@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKAWANINE Baccarat Tournament</title>
+    <link rel="shortcut icon" href="https://utagesystem.s3.ap-northeast-1.amazonaws.com/aEW47CenmRXC/6LtHecUluriM1cTYqdsMvXOnwIZi5euqj2H9HQXc.png">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Cinzel:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">
+    <style>
+:root {
+  --red: #C41E2A;
+  --red-bright: #E8293A;
+  --red-dim: rgba(196,30,42,0.15);
+  --gold: #C9A84C;
+  --gold-bright: #E8C97A;
+  --gold-pale: #F5EAC8;
+  --gold-dim: rgba(201,168,76,0.15);
+  --black: #080706;
+  --dark: #0E0C0A;
+  --card: #111110;
+  --card2: #181510;
+  --border: rgba(201,168,76,0.15);
+  --border-bright: rgba(201,168,76,0.4);
+  --text: #F0ECE0;
+  --muted: rgba(240,236,224,0.65);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--text);font-family:'Noto Sans JP',sans-serif;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(201,168,76,0.03) 1px,transparent 0);background-size:32px 32px;pointer-events:none;z-index:0;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(8,7,6,0.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,0.1);}
+.nav-logo{font-family:'Cinzel',serif;font-size:20px;font-weight:700;color:var(--gold-bright);letter-spacing:0.15em;}
+.nav-cta{padding:10px 28px;background:var(--red);color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.15em;text-decoration:none;transition:all .3s;}
+.nav-cta:hover{background:var(--red-bright);box-shadow:0 4px 20px rgba(196,30,42,0.4);}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:120px 24px 100px;text-align:center;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(196,30,42,0.08) 0%,transparent 60%),radial-gradient(ellipse 100% 70% at 50% 30%,rgba(201,168,76,0.05) 0%,transparent 65%),linear-gradient(160deg,#0E0C08 0%,#080706 40%,#0C0A06 100%);}
+.hero-accent{position:absolute;top:0;right:0;width:2px;height:60%;background:linear-gradient(180deg,transparent,var(--red),var(--gold),transparent);opacity:0.4;}
+.hero-accent2{position:absolute;bottom:0;left:0;width:60%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),var(--red),transparent);opacity:0.3;}
+
+/* AUTHORITY */
+.hero-authority{animation:fadeUp .8s ease both;position:relative;margin-bottom:48px;}
+.authority-quote{display:flex;align-items:center;gap:24px;background:rgba(255,255,255,0.03);border:1px solid var(--border);padding:24px 36px;max-width:640px;}
+.authority-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex-shrink:0;}
+.authority-text{text-align:left;}
+.authority-words{font-family:'Shippori Mincho',serif;font-size:clamp(16px,2.5vw,22px);font-weight:600;color:var(--text);line-height:1.6;letter-spacing:0.05em;}
+.authority-name{font-family:'EB Garamond',serif;font-size:14px;color:var(--gold);margin-top:8px;letter-spacing:0.2em;}
+
+/* PRIZE MEGA */
+.hero-prize-impact{animation:fadeUp .9s .15s ease both;opacity:0;position:relative;margin-bottom:16px;}
+.prize-mega{font-family:'EB Garamond',serif;font-size:clamp(64px,16vw,160px);font-weight:500;line-height:1;background:linear-gradient(135deg,var(--red-bright) 0%,var(--gold-bright) 50%,var(--gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;}
+
+.hero-catch{animation:fadeUp .9s .3s ease both;opacity:0;position:relative;margin-bottom:16px;}
+.hero-catch .action{font-family:'Shippori Mincho',serif;font-size:clamp(24px,5vw,48px);font-weight:800;color:var(--text);letter-spacing:0.05em;}
+
+.hero-sub{font-family:'Shippori Mincho',serif;font-size:clamp(18px,3.5vw,28px);color:var(--muted);letter-spacing:0.1em;line-height:1.8;margin-bottom:32px;animation:fadeUp .8s .4s ease both;opacity:0;position:relative;}
+.hero-sub strong{color:var(--gold-bright);font-weight:700;font-size:1.1em;}
+
+.hero-entry-fee{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:32px;animation:fadeUp .8s .5s ease both;opacity:0;position:relative;}
+.fee-label{font-size:14px;color:var(--muted);letter-spacing:0.15em;}
+.fee-amount{font-family:'EB Garamond',serif;font-size:36px;color:var(--red-bright);font-weight:600;}
+.fee-arrow{font-size:24px;color:var(--gold);}
+.fee-prize{font-family:'EB Garamond',serif;font-size:36px;color:var(--gold-bright);font-weight:600;}
+
+.hero-cta{animation:fadeUp .8s .6s ease both;opacity:0;position:relative;}
+.btn-primary{display:inline-block;padding:20px 72px;background:linear-gradient(135deg,var(--red-bright),var(--red));color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:16px;font-weight:700;letter-spacing:0.2em;text-decoration:none;transition:all .3s;position:relative;overflow:hidden;}
+.btn-primary:hover{box-shadow:0 8px 40px rgba(196,30,42,0.5);transform:translateY(-2px);}
+.btn-primary::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,0.1) 50%,transparent 60%);transform:translateX(-100%);transition:transform .6s;}
+.btn-primary:hover::after{transform:translateX(100%);}
+
+.hero-meta-info{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:20px;font-size:13px;color:var(--muted);letter-spacing:0.15em;animation:fadeUp .8s .7s ease both;opacity:0;position:relative;}
+.hero-meta-info .sep{color:var(--border);}
+
+.scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;animation:fadeIn 1s 1.5s ease both;opacity:0;pointer-events:none;}
+.scroll-cue span{font-size:8px;letter-spacing:0.5em;color:var(--muted);font-family:'EB Garamond',serif;text-transform:uppercase;}
+.scroll-bar{width:1px;height:40px;background:linear-gradient(180deg,var(--red),var(--gold),transparent);animation:scrollAnim 2s ease-in-out infinite;}
+
+/* SECTION */
+.section-wrap{max-width:1120px;margin:0 auto;padding:100px 24px;position:relative;z-index:1;}
+.full-divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);}
+.section-head{margin-bottom:64px;text-align:center;}
+.sh-eyebrow{font-family:'Cinzel',serif;font-size:12px;letter-spacing:0.6em;color:var(--red-bright);text-transform:uppercase;display:block;margin-bottom:14px;}
+.sh-title{font-family:'Shippori Mincho',serif;font-size:clamp(32px,6vw,56px);font-weight:700;background:linear-gradient(135deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.3;}
+.sh-sub{font-size:15px;color:var(--muted);letter-spacing:0.15em;margin-top:12px;font-family:'EB Garamond',serif;}
+.sh-ornament{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:20px;}
+.sh-line{width:48px;height:1px;background:var(--border);}
+.sh-dot{width:6px;height:6px;background:var(--red);transform:rotate(45deg);}
+
+/* TRUST */
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);}
+.trust-card{background:var(--card);padding:48px 40px;}
+.trust-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:0.5em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:14px;}
+.trust-main{font-family:'Shippori Mincho',serif;font-size:28px;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.4;}
+.trust-sub{font-size:15px;color:var(--muted);line-height:1.9;letter-spacing:0.05em;}
+.trust-highlight{display:inline-block;padding:6px 16px;border:1px solid var(--red);font-family:'EB Garamond',serif;font-size:14px;color:var(--red-bright);letter-spacing:0.15em;margin-top:12px;background:var(--red-dim);}
+
+/* IKAWA */
+.ikawa-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);}
+.ikawa-photo-col{background:var(--card);position:relative;min-height:480px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.ikawa-photo-col img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+.ikawa-photo-badge{position:absolute;bottom:24px;left:24px;right:24px;background:linear-gradient(135deg,rgba(8,7,6,0.95),rgba(14,12,8,0.92));border:1px solid var(--border);padding:20px 24px;z-index:2;border-left:3px solid var(--red);}
+.ipb-name{font-family:'Shippori Mincho',serif;font-size:24px;font-weight:700;color:var(--gold-bright);}
+.ipb-title{font-size:13px;color:var(--muted);letter-spacing:0.2em;margin-top:6px;}
+.ikawa-info-col{background:var(--card);padding:56px 48px;display:flex;flex-direction:column;justify-content:center;}
+.ikawa-tag{display:inline-block;background:var(--red);color:#fff;font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.5em;padding:5px 16px;text-transform:uppercase;margin-bottom:20px;font-weight:700;}
+.ikawa-headline{font-family:'Shippori Mincho',serif;font-size:clamp(26px,4.5vw,40px);font-weight:700;line-height:1.4;margin-bottom:20px;color:var(--text);}
+.ikawa-headline em{font-style:normal;color:var(--red-bright);}
+.ikawa-desc{font-size:15px;color:var(--muted);line-height:2;letter-spacing:0.05em;margin-bottom:32px;}
+.ikawa-quote{font-family:'Shippori Mincho',serif;font-size:18px;font-style:italic;color:var(--gold);border-left:3px solid var(--red);padding-left:20px;line-height:1.8;}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);}
+.why-card{background:var(--card);padding:48px 40px;transition:all .3s;}
+.why-card:hover{background:rgba(196,30,42,0.05);}
+.why-num{font-family:'EB Garamond',serif;font-size:72px;font-weight:400;color:rgba(196,30,42,0.4);line-height:1;display:block;margin-bottom:12px;}
+.why-title{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:14px;letter-spacing:0.05em;}
+.why-body{font-size:15px;color:var(--muted);line-height:2;letter-spacing:0.05em;}
+.why-body strong{color:var(--gold-bright);font-weight:600;}
+.why-accent{display:inline-block;margin-top:12px;padding:6px 14px;background:var(--red-dim);border-left:2px solid var(--red);font-size:14px;color:var(--red-bright);letter-spacing:0.05em;}
+
+/* PRIZE */
+.prize-list{display:flex;flex-direction:column;gap:2px;}
+.prize-item{background:var(--card);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;transition:all .3s;}
+.prize-item.gold{background:linear-gradient(135deg,rgba(196,30,42,0.1),rgba(201,168,76,0.08),var(--card));padding:44px 40px;border:1px solid var(--gold);position:relative;}
+.prize-item.gold::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--gold));}
+.prize-rank{display:flex;align-items:center;gap:16px;}
+.prize-icon{font-size:32px;}
+.prize-rank-num{width:56px;height:56px;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'EB Garamond',serif;font-size:24px;color:var(--gold);font-weight:600;}
+.prize-item.gold .prize-rank-num{width:64px;height:64px;border-color:var(--gold);font-size:28px;background:var(--gold-dim);}
+.prize-label{font-family:'Shippori Mincho',serif;font-size:20px;color:var(--text);letter-spacing:0.1em;font-weight:600;}
+.prize-item.gold .prize-label{font-size:24px;}
+.prize-amount{font-family:'EB Garamond',serif;font-size:clamp(36px,6vw,64px);color:var(--gold-bright);font-variant-numeric:lining-nums;line-height:1;text-align:right;}
+.prize-item.gold .prize-amount{font-size:clamp(44px,8vw,80px);background:linear-gradient(135deg,var(--red-bright),var(--gold-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.prize-unit{font-size:0.45em;letter-spacing:0.1em;}
+.prize-total{background:var(--card2);border:2px solid var(--red);padding:32px 40px;display:flex;align-items:center;justify-content:space-between;margin-top:2px;}
+.prize-total-label{font-family:'Cinzel',serif;font-size:12px;letter-spacing:0.5em;color:var(--red-bright);text-transform:uppercase;}
+.prize-total-amount{font-family:'EB Garamond',serif;font-size:clamp(40px,7vw,64px);background:linear-gradient(135deg,var(--red-bright),var(--gold-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600;}
+
+/* SCHEDULE */
+.schedule-timeline{display:flex;flex-direction:column;gap:0;}
+.sc-item{display:flex;gap:0;min-height:100px;}
+.sc-track{display:flex;flex-direction:column;align-items:center;width:60px;flex-shrink:0;}
+.sc-dot{width:14px;height:14px;border:2px solid var(--red);background:var(--black);transform:rotate(45deg);flex-shrink:0;z-index:1;}
+.sc-dot.active{background:var(--red);box-shadow:0 0 12px rgba(196,30,42,0.5);}
+.sc-line{flex:1;width:2px;background:linear-gradient(180deg,var(--red),var(--border));}
+.sc-content{flex:1;padding:0 0 48px 28px;transform:translateY(-6px);}
+.sc-time{font-family:'EB Garamond',serif;font-size:16px;color:var(--red-bright);letter-spacing:0.2em;display:block;margin-bottom:8px;font-weight:600;}
+.sc-title{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:8px;letter-spacing:0.05em;}
+.sc-detail{font-size:15px;color:var(--muted);line-height:1.9;letter-spacing:0.03em;}
+.sc-badge{display:inline-block;padding:3px 12px;background:var(--red);color:#fff;font-size:9px;letter-spacing:0.3em;font-family:'Cinzel',serif;font-weight:700;margin-bottom:8px;}
+
+/* RULES */
+.rules-simple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:var(--border);}
+.rule-card{background:var(--card);padding:40px 32px;text-align:center;}
+.rule-icon{font-size:32px;margin-bottom:16px;display:block;}
+.rule-title{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:700;color:var(--text);margin-bottom:12px;}
+.rule-text{font-size:14px;color:var(--muted);line-height:1.9;}
+
+/* STEPS */
+.steps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;position:relative;}
+.steps-grid::before{content:'';position:absolute;top:50px;left:15%;right:15%;height:2px;background:linear-gradient(90deg,var(--red),var(--gold),var(--red));z-index:0;}
+.step-card{text-align:center;padding:32px 24px;position:relative;z-index:1;}
+.step-num{width:64px;height:64px;border:3px solid var(--red);display:flex;align-items:center;justify-content:center;font-family:'EB Garamond',serif;font-size:28px;color:var(--red-bright);font-weight:600;margin:0 auto 20px;background:var(--black);transform:rotate(45deg);}
+.step-num span{transform:rotate(-45deg);}
+.step-title{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:10px;}
+.step-desc{font-size:14px;color:var(--muted);line-height:1.8;}
+
+/* STORY */
+.story-block{background:linear-gradient(135deg,rgba(196,30,42,0.06),rgba(201,168,76,0.04),var(--card));border:1px solid var(--border);padding:80px 60px;text-align:center;position:relative;}
+.story-block::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--red),var(--gold),transparent);}
+.story-lead{font-family:'Shippori Mincho',serif;font-size:clamp(20px,4vw,32px);font-weight:700;color:var(--text);line-height:1.8;margin-bottom:32px;}
+.story-lead em{font-style:normal;color:var(--red-bright);}
+.story-body{font-size:16px;color:var(--muted);line-height:2.2;letter-spacing:0.05em;max-width:700px;margin:0 auto 40px;}
+.story-body strong{color:var(--gold-bright);font-weight:600;}
+.story-highlight{font-family:'Shippori Mincho',serif;font-size:clamp(18px,3vw,28px);font-weight:700;color:var(--gold-bright);border:1px solid var(--gold);padding:20px 40px;display:inline-block;letter-spacing:0.15em;}
+
+/* ENTRY CTA */
+.entry-section{background:linear-gradient(135deg,rgba(196,30,42,0.1),rgba(201,168,76,0.05),transparent);border:1px solid var(--border);padding:80px 48px;text-align:center;position:relative;overflow:hidden;}
+.entry-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--gold));}
+.entry-eyebrow{font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.6em;color:var(--red-bright);text-transform:uppercase;display:block;margin-bottom:20px;position:relative;}
+.entry-title{font-family:'Shippori Mincho',serif;font-size:clamp(32px,6vw,56px);font-weight:800;margin-bottom:16px;position:relative;color:var(--text);}
+.entry-sub{font-size:16px;color:var(--muted);letter-spacing:0.15em;margin-bottom:32px;position:relative;}
+.entry-price{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:40px;position:relative;}
+.ep-from{font-size:18px;color:var(--muted);}
+.ep-amount{font-family:'EB Garamond',serif;font-size:clamp(44px,8vw,72px);color:var(--red-bright);font-weight:600;line-height:1;}
+.ep-arrow{font-size:28px;color:var(--gold);}
+.ep-prize{font-family:'EB Garamond',serif;font-size:clamp(44px,8vw,72px);color:var(--gold-bright);font-weight:600;line-height:1;}
+.ep-tax{font-size:12px;color:var(--muted);display:block;margin-top:4px;}
+
+.btn-entry-large{display:inline-block;padding:24px 80px;background:linear-gradient(135deg,var(--red-bright),var(--red));color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:18px;font-weight:700;letter-spacing:0.25em;text-decoration:none;transition:all .3s;position:relative;overflow:hidden;}
+.btn-entry-large:hover{box-shadow:0 8px 48px rgba(196,30,42,0.5);transform:translateY(-2px);}
+.entry-line{margin-top:24px;position:relative;}
+.line-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:#06C755;color:#fff;font-size:14px;font-weight:500;text-decoration:none;letter-spacing:0.05em;transition:all .3s;}
+.line-btn:hover{background:#05b04b;}
+.entry-footnote{font-size:12px;color:var(--muted);margin-top:20px;letter-spacing:0.1em;line-height:2;position:relative;}
+
+/* FIXED CTA */
+.fixed-cta{position:fixed;bottom:0;left:0;right:0;z-index:99;background:rgba(8,7,6,0.95);backdrop-filter:blur(8px);border-top:1px solid rgba(201,168,76,0.15);padding:12px 24px;display:flex;align-items:center;justify-content:center;gap:20px;transform:translateY(100%);transition:transform .4s ease;}
+.fixed-cta.show{transform:translateY(0);}
+.fixed-cta-text{font-family:'Shippori Mincho',serif;font-size:14px;color:var(--gold-bright);letter-spacing:0.1em;}
+.fixed-cta-text strong{color:var(--red-bright);font-size:18px;}
+.btn-fixed{padding:12px 40px;background:var(--red);color:#fff;font-size:13px;font-weight:700;letter-spacing:0.2em;text-decoration:none;transition:all .3s;flex-shrink:0;}
+.btn-fixed:hover{background:var(--red-bright);}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
+.footer-logo{font-family:'Cinzel',serif;font-size:36px;font-weight:700;color:var(--gold-bright);letter-spacing:0.2em;display:block;margin-bottom:8px;}
+.footer-tagline{font-size:12px;letter-spacing:0.5em;color:var(--muted);text-transform:uppercase;font-family:'EB Garamond',serif;margin-bottom:16px;}
+.footer-info{font-size:12px;color:var(--muted);line-height:2;letter-spacing:0.05em;margin-bottom:16px;}
+.footer-note{font-size:11px;color:rgba(232,224,208,0.35);line-height:2;letter-spacing:0.05em;}
+
+/* PARALLAX */
+.parallax-section{position:relative;height:60vh;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.parallax-bg{position:absolute;inset:-20%;background-size:cover;background-position:center;background-attachment:fixed;filter:brightness(0.4);z-index:0;}
+.parallax-content{position:relative;z-index:1;text-align:center;padding:40px;}
+.parallax-content .big-quote{font-family:'Shippori Mincho',serif;font-size:clamp(24px,5vw,44px);font-weight:700;color:#fff;line-height:1.6;letter-spacing:0.08em;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
+.parallax-content .quote-author{font-family:'EB Garamond',serif;font-size:18px;color:var(--gold-bright);margin-top:20px;letter-spacing:0.3em;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes scrollAnim{0%,100%{opacity:.3;transform:scaleY(1);}50%{opacity:1;transform:scaleY(1.15);}}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .trust-grid,.ikawa-wrap,.why-grid{grid-template-columns:1fr;}
+  .rules-simple{grid-template-columns:1fr;}
+  .steps-grid{grid-template-columns:1fr;gap:24px;}
+  .steps-grid::before{display:none;}
+  nav{padding:12px 20px;}
+  .nav-cta{padding:8px 20px;font-size:11px;}
+  .authority-quote{flex-direction:column;text-align:center;padding:20px 24px;}
+  .authority-text{text-align:center;}
+  .parallax-bg{background-attachment:scroll;}
+  .parallax-section{height:40vh;}
+  .ikawa-photo-col{min-height:320px;}
+  .ikawa-info-col{padding:36px 28px;}
+  .story-block{padding:48px 28px;}
+  .entry-price{flex-direction:column;gap:8px;}
+  .fixed-cta-text{display:none;}
+}
+@media(max-width:600px){
+  .hero-catch .amount{font-size:clamp(48px,12vw,80px);}
+  .section-wrap{padding:60px 16px;}
+  .entry-section{padding:48px 20px;}
+  .trust-card,.why-card{padding:32px 24px;}
+  .prize-item{padding:20px 16px;flex-direction:column;gap:12px;text-align:center;}
+  .prize-item.gold{padding:32px 16px;}
+  .prize-total{flex-direction:column;gap:8px;text-align:center;}
+}
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">IKAWANINE</div>
+  <a href="#entry" class="nav-cta">今すぐエントリー</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-accent2"></div>
+
+  <!-- ① 権威ブロック（井川コメント）-->
+  <div class="hero-authority">
+    <div class="authority-quote">
+      <img src="ikawa_photo.jpg" alt="井川意高" class="authority-photo">
+      <div class="authority-text">
+        <div class="authority-words">「この規模感で、この賞金は正直おかしい。」</div>
+        <div class="authority-name">— 井川 意高</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ② 賞金インパクト -->
+  <div class="hero-prize-impact">
+    <span class="prize-mega">¥3,000,000</span>
+  </div>
+
+  <!-- ③ キャッチコピー -->
+  <div class="hero-catch">
+    <span class="action">その一手が、人生を変える。</span>
+  </div>
+
+  <div class="hero-sub">
+    <strong>10万円</strong>で、<strong>300万円</strong>を掴め。
+  </div>
+
+  <div class="hero-entry-fee">
+    <span class="fee-amount">¥100,000</span>
+    <span class="fee-arrow">→</span>
+    <span class="fee-prize">¥3,000,000</span>
+  </div>
+
+  <!-- ④ CTA -->
+  <div class="hero-cta">
+    <a href="#entry" class="btn-primary">今すぐエントリー</a>
+  </div>
+
+  <!-- ⑤ サブ説明 -->
+  <div class="hero-meta-info">
+    <span>2025.4.18</span><span class="sep">|</span>
+    <span>東京</span><span class="sep">|</span>
+    <span>1日完結</span>
+  </div>
+
+  <div class="scroll-cue"><span>Scroll</span><div class="scroll-bar"></div></div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- TRUST -->
+<div class="section-wrap reveal">
+  <div class="section-head">
+    <span class="sh-eyebrow">Trust</span>
+    <h2 class="sh-title">大会概要</h2>
+    <div class="sh-sub">Why You Can Trust This Tournament</div>
+    <div class="sh-ornament"><span class="sh-line"></span><span class="sh-dot"></span><span class="sh-line"></span></div>
+  </div>
+
+  <div class="trust-grid">
+    <div class="trust-card">
+      <span class="trust-label">Event</span>
+      <div class="trust-main">IKAWANINE Baccarat Tournament<br>バカラトーナメント</div>
+      <div class="trust-sub">厳選されたプレイヤーが集う、本格バカラトーナメント。少額エントリーで高額賞金に挑戦できます。</div>
+    </div>
+    <div class="trust-card">
+      <span class="trust-label">Date &amp; Venue</span>
+      <div class="trust-main">2025年4月18日（金）</div>
+      <div class="trust-sub">東京都内の実在する会場にて開催。<br>参加確定後に詳細をご案内します。</div>
+      <span class="trust-highlight">Tokyo, Japan</span>
+    </div>
+    <div class="trust-card">
+      <span class="trust-label">Organizer</span>
+      <div class="trust-main">N9 運営事務局</div>
+      <div class="trust-sub">大会運営に関する全ての責任を持ち、公正なルールのもと開催いたします。</div>
+    </div>
+    <div class="trust-card">
+      <span class="trust-label">Special Guest</span>
+      <div class="trust-main">井川意高 参戦</div>
+      <div class="trust-sub">日本を代表するカジノプレイヤー、井川意高氏が本大会に参戦。同じテーブルで勝負できるチャンス。</div>
+      <span class="trust-highlight">井川意高 出場確定</span>
+    </div>
+  </div>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- IKAWA -->
+<div class="section-wrap reveal">
+  <div class="ikawa-wrap">
+    <div class="ikawa-photo-col">
+      <img src="ikawa_formal.jpg" alt="井川意高">
+      <div class="ikawa-photo-badge">
+        <div class="ipb-name">井川 意高</div>
+        <div class="ipb-title">Motota Ikawa — Special Guest Player</div>
+      </div>
+    </div>
+    <div class="ikawa-info-col">
+      <span class="ikawa-tag">Guest Player</span>
+      <h3 class="ikawa-headline"><em>井川意高</em>と<br>同じ舞台に立て。</h3>
+      <div class="ikawa-desc">日本のカジノ界で圧倒的な存在感を持つ井川意高氏。本トーナメントでは特別ゲストプレイヤーとして参戦。あなたも同じテーブルで勝負できる、またとない機会です。</div>
+      <div class="ikawa-quote">「勝つか、語られるか。<br>それが、この舞台の価値だ。」</div>
+    </div>
+  </div>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- PARALLAX: IKAWA QUOTE -->
+<div class="parallax-section">
+  <div class="parallax-bg" style="background-image:url('ikawa_formal.jpg');"></div>
+  <div class="parallax-content">
+    <div class="big-quote">「勝つか、語られるか。<br>それが、この舞台の価値だ。」</div>
+    <div class="quote-author">— 井川 意高</div>
+  </div>
+</div>
+
+<!-- WHY -->
+<div class="section-wrap reveal">
+  <div class="section-head">
+    <span class="sh-eyebrow">Benefits</span>
+    <h2 class="sh-title">なぜ、この大会なのか？</h2>
+    <div class="sh-ornament"><span class="sh-line"></span><span class="sh-dot"></span><span class="sh-line"></span></div>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-num">01</span>
+      <div class="why-title">少額でハイリターン</div>
+      <div class="why-body">エントリーフィーはたった<strong>100,000円</strong>。<br>優勝賞金は<strong>3,000,000円</strong>。30倍のリターンを掴めるチャンス。</div>
+      <div class="why-accent">¥100,000 → ¥3,000,000</div>
+    </div>
+    <div class="why-card">
+      <span class="why-num">02</span>
+      <div class="why-title">有名人と同じ舞台</div>
+      <div class="why-body"><strong>井川意高</strong>と同じテーブルで勝負できる。普通では手に入らない体験が、ここにある。</div>
+      <div class="why-accent">井川意高と対戦可能</div>
+    </div>
+    <div class="why-card">
+      <span class="why-num">03</span>
+      <div class="why-title">1日完結</div>
+      <div class="why-body">忙しい方でも大丈夫。<strong>1日で完結</strong>するトーナメント形式。仕事帰りや週末に、人生を変える勝負を。</div>
+    </div>
+    <div class="why-card">
+      <span class="why-num">04</span>
+      <div class="why-title">初期メンバーの価値</div>
+      <div class="why-body">将来、賞金数億規模を目指すこの大会。<strong>第1回の参加者</strong>は「伝説の初期メンバー」として語り継がれる。</div>
+      <div class="why-accent">最初の参加者だけが持つ価値</div>
+    </div>
+  </div>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- PRIZE -->
+<div class="section-wrap reveal">
+  <div class="section-head">
+    <span class="sh-eyebrow">Prize Pool</span>
+    <h2 class="sh-title">賞金構成</h2>
+    <div class="sh-sub">Prize Structure</div>
+    <div class="sh-ornament"><span class="sh-line"></span><span class="sh-dot"></span><span class="sh-line"></span></div>
+  </div>
+
+  <div class="prize-list">
+    <div class="prize-item gold">
+      <div class="prize-rank">
+        <span class="prize-icon">🥇</span>
+        <div class="prize-rank-num">1</div>
+        <span class="prize-label">優勝</span>
+      </div>
+      <span class="prize-amount">¥3,000,000<span class="prize-unit"> JPY</span></span>
+    </div>
+    <div class="prize-item">
+      <div class="prize-rank">
+        <span class="prize-icon">🥈</span>
+        <div class="prize-rank-num">2</div>
+        <span class="prize-label">準優勝</span>
+      </div>
+      <span class="prize-amount">¥1,500,000<span class="prize-unit"> JPY</span></span>
+    </div>
+    <div class="prize-item">
+      <div class="prize-rank">
+        <span class="prize-icon">🥉</span>
+        <div class="prize-rank-num">3</div>
+        <span class="prize-label">3位</span>
+      </div>
+      <span class="prize-amount">¥500,000<span class="prize-unit"> JPY</span></span>
+    </div>
+  </div>
+  <div class="prize-total">
+    <span class="prize-total-label">Total Prize Pool</span>
+    <span class="prize-total-amount">¥5,000,000<span class="prize-unit"> JPY</span></span>
+  </div>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- SCHEDULE -->
+<div class="section-wrap reveal">
+  <div class="section-head">
+    <span class="sh-eyebrow">Schedule</span>
+    <h2 class="sh-title">当日スケジュール</h2>
+    <div class="sh-sub">Event Timeline</div>
+    <div class="sh-ornament"><span class="sh-line"></span><span class="sh-dot"></span><span class="sh-line"></span></div>
+  </div>
+
+  <div class="schedule-timeline">
+    <div class="sc-item">
+      <div class="sc-track"><div class="sc-dot"></div><div class="sc-line"></div></div>
+      <div class="sc-content"><span class="sc-time">15:00</span><div class="sc-title">受付開始</div><div class="sc-detail">会場にて受付開始。本人確認書類をご持参ください。</div></div>
+    </div>
+    <div class="sc-item">
+      <div class="sc-track"><div class="sc-dot"></div><div class="sc-line"></div></div>
+      <div class="sc-content"><span class="sc-time">16:00</span><div class="sc-title">レセプション</div><div class="sc-detail">参加者同士の交流タイム。井川氏によるご挨拶。</div></div>
+    </div>
+    <div class="sc-item">
+      <div class="sc-track"><div class="sc-dot active"></div><div class="sc-line"></div></div>
+      <div class="sc-content"><span class="sc-badge">Main Event</span><span class="sc-time">17:00</span><div class="sc-title">トーナメント開始</div><div class="sc-detail">予選ラウンドから決勝まで、白熱のバカラバトル。</div></div>
+    </div>
+    <div class="sc-item">
+      <div class="sc-track"><div class="sc-dot"></div><div class="sc-line"></div></div>
+      <div class="sc-content"><span class="sc-time">20:00</span><div class="sc-title">決勝ラウンド</div><div class="sc-detail">勝ち残ったプレイヤーによる最終決戦。</div></div>
+    </div>
+    <div class="sc-item">
+      <div class="sc-track"><div class="sc-dot"></div></div>
+      <div class="sc-content"><span class="sc-time">21:00</span><div class="sc-title">表彰式</div><div class="sc-detail">優勝者への賞金贈呈。特別ディナー。</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- RULES -->
+<div class="section-wrap reveal">
+  <div class="section-head">
+    <span class="sh-eyebrow">Rules</span>
+    <h2 class="sh-title">ルール</h2>
+    <div class="sh-sub">初心者でも安心のシンプルルール</div>
+    <div class="sh-ornament"><span class="sh-line"></span><span class="sh-dot"></span><span class="sh-line"></span></div>
+  </div>
+
+  <div class="rules-simple">
+    <div class="rule-card">
+      <span class="rule-icon">🃏</span>
+      <div class="rule-title">勝ち上がり方式</div>
+      <div class="rule-text">テーブルごとにチップ数を競い、上位プレイヤーが次のラウンドへ進出。最終的にチップ最多が優勝。</div>
+    </div>
+    <div class="rule-card">
+      <span class="rule-icon">🪙</span>
+      <div class="rule-title">チップ量</div>
+      <div class="rule-text">全参加者に同じ量のトーナメントチップを配布。平等な条件でスタートします。</div>
+    </div>
+    <div class="rule-card">
+      <span class="rule-icon">⏱️</span>
+      <div class="rule-title">制限時間</div>
+      <div class="rule-text">各ラウンドに制限時間あり。スピーディーかつ緊張感のある勝負をお楽しみください。</div>
+    </div>
+  </div>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- STEPS -->
+<div class="section-wrap reveal">
+  <div class="section-head">
+    <span class="sh-eyebrow">How to Join</span>
+    <h2 class="sh-title">参加は3ステップ</h2>
+    <div class="sh-ornament"><span class="sh-line"></span><span class="sh-dot"></span><span class="sh-line"></span></div>
+  </div>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num"><span>1</span></div>
+      <div class="step-title">エントリー</div>
+      <div class="step-desc">下のボタンからエントリーフォームへ。必要事項を入力して申し込み完了。</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num"><span>2</span></div>
+      <div class="step-title">入金</div>
+      <div class="step-desc">エントリーフィー100,000円をお振込み。入金確認後、参加確定のご連絡をお送りします。</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num"><span>3</span></div>
+      <div class="step-title">当日参加</div>
+      <div class="step-desc">会場にお越しください。受付で本人確認後、トーナメント開始。あとは勝つだけ。</div>
+    </div>
+  </div>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- PARALLAX: VISION -->
+<div class="parallax-section" style="height:40vh;">
+  <div class="parallax-bg" style="background-image:url('ikawa_formal.jpg');background-position:center top;filter:brightness(0.25) saturate(0.5);"></div>
+  <div class="parallax-content">
+    <div class="big-quote" style="font-size:clamp(18px,4vw,32px);">遊びが、伝説になる場所。</div>
+  </div>
+</div>
+
+<!-- STORY -->
+<div class="section-wrap reveal">
+  <div class="section-head">
+    <span class="sh-eyebrow">Vision</span>
+    <h2 class="sh-title">この大会の未来</h2>
+    <div class="sh-ornament"><span class="sh-line"></span><span class="sh-dot"></span><span class="sh-line"></span></div>
+  </div>
+
+  <div class="story-block">
+    <div class="story-lead">
+      今は小さくてもいい。<br>
+      この大会は、<em>世界最大級のバカラ大会</em>へ<br>
+      成長する起点だ。
+    </div>
+    <div class="story-body">
+      将来的に賞金は<strong>数億円規模</strong>まで拡張される計画。<br>
+      第1回に参加したあなたは、<strong>「伝説の初期メンバー」</strong>として<br>
+      この大会の歴史に名を刻むことになる。<br><br>
+      これは一緒に作る物語だ。<br>
+      最初に飛び込んだ者だけが、未来の中心に立てる。
+    </div>
+    <div class="story-highlight">最初の参加者だけが持つ価値がある。</div>
+  </div>
+</div>
+
+<div class="full-divider"></div>
+
+<!-- ENTRY CTA -->
+<div class="section-wrap reveal" id="entry">
+  <div class="entry-section">
+    <span class="entry-eyebrow">Entry</span>
+    <h2 class="entry-title">席を確保する</h2>
+    <div class="entry-sub">その一手が、人生を変える。</div>
+
+    <div class="entry-price">
+      <div>
+        <span class="ep-from">エントリーフィー</span>
+        <span class="ep-amount">¥100,000</span>
+        <span class="ep-tax">（税別）</span>
+      </div>
+      <span class="ep-arrow">→</span>
+      <div>
+        <span class="ep-from">優勝賞金</span>
+        <span class="ep-prize">¥3,000,000</span>
+      </div>
+    </div>
+
+    <a href="#" class="btn-entry-large">今すぐ参加する</a>
+    <div class="entry-line"><a href="#" class="line-btn"><i class="fab fa-line"></i> LINEでお問い合わせ</a></div>
+    <div class="entry-footnote">※ エントリーフィーは参加費です。定員になり次第締め切ります。</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">IKAWANINE</span>
+  <div class="footer-tagline">Baccarat Tournament 2025</div>
+  <div class="footer-info">主催：N9 運営事務局<br>お問い合わせはLINEまたはメールにて承ります。</div>
+  <div class="footer-note">&copy; 2025 N9. All Rights Reserved.</div>
+</footer>
+
+<!-- FIXED CTA -->
+<div class="fixed-cta" id="fixedCta">
+  <div class="fixed-cta-text">エントリーフィー <strong>¥100,000</strong> → 優勝 <strong>¥3,000,000</strong></div>
+  <a href="#entry" class="btn-fixed">今すぐ参加する</a>
+</div>
+
+<script>
+// Reveal animation
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold: 0.08});
+reveals.forEach(el => observer.observe(el));
+
+// Fixed CTA show on scroll
+const fixedCta = document.getElementById('fixedCta');
+const hero = document.querySelector('.hero');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > hero.offsetHeight * 0.7) {
+    fixedCta.classList.add('show');
+  } else {
+    fixedCta.classList.remove('show');
+  }
+});
+</script>
+</body>
+</html>
