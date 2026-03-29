@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+
+            <link rel="shortcut icon" href="https://utagesystem.s3.ap-northeast-1.amazonaws.com/aEW47CenmRXC/6LtHecUluriM1cTYqdsMvXOnwIZi5euqj2H9HQXc.png">
+    
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=TlyKPBV1RjVP7cgaT4mk7g&gtm_preview=env-1&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PS46CR8');</script>
+        <!-- End Google Tag Manager -->
+        
+                
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,600,700,800,900&display=swap&subset=japanese" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,500,600,700,800,900&display=swap&subset=japanese" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet" media="print" onload="this.media='all'">
+        <link href="/css/page.css?id=41788c6c2215b9a17b81" rel="stylesheet">
+        <link href="/css/pageafter.css?id=5ca24d6baa7dbc58904f" rel="stylesheet" media="print" onload="this.media='all'">
+
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MH8KJJXR');</script>
+<!-- End Google Tag Manager -->
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N56HMFR');</script>
+<!-- End Google Tag Manager -->
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TSB4SG4B');</script>
+<!-- End Google Tag Manager -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+        <style>
+        /* =====================================================
+   N9 井川カップ バカラトーナメント - スタイルシート
+   
+   使用フォント (HTMLの <head> 内に以下を追加してください):
+   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+   ===================================================== */
+
+:root {
+  --gold: #C9A84C;
+  --gold-bright: #E8C97A;
+  --gold-pale: #F5EAC8;
+  --gold-dim: rgba(201,168,76,0.15);
+  --black: #080706;
+  --dark: #0E0C0A;
+  --card: #131109;
+  --card2: #181510;
+  --border: rgba(201,168,76,0.2);
+  --border-bright: rgba(201,168,76,0.5);
+  --text: #EDE7D8;
+  --muted: rgba(232,224,208,0.72);
+  --hex: rgba(201,168,76,0.04);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── TEXTURE OVERLAY ── */
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(201,168,76,0.03) 1px, transparent 0);
+  background-size: 32px 32px;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* ── NAV ── */
+nav {
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:100;
+  padding:16px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(180deg,rgba(8,7,6,0.95) 0%,transparent 100%);
+  backdrop-filter:blur(4px);
+}
+.nav-logo {
+  font-family:'Cinzel',serif;
+  font-size:18px;
+  font-weight:700;
+  color:var(--gold-bright);
+  letter-spacing:0.15em;
+}
+.nav-right {
+  font-size:10px;
+  letter-spacing:0.4em;
+  color:var(--muted);
+  font-family:'EB Garamond',serif;
+  text-transform:uppercase;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  padding:120px 24px 80px;
+  text-align:center;
+}
+
+.hero-bg {
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 100% 70% at 50% 30%, rgba(201,168,76,0.07) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 50% at 80% 80%, rgba(201,168,76,0.03) 0%, transparent 60%),
+    linear-gradient(160deg, #0E0C08 0%, #080706 40%, #0C0A06 100%);
+}
+
+/* diagonal gold line accent */
+.hero-accent {
+  position:absolute;
+  top:0;right:0;
+  width:1px;height:60%;
+  background:linear-gradient(180deg,transparent,var(--gold),transparent);
+  opacity:0.3;
+}
+.hero-accent2 {
+  position:absolute;
+  bottom:0;left:0;
+  width:60%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:0.2;
+}
+
+.hero-eyebrow {
+  font-family:'Cinzel',serif;
+  font-size:10px;
+  letter-spacing:0.55em;
+  color:var(--gold);
+  text-transform:uppercase;
+  margin-bottom:32px;
+  animation:fadeUp .8s ease both;
+  position:relative;
+}
+
+.hero-event-name {
+  font-family:'Cinzel',serif;
+  font-size:clamp(13px,2.5vw,18px);
+  letter-spacing:0.4em;
+  color:var(--gold-bright);
+  font-weight:400;
+  margin-bottom:16px;
+  animation:fadeUp .8s .1s ease both;
+  opacity:0;
+  position:relative;
+}
+
+.hero-title {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(56px,12vw,120px);
+  font-weight:700;
+  line-height:1.1;
+  letter-spacing:-0.01em;
+  margin-bottom:24px;
+  position:relative;
+  animation:fadeUp .9s .2s ease both;
+  opacity:0;
+}
+.hero-title .line1 {
+  display:block;
+  background:linear-gradient(135deg,#F2E4C0 0%,#C9A84C 30%,#E8C97A 60%,#C9A84C 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-title .line2 {
+  display:block;
+  background:linear-gradient(135deg,#C9A84C 0%,#F2E4C0 40%,#C9A84C 80%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  font-size:0.72em;
+  letter-spacing:0.05em;
+  margin-top:8px;
+}
+
+.hero-divider {
+  display:flex;align-items:center;justify-content:center;gap:16px;
+  margin:28px 0;
+  animation:fadeUp .8s .35s ease both;
+  opacity:0;
+  position:relative;
+}
+.hd-line{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+.hd-line.r{background:linear-gradient(90deg,var(--gold),transparent);}
+.hd-crown{font-size:16px;color:var(--gold);}
+
+.hero-meta {
+  display:flex;align-items:center;justify-content:center;
+  gap:32px;flex-wrap:wrap;
+  margin-bottom:40px;
+  animation:fadeUp .8s .45s ease both;
+  opacity:0;
+  position:relative;
+}
+.meta-item {
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+}
+.meta-label {
+  font-size:9px;letter-spacing:0.5em;color:var(--muted);text-transform:uppercase;
+  font-family:'EB Garamond',serif;
+}
+.meta-value {
+  font-family:'EB Garamond',serif;
+  font-size:18px;
+  color:var(--gold-bright);
+  font-variant-numeric:lining-nums;
+  letter-spacing:0.05em;
+}
+.meta-sep {
+  width:1px;height:36px;background:var(--border);
+}
+
+.hero-tags {
+  display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
+  margin-bottom:48px;
+  animation:fadeUp .8s .55s ease both;
+  opacity:0;
+  position:relative;
+}
+.hero-tag {
+  border:1px solid var(--border-bright);
+  padding:9px 26px;
+  font-size:13px;
+  letter-spacing:0.2em;
+  color:var(--gold-pale);
+  font-family:'EB Garamond',serif;
+}
+.hero-tag.featured {
+  background:var(--gold-dim);
+  border-color:var(--gold);
+}
+
+.hero-prize-block {
+  border:1px solid var(--border);
+  padding:20px 48px;
+  position:relative;
+  animation:fadeUp .8s .65s ease both;
+  opacity:0;
+  display:inline-block;
+}
+.hero-prize-block::before,.hero-prize-block::after {
+  content:'◆';position:absolute;color:var(--gold);font-size:7px;
+}
+.hero-prize-block::before{top:-4px;left:50%;transform:translateX(-50%);}
+.hero-prize-block::after{bottom:-4px;left:50%;transform:translateX(-50%);}
+.hpb-label {
+  font-size:9px;letter-spacing:0.5em;color:var(--gold);text-transform:uppercase;
+  font-family:'Cinzel',serif;display:block;margin-bottom:6px;
+}
+.hpb-amount {
+  font-family:'EB Garamond',serif;
+  font-size:clamp(40px,8vw,64px);
+  font-weight:500;
+  color:var(--gold-bright);
+  font-variant-numeric:lining-nums;
+  line-height:1.1;
+}
+.hpb-unit{font-size:0.45em;letter-spacing:0.1em;}
+
+.hero-main-copy {
+  margin: 20px 0 8px;
+  text-align: center;
+  animation: fadeUp .85s .28s ease both;
+  opacity: 0;
+  position: relative;
+}
+.hero-copy-main {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(18px, 3.5vw, 28px);
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.hero-copy-sub {
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(13px, 2vw, 17px);
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  font-style: italic;
+}
+
+.scroll-cue {
+  position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  animation:fadeIn 1s 1.5s ease both;opacity:0;
+  pointer-events:none;
+}
+.scroll-cue span{font-size:8px;letter-spacing:0.5em;color:var(--muted);font-family:'EB Garamond',serif;text-transform:uppercase;}
+.scroll-bar{width:1px;height:40px;background:linear-gradient(180deg,var(--gold),transparent);animation:scrollAnim 2s ease-in-out infinite;}
+@keyframes scrollAnim{0%,100%{opacity:.3;transform:scaleY(1);}50%{opacity:1;transform:scaleY(1.15);}}
+
+/* ── SECTION WRAPPER ── */
+.section-wrap {
+  max-width:1120px;
+  margin:0 auto;
+  padding:100px 24px;
+  position:relative;
+  z-index:1;
+}
+.full-divider {
+  width:100%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--border),transparent);
+}
+
+.section-head {
+  margin-bottom:64px;
+  text-align:center;
+}
+.sh-eyebrow {
+  font-family:'Cinzel',serif;
+  font-size:10px;letter-spacing:0.6em;color:var(--gold);text-transform:uppercase;
+  display:block;margin-bottom:14px;
+}
+.sh-title {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(28px,5vw,44px);
+  font-weight:600;
+  background:linear-gradient(135deg,var(--gold-bright),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1.3;
+}
+.sh-sub {
+  font-size:14px;color:var(--muted);letter-spacing:0.15em;margin-top:10px;
+  font-family:'EB Garamond',serif;
+}
+.sh-ornament {
+  display:flex;align-items:center;justify-content:center;gap:12px;margin-top:20px;
+}
+.sh-line{width:48px;height:1px;background:var(--border);}
+.sh-dot{width:4px;height:4px;background:var(--gold);transform:rotate(45deg);}
+
+/* ── OVERVIEW ── */
+.overview-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2px;
+  background:var(--border);
+}
+.ov-card {
+  background:var(--card);
+  padding:48px 40px;
+}
+.ov-label {
+  font-family:'Cinzel',serif;
+  font-size:10px;letter-spacing:0.5em;color:var(--gold);
+  text-transform:uppercase;display:block;margin-bottom:14px;
+}
+.ov-main {
+  font-family:'Shippori Mincho',serif;
+  font-size:24px;font-weight:600;
+  color:var(--text);margin-bottom:12px;line-height:1.4;
+}
+.ov-sub {
+  font-size:15px;color:var(--muted);line-height:1.9;letter-spacing:0.05em;
+}
+.ov-highlight {
+  display:inline-block;
+  padding:5px 14px;
+  border:1px solid var(--border);
+  font-family:'EB Garamond',serif;
+  font-size:14px;color:var(--gold-pale);
+  letter-spacing:0.15em;
+  margin-top:12px;
+}
+
+/* highlights */
+.highlights-grid {
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:16px;margin-top:0;
+}
+.hl-item {
+  display:flex;gap:16px;align-items:flex-start;
+  padding:28px 24px;
+  border:1px solid var(--border);
+  transition:all .3s;
+}
+.hl-item:hover{border-color:var(--gold);background:var(--gold-dim);}
+.hl-icon {
+  width:40px;height:40px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;background:rgba(201,168,76,0.05);
+}
+.hl-text h4{font-size:16px;font-weight:500;margin-bottom:5px;color:var(--text);letter-spacing:0.05em;}
+.hl-text p{font-size:13px;color:var(--muted);line-height:1.8;}
+
+/* deposit badge */
+.deposit-bar {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  background:var(--border);
+  margin-top:2px;
+}
+.dep-item {
+  background:var(--card2);
+  padding:24px 40px;
+  text-align:center;
+  flex-shrink:0;
+}
+.dep-label{font-size:10px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;font-family:'Cinzel',serif;display:block;margin-bottom:6px;}
+.dep-value{font-family:'EB Garamond',serif;font-size:28px;color:var(--gold-bright);font-variant-numeric:lining-nums;}
+.dep-sep{width:1px;height:60px;background:var(--border);flex-shrink:0;align-self:center;}
+.dep-note{background:var(--card2);padding:24px 40px;font-size:14px;color:var(--muted);letter-spacing:0.1em;line-height:1.8;text-align:center;flex:1;}
+
+/* ── IKAWA SECTION ── */
+.ikawa-wrap {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2px;
+  background:var(--border);
+}
+.ikawa-photo-col {
+  background:var(--card);
+  position:relative;
+  min-height:480px;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.ikawa-placeholder {
+  width:100%;height:100%;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--card) 0%,var(--card2) 100%);
+  border:2px dashed var(--border);
+  margin:24px;
+  gap:12px;
+  position:relative;
+  flex:1;
+}
+.ikawa-placeholder .ph-icon{font-size:48px;opacity:0.3;}
+.ikawa-placeholder .ph-text{font-size:11px;letter-spacing:0.3em;color:var(--muted);text-align:center;line-height:1.8;}
+.ikawa-photo-badge {
+  position:absolute;bottom:24px;left:24px;right:24px;
+  background:linear-gradient(135deg,rgba(8,7,6,0.92),rgba(14,12,8,0.9));
+  border:1px solid var(--border);
+  padding:16px 20px;
+}
+.ipb-name{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:600;color:var(--gold-bright);}
+.ipb-title{font-size:12px;color:var(--muted);letter-spacing:0.2em;margin-top:4px;}
+.ikawa-info-col {
+  background:var(--card);
+  padding:56px 48px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.ikawa-tag {
+  display:inline-block;
+  background:var(--gold);
+  color:var(--black);
+  font-family:'Cinzel',serif;
+  font-size:8px;letter-spacing:0.5em;
+  padding:4px 14px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+  font-weight:700;
+}
+.ikawa-headline {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(22px,3.5vw,32px);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:20px;
+  color:var(--text);
+}
+.ikawa-desc {
+  font-size:15px;color:var(--muted);line-height:2;letter-spacing:0.05em;margin-bottom:32px;
+}
+.ikawa-features {
+  display:flex;flex-direction:column;gap:12px;
+}
+.ikawa-feat {
+  display:flex;align-items:center;gap:12px;
+  padding:12px 16px;
+  border-left:2px solid var(--gold);
+  background:var(--gold-dim);
+  font-size:14px;color:var(--gold-pale);letter-spacing:0.1em;
+}
+
+/* ── PRIZE ── */
+.prize-total-banner {
+  border:1px solid var(--border-bright);
+  padding:28px 48px;
+  text-align:center;
+  margin-bottom:40px;
+  background:linear-gradient(135deg,rgba(201,168,76,0.06),transparent);
+  position:relative;
+}
+.ptb-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.5em;color:var(--gold);display:block;margin-bottom:8px;}
+.ptb-amount{font-family:'EB Garamond',serif;font-size:clamp(48px,8vw,72px);color:var(--gold-bright);font-variant-numeric:lining-nums;line-height:1;}
+.ptb-unit{font-size:0.4em;letter-spacing:0.1em;}
+
+.podium {
+  display:grid;
+  grid-template-columns:1fr 1.15fr 1fr;
+  gap:2px;
+  background:var(--border);
+  margin-bottom:2px;
+}
+.podium-item {
+  background:var(--card);
+  padding:40px 24px 32px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  transition:all .3s;
+}
+.podium-item:hover{background:rgba(201,168,76,0.06);}
+.podium-item.champion {
+  background:linear-gradient(160deg,rgba(201,168,76,0.1),var(--card));
+  border-top:2px solid var(--gold);
+}
+.podium-rank-circle {
+  width:48px;height:48px;
+  border:1px solid var(--border-bright);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;
+  font-family:'EB Garamond',serif;font-size:18px;color:var(--gold);
+  font-variant-numeric:lining-nums;
+}
+.champion .podium-rank-circle{
+  background:var(--gold);color:var(--black);border-color:var(--gold);
+}
+.podium-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:12px;}
+.podium-amount{font-family:'EB Garamond',serif;font-size:clamp(36px,5vw,52px);color:var(--gold-bright);font-variant-numeric:lining-nums;line-height:1;}
+.podium-amount .unit{font-size:0.42em;letter-spacing:0.1em;}
+.podium-note{font-size:10px;color:var(--muted);margin-top:8px;letter-spacing:0.15em;}
+.champion-crown{font-size:18px;position:absolute;top:16px;right:20px;opacity:0.8;}
+
+/* ── PRIZE RANKING (vertical) ── */
+.prize-ranking {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--border);
+  margin-bottom: 16px;
+}
+.prize-rank-item {
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 48px;
+  transition: all .3s;
+}
+.prize-rank-item:hover { background: rgba(201,168,76,0.05); }
+.prize-rank-item.champion {
+  background: linear-gradient(135deg, rgba(201,168,76,0.12), var(--card));
+  border-left: 3px solid var(--gold);
+  padding: 40px 48px;
+}
+.pr-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.pr-circle {
+  width: 52px; height: 52px;
+  border: 1px solid var(--border-bright);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  color: var(--gold);
+  font-variant-numeric: lining-nums;
+  flex-shrink: 0;
+}
+.pr-circle.gold {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+  width: 64px; height: 64px;
+  font-size: 26px;
+}
+.pr-label {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.45em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.pr-right { text-align: right; }
+.pr-amount {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(36px, 5vw, 56px);
+  color: var(--gold-bright);
+  font-variant-numeric: lining-nums;
+  line-height: 1;
+}
+.champion .pr-amount { font-size: clamp(48px, 7vw, 80px); }
+.pr-unit { font-size: 0.4em; letter-spacing: 0.1em; }
+.pr-note { font-size: 12px; color: var(--gold); letter-spacing: 0.2em; margin-top: 6px; font-family: 'EB Garamond', serif; }
+
+.podium { display: none; } /* hide old podium */
+
+
+.schedule-timeline {
+  max-width:760px;margin:0 auto;
+}
+.st-item {
+  display:grid;
+  grid-template-columns:110px 1px 1fr;
+  gap:0 28px;
+  position:relative;
+}
+.st-time {
+  font-family:'EB Garamond',serif;
+  font-size:24px;
+  color:var(--gold-bright);
+  font-variant-numeric:lining-nums;
+  text-align:right;
+  padding-top:18px;
+  line-height:1;
+}
+.st-track {
+  display:flex;flex-direction:column;align-items:center;
+}
+.st-dot {
+  width:9px;height:9px;background:var(--black);
+  border:1px solid var(--gold);
+  transform:rotate(45deg);margin-top:20px;flex-shrink:0;
+}
+.st-dot.active{background:var(--gold);}
+.st-line{flex:1;width:1px;background:linear-gradient(180deg,var(--border),transparent);}
+.st-content {
+  padding:14px 0 40px;
+}
+.st-title{font-size:17px;font-weight:500;letter-spacing:0.05em;margin-bottom:4px;color:var(--text);}
+.st-detail{font-size:14px;color:var(--muted);letter-spacing:0.1em;line-height:1.8;}
+.st-badge {
+  display:inline-block;
+  padding:2px 10px;
+  font-family:'Cinzel',serif;font-size:7px;
+  letter-spacing:0.4em;text-transform:uppercase;
+  margin-left:10px;vertical-align:middle;
+}
+.st-badge.main{background:var(--gold);color:var(--black);}
+.st-badge.dinner{background:rgba(201,168,76,0.15);color:var(--gold);border:1px solid var(--border);}
+.st-highlight {
+  margin-top:10px;padding:10px 16px;
+  border-left:2px solid var(--gold);
+  background:var(--gold-dim);
+  font-size:13px;color:var(--gold-pale);line-height:1.8;
+}
+
+/* ── ENTRY TIERS ── */
+.play-conditions {
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:24px 32px;
+  display:grid;
+  grid-template-columns:auto repeat(3,1fr);
+  gap:24px;
+  align-items:center;
+  margin-bottom:32px;
+}
+.pc-head{font-size:11px;color:var(--muted);letter-spacing:0.15em;line-height:1.8;}
+.pc-item{text-align:center;}
+.pc-label{font-size:8px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;font-family:'Cinzel',serif;display:block;margin-bottom:6px;}
+.pc-val{font-family:'EB Garamond',serif;font-size:20px;color:var(--text);font-variant-numeric:lining-nums;}
+
+.tiers-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:2px;background:var(--border);
+}
+.tier-card {
+  background:var(--card);
+  padding:40px 28px;
+  position:relative;
+  overflow:hidden;
+  transition:all .3s;
+}
+.tier-card:hover{background:rgba(201,168,76,0.05);}
+.tier-card.recommended {
+  background:linear-gradient(160deg,rgba(201,168,76,0.1),var(--card));
+}
+.tier-card.recommended::before {
+  content:'RECOMMENDED';
+  position:absolute;top:0;left:0;right:0;
+  background:var(--gold);
+  color:var(--black);
+  font-family:'Cinzel',serif;font-size:7px;letter-spacing:0.5em;
+  text-align:center;padding:5px;font-weight:700;
+}
+.tier-card.recommended{padding-top:48px;}
+.tier-dep-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.4em;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:10px;}
+.tier-amount{font-family:'EB Garamond',serif;font-size:clamp(28px,3vw,36px);color:var(--gold-bright);font-variant-numeric:lining-nums;line-height:1;margin-bottom:24px;}
+.tier-amount .unit{font-size:0.55em;}
+.tier-benefits{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.tier-benefits li {
+  font-size:13px;color:var(--muted);letter-spacing:0.05em;
+  padding-left:20px;position:relative;line-height:1.7;
+}
+.tier-benefits li::before{content:'→';position:absolute;left:0;top:0;color:var(--gold);font-size:12px;line-height:1.7;}
+.tier-plan-name{font-size:9px;letter-spacing:0.3em;color:var(--border-bright);text-align:right;margin-top:20px;font-family:'EB Garamond',serif;}
+
+.tier-play-cond {
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.tpc-title {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.tpc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(201,168,76,0.07);
+  font-size: 12px;
+}
+.tpc-row:last-child { border-bottom: none; }
+.tpc-label { color: var(--muted); letter-spacing: 0.1em; font-family: 'EB Garamond', serif; }
+.tpc-val { color: var(--gold-pale); font-family: 'EB Garamond', serif; font-size: 14px; font-variant-numeric: lining-nums; }
+
+/* ── BENEFITS SUMMARY ── */
+.benefits-wrap {
+  display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);margin-bottom:2px;
+}
+.benefit-item {
+  background:var(--card);padding:40px 36px;
+  display:flex;gap:20px;align-items:flex-start;
+  transition:all .3s;
+}
+.benefit-item:hover{background:rgba(201,168,76,0.05);}
+.benefit-item.featured{
+  background:linear-gradient(135deg,rgba(201,168,76,0.08),var(--card));
+  border-left:2px solid var(--gold);
+}
+.bi-icon{width:44px;height:44px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.bi-body h4{font-family:'Shippori Mincho',serif;font-size:17px;font-weight:600;margin-bottom:6px;color:var(--text);}
+.bi-body p{font-size:14px;color:var(--muted);line-height:1.9;}
+.bi-tag{display:inline-block;padding:2px 8px;background:var(--gold);color:var(--black);font-size:7px;letter-spacing:0.4em;text-transform:uppercase;font-family:'Cinzel',serif;margin-bottom:8px;font-weight:700;}
+
+/* ── RULES ── */
+.rules-intro {
+  background:var(--card);border:1px solid var(--border);
+  padding:28px 36px;margin-bottom:24px;
+  border-left:3px solid var(--gold);
+  font-size:15px;line-height:2;color:var(--muted);letter-spacing:0.05em;
+}
+.rules-grid {
+  display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);
+}
+.rule-card {
+  background:var(--card);padding:40px 36px;
+}
+.rule-num {
+  font-family:'EB Garamond',serif;
+  font-size:48px;font-weight:400;
+  color:rgba(201,168,76,0.55);
+  line-height:1;display:block;margin-bottom:12px;
+  font-variant-numeric:lining-nums;
+}
+.rule-title {
+  font-family:'Shippori Mincho',serif;
+  font-size:18px;font-weight:600;
+  color:var(--text);margin-bottom:14px;letter-spacing:0.05em;
+}
+.rule-body {
+  font-size:14px;color:var(--muted);line-height:2;letter-spacing:0.05em;
+}
+.rule-body strong{color:var(--gold-pale);font-weight:500;}
+.rule-body .highlight-box {
+  margin-top:14px;padding:12px 16px;
+  background:var(--gold-dim);
+  border-left:2px solid var(--gold);
+  font-size:13px;color:var(--gold-pale);
+}
+.rule-table {
+  width:100%;border-collapse:collapse;margin-top:12px;font-size:13px;
+}
+.rule-table th{
+  font-family:'Cinzel',serif;font-size:8px;letter-spacing:0.3em;
+  color:var(--gold);text-align:left;padding:8px 12px;
+  border-bottom:1px solid var(--border);text-transform:uppercase;
+}
+.rule-table td{
+  padding:8px 12px;color:var(--muted);
+  border-bottom:1px solid rgba(201,168,76,0.05);
+}
+.rule-table tr:last-child td{border-bottom:none;}
+
+/* ── NOTES ── */
+.notes-grid{display:flex;flex-direction:column;gap:2px;}
+.note-item {
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:28px 36px;
+  display:flex;gap:20px;align-items:flex-start;
+}
+.note-icon{font-size:18px;flex-shrink:0;margin-top:2px;}
+.note-body h4{font-size:15px;font-weight:500;color:var(--gold-pale);margin-bottom:6px;letter-spacing:0.05em;}
+.note-body p{font-size:14px;color:var(--muted);line-height:1.9;letter-spacing:0.03em;}
+
+/* ── ENTRY CTA ── */
+.entry-section {
+  background:linear-gradient(135deg,rgba(201,168,76,0.07),transparent);
+  border:1px solid var(--border);
+  padding:80px 48px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.entry-section::before {
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(201,168,76,0.06),transparent);
+}
+.entry-eyebrow{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.6em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:20px;position:relative;}
+.entry-title{font-family:'Shippori Mincho',serif;font-size:clamp(28px,5vw,44px);font-weight:700;margin-bottom:12px;position:relative;
+  background:linear-gradient(135deg,var(--gold-bright),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.entry-sub{font-size:14px;color:var(--muted);letter-spacing:0.15em;margin-bottom:40px;position:relative;}
+.entry-condition {
+  display:inline-block;
+  border:1px solid var(--border-bright);
+  padding:14px 32px;
+  font-family:'EB Garamond',serif;
+  font-size:16px;color:var(--gold-pale);
+  letter-spacing:0.15em;
+  margin-bottom:40px;position:relative;
+}
+.entry-fee {
+  font-family:'EB Garamond',serif;
+  font-size:clamp(36px,6vw,54px);
+  color:var(--gold-bright);
+  font-variant-numeric:lining-nums;
+  display:block;margin-bottom:48px;position:relative;
+  line-height:1.1;
+}
+.entry-fee-tax {
+  font-size:0.28em;
+  color:var(--muted);
+  letter-spacing:0.2em;
+  vertical-align:middle;
+  margin-left:8px;
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:300;
+}
+.entry-fee-note{display:none;}
+.btn-entry {
+  display:inline-block;
+  padding:18px 64px;
+  background:linear-gradient(135deg,var(--gold-bright),var(--gold));
+  color:var(--black);
+  font-family:'Cinzel',serif;
+  font-size:12px;letter-spacing:0.4em;
+  text-transform:uppercase;
+  text-decoration:none;
+  font-weight:700;
+  transition:all .3s;
+  position:relative;
+}
+.btn-entry:hover{
+  background:linear-gradient(135deg,var(--gold-pale),var(--gold-bright));
+  box-shadow:0 8px 40px rgba(201,168,76,0.35);
+}
+.entry-line-block {
+  margin-top:32px;position:relative;
+  display:flex;align-items:center;justify-content:center;gap:0;
+}
+.line-btn {
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 32px;
+  background:#06C755;
+  color:#fff;
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:14px;font-weight:500;
+  text-decoration:none;letter-spacing:0.05em;
+  margin-top:16px;
+  transition:all .3s;
+}
+.line-btn:hover{background:#05b04b;}
+.entry-footnote{font-size:12px;color:var(--muted);margin-top:24px;letter-spacing:0.1em;line-height:2;position:relative;}
+
+/* ── FOOTER ── */
+footer {
+  border-top:1px solid var(--border);
+  padding:48px 24px;
+  text-align:center;
+}
+.footer-logo{font-family:'Cinzel',serif;font-size:28px;font-weight:700;color:var(--gold-bright);letter-spacing:0.2em;display:block;margin-bottom:8px;}
+.footer-tagline{font-size:11px;letter-spacing:0.5em;color:var(--muted);text-transform:uppercase;font-family:'EB Garamond',serif;margin-bottom:24px;}
+.footer-note{font-size:11px;color:rgba(232,224,208,0.35);line-height:2;letter-spacing:0.05em;}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .overview-grid,.ikawa-wrap,.benefits-wrap,.rules-grid{grid-template-columns:1fr;}
+  .tiers-grid{grid-template-columns:1fr 1fr;}
+  .podium{grid-template-columns:1fr;}
+  .highlights-grid{grid-template-columns:1fr;}
+  .play-conditions{grid-template-columns:1fr 1fr;row-gap:16px;}
+  nav{padding:16px 20px;}
+  .nav-right{display:none;}
+  .ikawa-photo-col{min-height:320px;}
+  .ikawa-info-col{padding:36px 28px;}
+  .prize-rank-item{padding:20px 28px;}
+  .prize-rank-item.champion{padding:28px 28px;}
+  .pr-amount{font-size:40px;}
+  .champion .pr-amount{font-size:52px;}
+  .deposit-bar{flex-direction:column;gap:2px;}
+  .dep-sep{width:100%;height:1px;}
+  .dep-note{text-align:center;width:100%;}
+  .ov-card{padding:32px 24px;}
+  .lottery-grid{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .tiers-grid{grid-template-columns:1fr;}
+  .hero-meta{gap:12px;flex-direction:column;}
+  .meta-sep{display:none;}
+  .st-time{font-size:18px;}
+  .section-wrap{padding:56px 16px;}
+  .hero{padding:100px 16px 64px;}
+  .hero-tags{flex-direction:column;align-items:center;gap:8px;}
+  .hero-prize-block{padding:20px 32px;}
+  .hero-copy-main{font-size:16px;}
+  .hero-copy-sub{font-size:13px;}
+  .prize-total-banner{padding:20px 24px;}
+  .prize-rank-item{padding:16px 20px;flex-direction:column;align-items:flex-start;gap:8px;}
+  .pr-right{width:100%;}
+  .pr-amount{font-size:36px;}
+  .champion .pr-amount{font-size:44px;}
+  .ikawa-info-col{padding:28px 20px;}
+  .ikawa-headline{font-size:20px;}
+  .ikawa-features{gap:8px;}
+  .schedule-timeline{padding:0;}
+  .st-item{grid-template-columns:80px 1px 1fr;gap:0 16px;}
+  .st-title{font-size:14px;}
+  .rule-card{padding:28px 20px;}
+  .ov-card{padding:28px 20px;}
+  .section-head{margin-bottom:40px;}
+  .tier-card{padding:28px 20px;}
+  .tier-card.recommended{padding-top:44px;}
+  .note-item{padding:20px 20px;}
+  .entry-section{padding:48px 20px;}
+  .btn-entry{padding:16px 36px;font-size:11px;}
+  .benefit-item{padding:28px 20px;}
+  .podium-item{padding:24px 16px;}
+  .sh-title{font-size:26px;}
+  footer{padding:40px 16px;}
+  .hero-title .line2{font-size:0.65em;}
+  .deposit-bar{flex-direction:column;}
+  .dep-item{width:100%;}
+  .scroll-cue{display:none;}
+}
+/* UTAGEアニメーション無効化（常時表示） */
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+.scroll-cue {
+  display: none !important;
+}
+    </style>
+    </head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PS46CR8&gtm_auth=TlyKPBV1RjVP7cgaT4mk7g&gtm_preview=env-1&gtm_cookies_win=x"
+                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH8KJJXR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	 <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSB4SG4B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N56HMFR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="body">
+    <div id="main" v-bind:class="[pagePcWidth, borderType, pageBackgroundImageClasses]" v-bind:style="pageBackgroundStyles">
+        <elements-component v-bind:data='{"page":{"background_color":null,"background_image_src":null,"background_image_style":null},"elements":[{"id":947947161,"is_popup":0,"type":"section","sid":"","children":[{"id":947947162,"is_popup":0,"type":"row","sid":"","children":[{"id":947947163,"is_popup":0,"type":"col","sid":"","children":[{"id":947947164,"is_popup":0,"type":"html","text":"\u003C!DOCTYPE html\u003E\n\u003Chtml lang=\u0022ja\u0022\u003E\n\u003Chead\u003E\n\u003Cmeta charset=\u0022UTF-8\u0022\u003E\n\u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0\u0022\u003E\n\u003Ctitle\u003EN9 \u30d0\u30ab\u30e9\u30c8\u30fc\u30ca\u30e1\u30f3\u30c8 2026\u003C\/title\u003E\n\u003Clink href=\u0022https:\/\/fonts.googleapis.com\/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400\u0026family=Noto+Sans+JP:wght@300;400;500;700\u0026family=Shippori+Mincho:wght@400;500;600;700\u0026family=Cinzel:wght@400;600;700\u0026display=swap\u0022 rel=\u0022stylesheet\u0022\u003E\n\u003Cstyle\u003E\n\n:root {\n  --gold: #C9A84C;\n  --gold-bright: #E8C97A;\n  --gold-pale: #F5EAC8;\n  --gold-dim: rgba(201,168,76,0.15);\n  --black: #080706;\n  --dark: #0E0C0A;\n  --card: #131109;\n  --card2: #181510;\n  --border: rgba(201,168,76,0.2);\n  --border-bright: rgba(201,168,76,0.5);\n  --text: #EDE7D8;\n  --muted: rgba(232,224,208,0.72);\n  --hex: rgba(201,168,76,0.04);\n}\n\n*{margin:0;padding:0;box-sizing:border-box;}\nhtml{scroll-behavior:smooth;}\n\nbody {\n  background: var(--black);\n  color: var(--text);\n  font-family: \u0027Noto Sans JP\u0027, sans-serif;\n  overflow-x: hidden;\n}\n\nbody::before {\n  content:\u0027\u0027;\n  position:fixed;\n  inset:0;\n  background-image: radial-gradient(circle at 1px 1px, rgba(201,168,76,0.03) 1px, transparent 0);\n  background-size: 32px 32px;\n  pointer-events:none;\n  z-index:0;\n}\n\nnav {\n  position:fixed;\n  top:0;left:0;right:0;\n  z-index:100;\n  padding:16px 40px;\n  display:flex;\n  justify-content:space-between;\n  align-items:center;\n  background:linear-gradient(180deg,rgba(8,7,6,0.95) 0%,transparent 100%);\n  backdrop-filter:blur(4px);\n}\n.nav-logo {\n  font-family:\u0027Cinzel\u0027,serif;\n  font-size:18px;\n  font-weight:700;\n  color:var(--gold-bright);\n  letter-spacing:0.15em;\n}\n.nav-right {\n  font-size:10px;\n  letter-spacing:0.4em;\n  color:var(--muted);\n  font-family:\u0027EB Garamond\u0027,serif;\n  text-transform:uppercase;\n}\n\n.hero {\n  min-height:100vh;\n  display:flex;\n  flex-direction:column;\n  align-items:center;\n  justify-content:center;\n  position:relative;\n  overflow:hidden;\n  padding:120px 24px 80px;\n  text-align:center;\n}\n.hero-bg {\n  position:absolute;inset:0;\n  background:\n    radial-gradient(ellipse 100% 70% at 50% 30%, rgba(201,168,76,0.07) 0%, transparent 65%),\n    radial-gradient(ellipse 50% 50% at 80% 80%, rgba(201,168,76,0.03) 0%, transparent 60%),\n    linear-gradient(160deg, #0E0C08 0%, #080706 40%, #0C0A06 100%);\n}\n.hero-accent {\n  position:absolute;top:0;right:0;\n  width:1px;height:60%;\n  background:linear-gradient(180deg,transparent,var(--gold),transparent);\n  opacity:0.3;\n}\n.hero-accent2 {\n  position:absolute;bottom:0;left:0;\n  width:60%;height:1px;\n  background:linear-gradient(90deg,transparent,var(--gold),transparent);\n  opacity:0.2;\n}\n.hero-eyebrow {\n  font-family:\u0027Cinzel\u0027,serif;\n  font-size:10px;\n  letter-spacing:0.55em;\n  color:var(--gold);\n  text-transform:uppercase;\n  margin-bottom:32px;\n  animation:fadeUp .8s ease both;\n  position:relative;\n}\n.hero-event-name {\n  font-family:\u0027Cinzel\u0027,serif;\n  font-size:clamp(13px,2.5vw,18px);\n  letter-spacing:0.4em;\n  color:var(--gold-bright);\n  font-weight:400;\n  margin-bottom:16px;\n  animation:fadeUp .8s .1s ease both;\n  opacity:0;\n  position:relative;\n}\n.hero-title {\n  font-family:\u0027Shippori Mincho\u0027,serif;\n  font-size:clamp(56px,12vw,120px);\n  font-weight:700;\n  line-height:1.3;\n  padding-bottom:8px;\n  letter-spacing:-0.01em;\n  margin-bottom:24px;\n  position:relative;\n  animation:fadeUp .9s .2s ease both;\n  opacity:0;\n  overflow:visible;\n}\n.hero-title .line1 {\n  display:block;\n  background:linear-gradient(135deg,#F2E4C0 0%,#C9A84C 30%,#E8C97A 60%,#C9A84C 100%);\n  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;\n}\n.hero-title .line2 {\n  display:block;\n  background:linear-gradient(135deg,#C9A84C 0%,#F2E4C0 40%,#C9A84C 80%);\n  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;\n  font-size:0.72em;\n  letter-spacing:0.05em;\n  margin-top:8px;\n}\n.hero-main-copy {\n  margin:20px 0 8px;\n  text-align:center;\n  animation:fadeUp .85s .28s ease both;\n  opacity:0;\n  position:relative;\n}\n.hero-copy-main {\n  font-family:\u0027Shippori Mincho\u0027,serif;\n  font-size:clamp(18px,3.5vw,28px);\n  font-weight:600;\n  color:var(--text);\n  letter-spacing:0.08em;\n  line-height:1.5;\n  margin-bottom:8px;\n}\n.hero-copy-sub {\n  font-family:\u0027Shippori Mincho\u0027,serif;\n  font-size:clamp(13px,2vw,17px);\n  font-weight:400;\n  color:var(--gold);\n  letter-spacing:0.15em;\n  font-style:italic;\n}\n.hero-divider {\n  display:flex;align-items:center;justify-content:center;gap:16px;\n  margin:28px 0;\n  animation:fadeUp .8s .35s ease both;\n  opacity:0;\n  position:relative;\n}\n.hd-line{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}\n.hd-line.r{background:linear-gradient(90deg,var(--gold),transparent);}\n.hd-crown{font-size:16px;color:var(--gold);}\n.hero-meta {\n  display:flex;align-items:center;justify-content:center;\n  gap:32px;flex-wrap:wrap;\n  margin-bottom:40px;\n  animation:fadeUp .8s .45s ease both;\n  opacity:0;\n  position:relative;\n}\n.meta-item {display:flex;flex-direction:column;align-items:center;gap:4px;}\n.meta-label {font-size:9px;letter-spacing:0.5em;color:var(--muted);text-transform:uppercase;font-family:\u0027EB Garamond\u0027,serif;}\n.meta-value {font-family:\u0027EB Garamond\u0027,serif;font-size:18px;color:var(--gold-bright);font-variant-numeric:lining-nums;letter-spacing:0.05em;}\n.meta-sep {width:1px;height:36px;background:var(--border);}\n.hero-tags {\n  display:flex;gap:12px;justify-content:center;flex-wrap:wrap;\n  margin-bottom:48px;\n  animation:fadeUp .8s .55s ease both;\n  opacity:0;\n  position:relative;\n}\n.hero-tag {\n  border:1px solid var(--border-bright);\n  padding:9px 26px;\n  font-size:13px;\n  letter-spacing:0.2em;\n  color:var(--gold-pale);\n  font-family:\u0027EB Garamond\u0027,serif;\n}\n.hero-tag.featured {background:var(--gold-dim);border-color:var(--gold);}\n.hero-prize-block {\n  border:1px solid var(--border);\n  padding:20px 48px;\n  position:relative;\n  animation:fadeUp .8s .65s ease both;\n  opacity:0;\n  display:inline-block;\n  margin-bottom:80px;\n}\n.hero-prize-block::before,.hero-prize-block::after {content:\u0027\u25c6\u0027;position:absolute;color:var(--gold);font-size:7px;}\n.hero-prize-block::before{top:-4px;left:50%;transform:translateX(-50%);}\n.hero-prize-block::after{bottom:-4px;left:50%;transform:translateX(-50%);}\n.hpb-label {font-size:9px;letter-spacing:0.5em;color:var(--gold);text-transform:uppercase;font-family:\u0027Cinzel\u0027,serif;display:block;margin-bottom:6px;}\n.hpb-amount {font-family:\u0027EB Garamond\u0027,serif;font-size:clamp(40px,8vw,64px);font-weight:500;color:var(--gold-bright);font-variant-numeric:lining-nums;line-height:1.1;}\n.hpb-unit{font-size:0.45em;letter-spacing:0.1em;}\n.scroll-cue {\n  position:absolute;bottom:24px;left:50%;transform:translateX(-50%);\n  display:flex;flex-direction:column;align-items:center;gap:8px;\n  animation:fadeIn 1s 1.5s ease both;opacity:0;\n  pointer-events:none;\n}\n.scroll-cue span{font-size:8px;letter-spacing:0.5em;color:var(--muted);font-family:\u0027EB Garamond\u0027,serif;text-transform:uppercase;}\n.scroll-bar{width:1px;height:40px;background:linear-gradient(180deg,var(--gold),transparent);animation:scrollAnim 2s ease-in-out infinite;}\n@keyframes scrollAnim{0%,100%{opacity:.3;transform:scaleY(1);}50%{opacity:1;transform:scaleY(1.15);}}\n\n.section-wrap {max-width:1120px;margin:0 auto;padding:100px 24px;position:relative;z-index:1;}\n.full-divider {width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);}\n\n.section-head {margin-bottom:64px;text-align:center;}\n.sh-eyebrow {font-family:\u0027Cinzel\u0027,serif;font-size:10px;letter-spacing:0.6em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:14px;}\n.sh-title {font-family:\u0027Shippori Mincho\u0027,serif;font-size:clamp(28px,5vw,44px);font-weight:600;background:linear-gradient(135deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.3;}\n.sh-sub {font-size:14px;color:var(--muted);letter-spacing:0.15em;margin-top:10px;font-family:\u0027EB Garamond\u0027,serif;}\n.sh-ornament {display:flex;align-items:center;justify-content:center;gap:12px;margin-top:20px;}\n.sh-line{width:48px;height:1px;background:var(--border);}\n.sh-dot{width:4px;height:4px;background:var(--gold);transform:rotate(45deg);}\n\n.overview-grid {display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);}\n.ov-card {background:var(--card);padding:48px 40px;}\n.ov-label {font-family:\u0027Cinzel\u0027,serif;font-size:10px;letter-spacing:0.5em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:14px;}\n.ov-main {font-family:\u0027Shippori Mincho\u0027,serif;font-size:24px;font-weight:600;color:var(--text);margin-bottom:12px;line-height:1.4;}\n.ov-sub {font-size:15px;color:var(--muted);line-height:1.9;letter-spacing:0.05em;}\n.ov-highlight {display:inline-block;padding:5px 14px;border:1px solid var(--border);font-family:\u0027EB Garamond\u0027,serif;font-size:14px;color:var(--gold-pale);letter-spacing:0.15em;margin-top:12px;}\n.highlights-grid {display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:0;}\n.hl-item {display:flex;gap:16px;align-items:flex-start;padding:28px 24px;border:1px solid var(--border);transition:all .3s;}\n.hl-item:hover{border-color:var(--gold);background:var(--gold-dim);}\n.hl-icon {width:40px;height:40px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;background:rgba(201,168,76,0.05);}\n.hl-text h4{font-size:16px;font-weight:500;margin-bottom:5px;color:var(--text);letter-spacing:0.05em;}\n.hl-text p{font-size:13px;color:var(--muted);line-height:1.8;}\n.deposit-bar {display:flex;align-items:center;justify-content:center;gap:0;background:var(--border);margin-top:2px;}\n.dep-item {background:var(--card2);padding:24px 40px;text-align:center;flex-shrink:0;}\n.dep-label{font-size:10px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;font-family:\u0027Cinzel\u0027,serif;display:block;margin-bottom:6px;}\n.dep-value{font-family:\u0027EB Garamond\u0027,serif;font-size:28px;color:var(--gold-bright);font-variant-numeric:lining-nums;}\n.dep-sep{width:1px;height:60px;background:var(--border);flex-shrink:0;align-self:center;}\n.dep-note{background:var(--card2);padding:24px 40px;font-size:14px;color:var(--muted);letter-spacing:0.1em;line-height:1.8;text-align:center;flex:1;}\n\n.ikawa-wrap {display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);}\n.ikawa-photo-col {background:var(--card);position:relative;min-height:480px;overflow:hidden;display:flex;align-items:center;justify-content:center;}\n.ikawa-photo-badge {position:absolute;bottom:24px;left:24px;right:24px;background:linear-gradient(135deg,rgba(8,7,6,0.92),rgba(14,12,8,0.9));border:1px solid var(--border);padding:16px 20px;}\n.ipb-name{font-family:\u0027Shippori Mincho\u0027,serif;font-size:20px;font-weight:600;color:var(--gold-bright);}\n.ipb-title{font-size:12px;color:var(--muted);letter-spacing:0.2em;margin-top:4px;}\n.ikawa-info-col {background:var(--card);padding:56px 48px;display:flex;flex-direction:column;justify-content:center;}\n.ikawa-tag {display:inline-block;background:var(--gold);color:var(--black);font-family:\u0027Cinzel\u0027,serif;font-size:8px;letter-spacing:0.5em;padding:4px 14px;text-transform:uppercase;margin-bottom:20px;font-weight:700;}\n.ikawa-headline {font-family:\u0027Shippori Mincho\u0027,serif;font-size:clamp(22px,3.5vw,32px);font-weight:700;line-height:1.4;margin-bottom:20px;color:var(--text);}\n.ikawa-desc {font-size:15px;color:var(--muted);line-height:2;letter-spacing:0.05em;margin-bottom:32px;}\n.ikawa-features {display:flex;flex-direction:column;gap:12px;}\n.ikawa-feat {display:flex;align-items:center;gap:12px;padding:12px 16px;border-left:2px solid var(--gold);background:var(--gold-dim);font-size:14px;color:var(--gold-pale);letter-spacing:0.1em;}\n\n.prize-total-banner {border:1px solid var(--border-bright);padding:28px 48px;text-align:center;margin-bottom:40px;background:linear-gradient(135deg,rgba(201,168,76,0.06),transparent);position:relative;}\n.ptb-label{font-family:\u0027Cinzel\u0027,serif;font-size:9px;letter-spacing:0.5em;color:var(--gold);display:block;margin-bottom:8px;}\n.ptb-amount{font-family:\u0027EB Garamond\u0027,serif;font-size:clamp(48px,8vw,72px);color:var(--gold-bright);font-variant-numeric:lining-nums;line-height:1;}\n.ptb-unit{font-size:0.4em;letter-spacing:0.1em;}\n.prize-ranking {display:flex;flex-direction:column;gap:2px;background:var(--border);margin-bottom:16px;}\n.prize-rank-item {background:var(--card);display:flex;align-items:center;justify-content:space-between;padding:28px 48px;transition:all .3s;}\n.prize-rank-item:hover{background:rgba(201,168,76,0.05);}\n.prize-rank-item.champion {background:linear-gradient(135deg,rgba(201,168,76,0.12),var(--card));border-left:3px solid var(--gold);padding:40px 48px;}\n.pr-left {display:flex;align-items:center;gap:24px;}\n.pr-circle {width:52px;height:52px;border:1px solid var(--border-bright);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:\u0027EB Garamond\u0027,serif;font-size:20px;color:var(--gold);font-variant-numeric:lining-nums;flex-shrink:0;}\n.pr-circle.gold {background:var(--gold);color:var(--black);border-color:var(--gold);width:64px;height:64px;font-size:26px;}\n.pr-label {font-family:\u0027Cinzel\u0027,serif;font-size:10px;letter-spacing:0.45em;color:var(--gold);text-transform:uppercase;}\n.pr-right{text-align:right;}\n.pr-amount {font-family:\u0027EB Garamond\u0027,serif;font-size:clamp(36px,5vw,56px);color:var(--gold-bright);font-variant-numeric:lining-nums;line-height:1;}\n.champion .pr-amount{font-size:clamp(48px,7vw,80px);}\n.pr-unit{font-size:0.4em;letter-spacing:0.1em;}\n.pr-note{font-size:12px;color:var(--gold);letter-spacing:0.2em;margin-top:6px;font-family:\u0027EB Garamond\u0027,serif;}\n\n.schedule-timeline {max-width:760px;margin:0 auto;}\n.st-item {display:grid;grid-template-columns:110px 1px 1fr;gap:0 28px;position:relative;}\n.st-time {font-family:\u0027EB Garamond\u0027,serif;font-size:24px;color:var(--gold-bright);font-variant-numeric:lining-nums;text-align:right;padding-top:18px;line-height:1;}\n.st-track {display:flex;flex-direction:column;align-items:center;}\n.st-dot {width:9px;height:9px;background:var(--black);border:1px solid var(--gold);transform:rotate(45deg);margin-top:20px;flex-shrink:0;}\n.st-dot.active{background:var(--gold);}\n.st-line{flex:1;width:1px;background:linear-gradient(180deg,var(--border),transparent);}\n.st-content {padding:14px 0 40px;}\n.st-title{font-size:17px;font-weight:500;letter-spacing:0.05em;margin-bottom:4px;color:var(--text);}\n.st-detail{font-size:14px;color:var(--muted);letter-spacing:0.1em;line-height:1.8;}\n.st-badge {display:inline-block;padding:2px 10px;font-family:\u0027Cinzel\u0027,serif;font-size:7px;letter-spacing:0.4em;text-transform:uppercase;margin-left:10px;vertical-align:middle;}\n.st-badge.main{background:var(--gold);color:var(--black);}\n.st-badge.dinner{background:rgba(201,168,76,0.15);color:var(--gold);border:1px solid var(--border);}\n.st-highlight {margin-top:10px;padding:10px 16px;border-left:2px solid var(--gold);background:var(--gold-dim);font-size:13px;color:var(--gold-pale);line-height:1.8;}\n\n.tiers-grid {display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);}\n.tier-card {background:var(--card);padding:40px 28px;position:relative;overflow:hidden;transition:all .3s;}\n.tier-card:hover{background:rgba(201,168,76,0.05);}\n.tier-card.recommended {background:linear-gradient(160deg,rgba(201,168,76,0.1),var(--card));}\n.tier-card.recommended::before {content:\u0027RECOMMENDED\u0027;position:absolute;top:0;left:0;right:0;background:var(--gold);color:var(--black);font-family:\u0027Cinzel\u0027,serif;font-size:7px;letter-spacing:0.5em;text-align:center;padding:5px;font-weight:700;}\n.tier-card.recommended{padding-top:48px;}\n.tier-dep-label{font-family:\u0027Cinzel\u0027,serif;font-size:9px;letter-spacing:0.4em;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:10px;}\n.tier-amount{font-family:\u0027EB Garamond\u0027,serif;font-size:clamp(28px,3vw,36px);color:var(--gold-bright);font-variant-numeric:lining-nums;line-height:1;margin-bottom:24px;}\n.tier-amount .unit{font-size:0.55em;}\n.tier-benefits{list-style:none;display:flex;flex-direction:column;gap:10px;}\n.tier-benefits li {font-size:13px;color:var(--muted);letter-spacing:0.05em;padding-left:20px;position:relative;line-height:1.7;}\n.tier-benefits li::before{content:\u0027\u2192\u0027;position:absolute;left:0;top:0;color:var(--gold);font-size:12px;line-height:1.7;}\n.tier-plan-name{font-size:9px;letter-spacing:0.3em;color:var(--border-bright);text-align:right;margin-top:20px;font-family:\u0027EB Garamond\u0027,serif;}\n.tier-play-cond {margin-top:20px;border-top:1px solid var(--border);padding-top:16px;}\n.tpc-title {font-family:\u0027Cinzel\u0027,serif;font-size:9px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:10px;}\n.tpc-row {display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(201,168,76,0.07);font-size:12px;}\n.tpc-row:last-child{border-bottom:none;}\n.tpc-label{color:var(--muted);letter-spacing:0.1em;font-family:\u0027EB Garamond\u0027,serif;}\n.tpc-val{color:var(--gold-pale);font-family:\u0027EB Garamond\u0027,serif;font-size:14px;font-variant-numeric:lining-nums;}\n\n.benefits-wrap {display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);margin-bottom:2px;}\n.benefit-item {background:var(--card);padding:40px 36px;display:flex;gap:20px;align-items:flex-start;transition:all .3s;}\n.benefit-item:hover{background:rgba(201,168,76,0.05);}\n.benefit-item.featured{background:linear-gradient(135deg,rgba(201,168,76,0.08),var(--card));border-left:2px solid var(--gold);}\n.bi-icon{width:44px;height:44px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}\n.bi-body h4{font-family:\u0027Shippori Mincho\u0027,serif;font-size:17px;font-weight:600;margin-bottom:6px;color:var(--text);}\n.bi-body p{font-size:14px;color:var(--muted);line-height:1.9;}\n.bi-tag{display:inline-block;padding:2px 8px;background:var(--gold);color:var(--black);font-size:7px;letter-spacing:0.4em;text-transform:uppercase;font-family:\u0027Cinzel\u0027,serif;margin-bottom:8px;font-weight:700;}\n\n.rules-intro {background:var(--card);border:1px solid var(--border);padding:28px 36px;margin-bottom:24px;border-left:3px solid var(--gold);font-size:15px;line-height:2;color:var(--muted);letter-spacing:0.05em;}\n.rules-grid {display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);}\n.rule-card {background:var(--card);padding:40px 36px;}\n.rule-num {font-family:\u0027EB Garamond\u0027,serif;font-size:48px;font-weight:400;color:rgba(201,168,76,0.55);line-height:1;display:block;margin-bottom:12px;font-variant-numeric:lining-nums;}\n.rule-title {font-family:\u0027Shippori Mincho\u0027,serif;font-size:18px;font-weight:600;color:var(--text);margin-bottom:14px;letter-spacing:0.05em;}\n.rule-body {font-size:14px;color:var(--muted);line-height:2;letter-spacing:0.05em;}\n.rule-body strong{color:var(--gold-pale);font-weight:500;}\n.rule-body .highlight-box {margin-top:14px;padding:12px 16px;background:var(--gold-dim);border-left:2px solid var(--gold);font-size:13px;color:var(--gold-pale);}\n.rule-table {width:100%;border-collapse:collapse;margin-top:12px;font-size:13px;}\n.rule-table th{font-family:\u0027Cinzel\u0027,serif;font-size:8px;letter-spacing:0.3em;color:var(--gold);text-align:left;padding:8px 12px;border-bottom:1px solid var(--border);text-transform:uppercase;}\n.rule-table td{padding:8px 12px;color:var(--muted);border-bottom:1px solid rgba(201,168,76,0.05);}\n.rule-table tr:last-child td{border-bottom:none;}\n\n.notes-grid{display:flex;flex-direction:column;gap:2px;}\n.note-item {background:var(--card);border:1px solid var(--border);padding:28px 36px;display:flex;gap:20px;align-items:flex-start;}\n.note-icon{font-size:18px;flex-shrink:0;margin-top:2px;}\n.note-body h4{font-size:15px;font-weight:500;color:var(--gold-pale);margin-bottom:6px;letter-spacing:0.05em;}\n.note-body p{font-size:14px;color:var(--muted);line-height:1.9;letter-spacing:0.03em;}\n\n.entry-section {background:linear-gradient(135deg,rgba(201,168,76,0.07),transparent);border:1px solid var(--border);padding:80px 48px;text-align:center;position:relative;overflow:hidden;}\n.entry-section::before {content:\u0027\u0027;position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(201,168,76,0.06),transparent);}\n.entry-eyebrow{font-family:\u0027Cinzel\u0027,serif;font-size:9px;letter-spacing:0.6em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:20px;position:relative;}\n.entry-title{font-family:\u0027Shippori Mincho\u0027,serif;font-size:clamp(28px,5vw,44px);font-weight:700;margin-bottom:12px;position:relative;background:linear-gradient(135deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}\n.entry-sub{font-size:14px;color:var(--muted);letter-spacing:0.15em;margin-bottom:40px;position:relative;}\n.entry-condition {display:inline-block;border:1px solid var(--border-bright);padding:14px 32px;font-family:\u0027EB Garamond\u0027,serif;font-size:16px;color:var(--gold-pale);letter-spacing:0.15em;margin-bottom:40px;position:relative;}\n.entry-fee {font-family:\u0027EB Garamond\u0027,serif;font-size:clamp(36px,6vw,54px);color:var(--gold-bright);font-variant-numeric:lining-nums;display:block;margin-bottom:48px;position:relative;line-height:1.1;}\n.entry-fee-tax {font-size:0.28em;color:var(--muted);letter-spacing:0.2em;vertical-align:middle;margin-left:8px;font-family:\u0027Noto Sans JP\u0027,sans-serif;font-weight:300;}\n.entry-footnote{font-size:12px;color:var(--muted);margin-top:24px;letter-spacing:0.1em;line-height:2;position:relative;}\n\nfooter {\n  width:100%;\n  padding:60px 24px 48px;\n  text-align:center;\n  border-top:1px solid var(--border);\n  background:linear-gradient(180deg,var(--dark) 0%,var(--black) 100%);\n  position:relative;\n  z-index:1;\n}\n.footer-logo {\n  font-family:\u0027Cinzel\u0027,serif;\n  font-size:22px;\n  font-weight:700;\n  color:var(--gold-bright);\n  letter-spacing:0.2em;\n  display:block;\n  margin-bottom:16px;\n}\n.footer-tagline {\n  font-family:\u0027EB Garamond\u0027,serif;\n  font-size:13px;\n  color:var(--muted);\n  letter-spacing:0.3em;\n  text-transform:uppercase;\n  margin-bottom:20px;\n}\n.footer-note {\n  font-size:11px;\n  color:rgba(232,224,208,0.4);\n  letter-spacing:0.1em;\n  line-height:2;\n}\n\n@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}\n@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}\n.reveal{opacity:1;transform:none;transition:none;}\n\n@media(max-width:900px){\n  .overview-grid,.ikawa-wrap,.benefits-wrap,.rules-grid{grid-template-columns:1fr;}\n  .tiers-grid{grid-template-columns:1fr 1fr;}\n  .highlights-grid{grid-template-columns:1fr;}\n  nav{padding:16px 20px;}\n  .nav-right{display:none;}\n  .ikawa-photo-col{min-height:320px;}\n  .ikawa-info-col{padding:36px 28px;}\n  .prize-rank-item{padding:20px 28px;}\n  .prize-rank-item.champion{padding:28px 28px;}\n  .pr-amount{font-size:40px;}\n  .champion .pr-amount{font-size:52px;}\n  .deposit-bar{flex-direction:column;gap:2px;}\n  .dep-sep{width:100%;height:1px;}\n  .dep-note{text-align:center;width:100%;}\n  .ov-card{padding:32px 24px;}\n}\n@media(max-width:600px){\n  .tiers-grid{grid-template-columns:1fr;}\n  .hero-meta{gap:12px;flex-direction:column;}\n  .meta-sep{display:none;}\n  .st-time{font-size:18px;}\n  .section-wrap{padding:56px 16px;}\n  .hero{padding:100px 16px 64px;}\n  .hero-tags{flex-direction:column;align-items:center;gap:8px;}\n  .hero-prize-block{padding:20px 32px;}\n  .hero-copy-main{font-size:16px;}\n  .hero-copy-sub{font-size:13px;}\n  .prize-total-banner{padding:20px 24px;}\n  .prize-rank-item{padding:16px 20px;flex-direction:column;align-items:flex-start;gap:8px;}\n  .pr-right{width:100%;}\n  .pr-amount{font-size:36px;}\n  .champion .pr-amount{font-size:44px;}\n  .ikawa-info-col{padding:28px 20px;}\n  .ikawa-headline{font-size:20px;}\n  .schedule-timeline{padding:0;}\n  .st-item{grid-template-columns:80px 1px 1fr;gap:0 16px;}\n  .st-title{font-size:14px;}\n  .rule-card{padding:28px 20px;}\n  .ov-card{padding:28px 20px;}\n  .section-head{margin-bottom:40px;}\n  .tier-card{padding:28px 20px;}\n  .tier-card.recommended{padding-top:44px;}\n  .note-item{padding:20px 20px;}\n  .entry-section{padding:48px 20px;}\n  .benefit-item{padding:28px 20px;}\n  .sh-title{font-size:26px;}\n  .deposit-bar{flex-direction:column;}\n  .dep-item{width:100%;}\n  .scroll-cue{display:none;}\n}\n\n\u003C\/style\u003E\n\u003C\/head\u003E\n\u003Cbody\u003E\n\u003C!-- NAV --\u003E\n\u003Cnav\u003E\n  \u003Cdiv class=\u0022nav-logo\u0022\u003EN9\u003C\/div\u003E\n  \u003Cdiv class=\u0022nav-right\u0022\u003EN9 Baccarat Tournament 2026\u003C\/div\u003E\n\u003C\/nav\u003E\n\n\u003C!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 HERO \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 --\u003E\n\u003Csection class=\u0022hero\u0022\u003E\n  \u003Cdiv class=\u0022hero-bg\u0022\u003E\u003C\/div\u003E\n  \u003Cdiv class=\u0022hero-accent\u0022\u003E\u003C\/div\u003E\n  \u003Cdiv class=\u0022hero-accent2\u0022\u003E\u003C\/div\u003E\n\n  \u003Cp class=\u0022hero-eyebrow\u0022\u003EVIP Exclusive Event \u00b7 2026\u003C\/p\u003E\n\n  \u003Cp class=\u0022hero-event-name\u0022\u003EN9 BACCARAT TOURNAMENT\u003C\/p\u003E\n\n  \u003Ch1 class=\u0022hero-title\u0022\u003E\n    \u003Cspan class=\u0022line1\u0022\u003EN9\u30d0\u30ab\u30e9\u003C\/span\u003E\n    \u003Cspan class=\u0022line2\u0022\u003E\u30c8\u30fc\u30ca\u30e1\u30f3\u30c8\u003C\/span\u003E\n  \u003C\/h1\u003E\n\n  \u003Cdiv class=\u0022hero-main-copy\u0022\u003E\n    \u003Cp class=\u0022hero-copy-main\u0022\u003E10\u4e07\u5186\u306e\u6311\u6226\u3002\u512a\u52dd\u8cde\u91d1300\u4e07\u5186\u3002\u003C\/p\u003E\n    \u003Cp class=\u0022hero-copy-sub\u0022\u003E\u52dd\u8005\u306b\u306f\u3001\u3055\u3089\u306a\u308b\u591c\u304c\u5f85\u3063\u3066\u3044\u308b\u3002\u003C\/p\u003E\n  \u003C\/div\u003E\n  \u003Cdiv style=\u0022margin:0 0 8px;animation:fadeUp .85s .32s ease both;opacity:0;position:relative;\u0022\u003E\n    \u003Cspan style=\u0022display:inline-block;font-family:\u0027Noto Sans JP\u0027,sans-serif;font-style:normal;font-size:clamp(11px,1.6vw,13px);font-weight:400;color:var(--gold);letter-spacing:0.14em;border:1px solid rgba(201,168,76,0.35);padding:6px 18px;border-radius:2px;\u0022\u003E\ud83d\udd30 \u30d0\u30ab\u30e9\u521d\u5fc3\u8005\u306e\u65b9\u3082\u5927\u6b53\u8fce\u3000\uff0f\u3000\u5f53\u65e5\u30eb\u30fc\u30eb\u8aac\u660e\u3042\u308a\u003C\/span\u003E\n  \u003C\/div\u003E\n  \u003Cdiv class=\u0022hero-divider\u0022\u003E\n    \u003Cdiv class=\u0022hd-line\u0022\u003E\u003C\/div\u003E\n    \u003Cdiv class=\u0022hd-crown\u0022\u003E\u265b\u003C\/div\u003E\n    \u003Cdiv class=\u0022hd-line r\u0022\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022hero-meta\u0022\u003E\n    \u003Cdiv class=\u0022meta-item\u0022\u003E\n      \u003Cspan class=\u0022meta-label\u0022\u003EDate\u003C\/span\u003E\n      \u003Cspan class=\u0022meta-value\u0022\u003E4\u670818\u65e5\uff08\u571f\uff09\u003C\/span\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022meta-sep\u0022\u003E\u003C\/div\u003E\n    \u003Cdiv class=\u0022meta-item\u0022\u003E\n      \u003Cspan class=\u0022meta-label\u0022\u003EVenue\u003C\/span\u003E\n      \u003Cspan class=\u0022meta-value\u0022\u003E\u30a6\u30a9\u30fc\u30ab\u30fc\u30d2\u30eb\u003C\/span\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022meta-sep\u0022\u003E\u003C\/div\u003E\n    \u003Cdiv class=\u0022meta-item\u0022\u003E\n      \u003Cspan class=\u0022meta-label\u0022\u003ELocation\u003C\/span\u003E\n      \u003Cspan class=\u0022meta-value\u0022\u003E\u97d3\u56fd\u30ab\u30b8\u30ce VIP\u30eb\u30fc\u30e0\u003C\/span\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022hero-tags\u0022\u003E\n    \u003Cdiv class=\u0022hero-tag featured\u0022\u003E10\u4e07\u5186\u306e\u6311\u6226\u003C\/div\u003E\n    \u003Cdiv class=\u0022hero-tag\u0022\u003E\u512a\u52dd\u8cde\u91d1 300\u4e07\u5186\u003C\/div\u003E\n    \u003Cdiv class=\u0022hero-tag\u0022\u003E\u30a6\u30a9\u30fc\u30ab\u30fc\u30d2\u30eb VIP\u30eb\u30fc\u30e0\u9650\u5b9a\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022hero-prize-block\u0022\u003E\n    \u003Cspan class=\u0022hpb-label\u0022\u003ETotal Prize\u003C\/span\u003E\n    \u003Cdiv class=\u0022hpb-amount\u0022\u003E500\u003Cspan class=\u0022hpb-unit\u0022\u003E\u4e07\u5186\u003C\/span\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022scroll-cue\u0022\u003E\n    \u003Cspan\u003EScroll\u003C\/span\u003E\n    \u003Cdiv class=\u0022scroll-bar\u0022\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/section\u003E\n\n\u003Cdiv class=\u0022full-divider\u0022\u003E\u003C\/div\u003E\n\n\u003C!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 OVERVIEW \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 --\u003E\n\u003Cdiv class=\u0022section-wrap reveal\u0022\u003E\n  \u003Cdiv class=\u0022section-head\u0022\u003E\n    \u003Cspan class=\u0022sh-eyebrow\u0022\u003E01 \u2014 Event Overview\u003C\/span\u003E\n    \u003Ch2 class=\u0022sh-title\u0022\u003E\u958b\u50ac\u6982\u8981\u003C\/h2\u003E\n    \u003Cp class=\u0022sh-sub\u0022\u003E4\u670818\u65e5\uff08\u571f\uff09\u97d3\u56fd\u30ab\u30b8\u30ce VIP\u30a8\u30ea\u30a2\u003C\/p\u003E\n    \u003Cdiv class=\u0022sh-ornament\u0022\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-dot\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022overview-grid\u0022\u003E\n    \u003Cdiv class=\u0022ov-card\u0022\u003E\n      \u003Cspan class=\u0022ov-label\u0022\u003EVenue\u003C\/span\u003E\n      \u003Cdiv class=\u0022ov-main\u0022\u003E\u30a6\u30a9\u30fc\u30ab\u30fc\u30d2\u30eb\u003Cbr\u003E\u003Cspan style=\u0022color:var(--gold)\u0022\u003EVIP\u30a8\u30ea\u30a2\u003C\/span\u003E\u003C\/div\u003E\n      \u003Cp class=\u0022ov-sub\u0022\u003E\u9078\u3070\u308c\u3057\u8005\u3060\u3051\u304c\u5165\u5ba4\u3092\u8a31\u3055\u308c\u308b\u3001\u6700\u9ad8\u7d1a\u306eVIP\u30eb\u30fc\u30e0\u3092\u8cb8\u5207\u3067\u958b\u50ac\u3002\u6975\u4e0a\u306e\u7a7a\u9593\u3067\u71b1\u3044\u6226\u3044\u304c\u7e70\u308a\u5e83\u3052\u3089\u308c\u307e\u3059\u3002\u003C\/p\u003E\n      \u003Cspan class=\u0022ov-highlight\u0022\u003E\u97d3\u56fd\u30ab\u30b8\u30ce \/ Walker Hill\u003C\/span\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022ov-card\u0022\u003E\n      \u003Cspan class=\u0022ov-label\u0022\u003EFormat\u003C\/span\u003E\n      \u003Cdiv class=\u0022ov-main\u0022\u003E\u30d0\u30ab\u30e9\u30c8\u30fc\u30ca\u30e1\u30f3\u30c8\u003C\/div\u003E\n      \u003Cp class=\u0022ov-sub\u0022\u003E\u53c2\u52a0\u8005\u5168\u54e1\u304c\u516c\u5e73\u306a\u6761\u4ef6\u3067\u30b9\u30bf\u30fc\u30c8\u3059\u308b\u3001\u5b9f\u529b\u3068\u904b\u304c\u8a66\u3055\u308c\u308b\u30c8\u30fc\u30ca\u30e1\u30f3\u30c8\u5f62\u5f0f\u3002\u003C\/p\u003E\n      \u003Cdiv class=\u0022highlights-grid\u0022 style=\u0022margin-top:24px;\u0022\u003E\n        \u003Cdiv class=\u0022hl-item\u0022\u003E\n          \u003Cdiv class=\u0022hl-icon\u0022\u003E\ud83d\udc51\u003C\/div\u003E\n          \u003Cdiv class=\u0022hl-text\u0022\u003E\n            \u003Ch4\u003E\u4e95\u5ddd\u6c0f \u7279\u5225\u53c2\u6226\u003C\/h4\u003E\n            \u003Cp\u003E\u5f53\u65e5\u306f\u4e95\u5ddd\u3055\u3093\u3082\u5927\u4f1a\u306b\u30d7\u30ec\u30a4\u30e4\u30fc\u3068\u3057\u3066\u53c2\u52a0\u3002\u540c\u3058\u30c6\u30fc\u30d6\u30eb\u3067\u30d7\u30ec\u30a4\u3067\u304d\u308b\u53ef\u80fd\u6027\u3082\u3002\u003C\/p\u003E\n          \u003C\/div\u003E\n        \u003C\/div\u003E\n        \u003Cdiv class=\u0022hl-item\u0022\u003E\n          \u003Cdiv class=\u0022hl-icon\u0022\u003E\u2b50\u003C\/div\u003E\n          \u003Cdiv class=\u0022hl-text\u0022\u003E\n            \u003Ch4\u003ESPECIAL OFFER\u003C\/h4\u003E\n            \u003Cp\u003E\u512a\u52dd\u8cde\u91d1 300\u4e07\u5186\u003Cbr\u003E\u7dcf\u8cde\u91d1 500\u4e07\u5186\u306e\u30d3\u30c3\u30b0\u30c8\u30fc\u30ca\u30e1\u30f3\u30c8\u003C\/p\u003E\n          \u003C\/div\u003E\n        \u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022deposit-bar\u0022 style=\u0022margin-top:2px;\u0022\u003E\n    \u003Cdiv class=\u0022dep-item\u0022\u003E\n      \u003Cspan class=\u0022dep-label\u0022\u003EDeposit\u003C\/span\u003E\n      \u003Cdiv class=\u0022dep-value\u0022\u003E50\u4e07\u5186\u4ee5\u4e0a\u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022dep-sep\u0022\u003E\u003C\/div\u003E\n    \u003Cdiv class=\u0022dep-note\u0022\u003EVIP\u9650\u5b9a\u53c2\u52a0\u6761\u4ef6 \uff0f \u30c7\u30dd\u30b8\u30c3\u30c850\u4e07\u5186\u4ee5\u4e0a\u306e\u304a\u5ba2\u69d8\u306e\u307f\u3054\u53c2\u52a0\u3044\u305f\u3060\u3051\u307e\u3059\u3002\u3000\uff5c\u3000\u6700\u5927\u53c2\u52a0\u4eba\u6570\uff1a\u003Cstrong\u003E42\u540d\u003C\/strong\u003E\uff08\u5148\u7740\u9806\uff09\u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n\n\u003Cdiv class=\u0022full-divider\u0022\u003E\u003C\/div\u003E\n\n\u003C!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 IKAWA \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 --\u003E\n\u003Cdiv class=\u0022section-wrap reveal\u0022 style=\u0022padding-top:100px;padding-bottom:100px;\u0022\u003E\n  \u003Cdiv class=\u0022section-head\u0022\u003E\n    \u003Cspan class=\u0022sh-eyebrow\u0022\u003E02 \u2014 Special Guest\u003C\/span\u003E\n    \u003Ch2 class=\u0022sh-title\u0022\u003E\u4e95\u5ddd\u6c0f \u7279\u5225\u53c2\u6226\u003C\/h2\u003E\n    \u003Cdiv class=\u0022sh-ornament\u0022\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-dot\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022ikawa-wrap\u0022\u003E\n    \u003Cdiv class=\u0022ikawa-photo-col\u0022\u003E\n      \u003C!-- UTAGE: \u4e95\u5ddd\u6c0f\u5199\u771f\u3092\u5dee\u3057\u66ff\u3048\u308b\u5834\u5408\u306fsrc\u5c5e\u6027\u306b\u753b\u50cfURL\u3092\u6307\u5b9a\u3057\u3066\u304f\u3060\u3055\u3044 --\u003E\n      \u003Cimg src=\u0022https:\/\/utagesystem.s3.ap-northeast-1.amazonaws.com\/aEW47CenmRXC\/dxoJF1f1p5TF\/dOLAfQfKFNacEQVgBetbFMM7H2NVhjjUzeN6QBv6.png\u0022 alt=\u0022\u4e95\u5ddd\u6c0f\u3068\u53c2\u52a0\u8005\u0022 style=\u0022width:100%;height:100%;object-fit:cover;object-position:center top;display:block;\u0022\u003E\n      \u003Cdiv class=\u0022ikawa-photo-badge\u0022\u003E\n        \u003Cdiv class=\u0022ipb-name\u0022\u003E\u4e95\u5ddd \u610f\u9ad8 \u6c0f\u003C\/div\u003E\n        \u003Cdiv class=\u0022ipb-title\u0022\u003ESpecial Guest \u00b7 Baccarat Player\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022ikawa-info-col\u0022\u003E\n      \u003Cspan class=\u0022ikawa-tag\u0022\u003ESpecial\u003C\/span\u003E\n      \u003Ch3 class=\u0022ikawa-headline\u0022\u003E\u5f53\u65e5\u306f\u4e95\u5ddd\u3055\u3093\u3082\u003Cbr\u003E\u5927\u4f1a\u306b\u53c2\u6226\u3057\u307e\u3059\u3002\u003C\/h3\u003E\n      \u003Cp class=\u0022ikawa-desc\u0022\u003E\n        \u540c\u3058\u30c6\u30fc\u30d6\u30eb\u3067\u30d7\u30ec\u30a4\u3067\u304d\u308b\u53ef\u80fd\u6027\u3082\u3042\u308b\u3001\u307e\u305f\u3068\u306a\u3044\u30c1\u30e3\u30f3\u30b9\u3067\u3059\u3002\n        \u30d0\u30ab\u30e9\u306e\u4e16\u754c\u3067\u4f1d\u8aac\u7684\u306a\u5b58\u5728\u3068\u3057\u3066\u77e5\u3089\u308c\u308b\u4e95\u5ddd\u6c0f\u3068\u540c\u5353\u3067\u6226\u3048\u308b\u3001\u3053\u306e\u6a5f\u4f1a\u3092\u304a\u898b\u9003\u3057\u306a\u304f\u3002\n      \u003C\/p\u003E\n      \u003Cdiv class=\u0022ikawa-features\u0022\u003E\n        \u003Cdiv class=\u0022ikawa-feat\u0022\u003E\u2660 \u540c\u3058\u30c6\u30fc\u30d6\u30eb\u3067\u30d7\u30ec\u30a4\u3067\u304d\u308b\u53ef\u80fd\u6027\u3042\u308a\u003C\/div\u003E\n        \u003Cdiv class=\u0022ikawa-feat\u0022\u003E\ud83e\udd1d \u7279\u5225\u306a\u51fa\u4f1a\u3044\u3068\u4ea4\u6d41\u306e\u5834\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n\n\u003Cdiv class=\u0022full-divider\u0022\u003E\u003C\/div\u003E\n\n\u003C!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 PRIZE \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 --\u003E\n\u003Cdiv class=\u0022section-wrap reveal\u0022\u003E\n  \u003Cdiv class=\u0022section-head\u0022\u003E\n    \u003Cspan class=\u0022sh-eyebrow\u0022\u003E03 \u2014 Prize Structure\u003C\/span\u003E\n    \u003Ch2 class=\u0022sh-title\u0022\u003E\u8cde\u91d1\u4f53\u7cfb\u003C\/h2\u003E\n    \u003Cdiv class=\u0022sh-ornament\u0022\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-dot\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022prize-total-banner\u0022\u003E\n    \u003Cspan class=\u0022ptb-label\u0022\u003ETotal Prize Pool\u003C\/span\u003E\n    \u003Cdiv class=\u0022ptb-amount\u0022\u003E500\u003Cspan class=\u0022ptb-unit\u0022\u003E\u4e07\u5186\u003C\/span\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022prize-ranking\u0022\u003E\n    \u003Cdiv class=\u0022prize-rank-item champion\u0022\u003E\n      \u003Cdiv class=\u0022pr-left\u0022\u003E\n        \u003Cdiv class=\u0022pr-circle gold\u0022\u003E1\u003C\/div\u003E\n        \u003Cspan class=\u0022pr-label\u0022\u003EChampion\u003C\/span\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\u0022pr-right\u0022\u003E\n        \u003Cdiv class=\u0022pr-amount\u0022\u003E300\u003Cspan class=\u0022pr-unit\u0022\u003E\u4e07\u5186\u003C\/span\u003E\u003C\/div\u003E\n        \u003Cdiv class=\u0022pr-note\u0022\u003E\u512a\u52dd\u8cde\u91d1 \u265b\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022prize-rank-item\u0022\u003E\n      \u003Cdiv class=\u0022pr-left\u0022\u003E\n        \u003Cdiv class=\u0022pr-circle\u0022\u003E2\u003C\/div\u003E\n        \u003Cspan class=\u0022pr-label\u0022\u003E2nd Prize\u003C\/span\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\u0022pr-right\u0022\u003E\n        \u003Cdiv class=\u0022pr-amount\u0022\u003E150\u003Cspan class=\u0022pr-unit\u0022\u003E\u4e07\u5186\u003C\/span\u003E\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022prize-rank-item\u0022\u003E\n      \u003Cdiv class=\u0022pr-left\u0022\u003E\n        \u003Cdiv class=\u0022pr-circle\u0022\u003E3\u003C\/div\u003E\n        \u003Cspan class=\u0022pr-label\u0022\u003E3rd Prize\u003C\/span\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\u0022pr-right\u0022\u003E\n        \u003Cdiv class=\u0022pr-amount\u0022\u003E50\u003Cspan class=\u0022pr-unit\u0022\u003E\u4e07\u5186\u003C\/span\u003E\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n  \u003Cp style=\u0022font-size:11px;color:var(--muted);text-align:center;margin-top:16px;letter-spacing:0.1em;\u0022\u003E\n    \u203b \u4e0a\u4f4d3\u540d\u306e\u307f\u304c\u7372\u5f97\u3067\u304d\u308b\u9ad8\u984d\u8cde\u91d1\u30d0\u30ab\u30e9\u30c8\u30fc\u30ca\u30e1\u30f3\u30c8\n  \u003C\/p\u003E\n\u003C\/div\u003E\n\n\u003Cdiv class=\u0022full-divider\u0022\u003E\u003C\/div\u003E\n\n\u003C!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 RULES \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 --\u003E\n\u003Cdiv class=\u0022section-wrap reveal\u0022\u003E\n  \u003Cdiv class=\u0022section-head\u0022\u003E\n    \u003Cspan class=\u0022sh-eyebrow\u0022\u003E04 \u2014 Tournament Rules\u003C\/span\u003E\n    \u003Ch2 class=\u0022sh-title\u0022\u003E\ud83d\udd30 \u5927\u4f1a\u30eb\u30fc\u30eb\u30ac\u30a4\u30c9\u003C\/h2\u003E\n    \u003Cp class=\u0022sh-sub\u0022\u003E\u521d\u5fc3\u8005\u306e\u65b9\u306b\u3082\u308f\u304b\u308a\u3084\u3059\u304f\u89e3\u8aac\u3057\u307e\u3059\u003C\/p\u003E\n    \u003Cdiv class=\u0022sh-ornament\u0022\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-dot\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022rules-intro\u0022\u003E\n    \u672c\u5927\u4f1a\u306f\u30d0\u30ab\u30e9\u30c8\u30fc\u30ca\u30e1\u30f3\u30c8\u3067\u3059\u3002\u516c\u5e73\u306a\u6761\u4ef6\u306e\u3082\u3068\u3001\u5b9f\u529b\u3068\u904b\u3092\u7af6\u3044\u5408\u3046\u7279\u5225\u306a\u4e00\u591c\u3092\u304a\u697d\u3057\u307f\u304f\u3060\u3055\u3044\u3002\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022rules-grid\u0022\u003E\n    \u003Cdiv class=\u0022rule-card\u0022\u003E\n      \u003Cspan class=\u0022rule-num\u0022\u003E\u2460\u003C\/span\u003E\n      \u003Cdiv class=\u0022rule-title\u0022\u003E\u30b9\u30bf\u30fc\u30c8\u6642\u306e\u6301\u3061\u70b9\u003C\/div\u003E\n      \u003Cdiv class=\u0022rule-body\u0022\u003E\n        \u5168\u54e1 \u003Cstrong\u003E1,000\u4e07\u30a6\u30a9\u30f3\u5206\u306e\u30c1\u30c3\u30d7\u003C\/strong\u003E \u3092\u6301\u3063\u305f\u72b6\u614b\u3067\u30b9\u30bf\u30fc\u30c8\u3057\u307e\u3059\u3002\n        \u53c2\u52a0\u8005\u5168\u54e1\u304c\u540c\u3058\u6761\u4ef6\u304b\u3089\u30b9\u30bf\u30fc\u30c8\u3059\u308b\u305f\u3081\u3001\u5b9f\u529b\u3068\u6226\u7565\u304c\u3082\u306e\u3092\u3044\u3044\u307e\u3059\u3002\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003Cdiv class=\u0022rule-card\u0022\u003E\n      \u003Cspan class=\u0022rule-num\u0022\u003E\u2461\u003C\/span\u003E\n      \u003Cdiv class=\u0022rule-title\u0022\u003E\u30b2\u30fc\u30e0\u306e\u9032\u884c\uff08\u516810\u30b2\u30fc\u30e0\uff09\u003C\/div\u003E\n      \u003Cdiv class=\u0022rule-body\u0022\u003E\n        \u003Cstrong\u003E\ud83d\udd39 \u7df4\u7fd2\uff08\u30d5\u30ea\u30fc\u30b2\u30fc\u30e0\uff093\u56de\u003C\/strong\u003E\u003Cbr\u003E\n        \u6700\u521d\u306e3\u56de\u306f\u8ced\u3051\u305a\u306b\u6d41\u308c\u3084\u7f6b\u7dda\uff08\u5c65\u6b74\uff09\u3092\u898b\u308b\u3053\u3068\u304c\u3067\u304d\u307e\u3059\u3002\u003Cbr\u003E\u003Cbr\u003E\n        \u003Cstrong\u003E\ud83d\udd39 \u672c\u756a\uff08\u672c\u30b2\u30fc\u30e0\uff097\u56de\u003C\/strong\u003E\u003Cbr\u003E\n        \u305d\u306e\u5f8c\u306e7\u56de\u304c\u52dd\u8ca0\uff01\u3053\u306e7\u30b2\u30fc\u30e0\u304c\u7d42\u308f\u3063\u305f\u6642\u70b9\u3067\u3001\u624b\u5143\u306b\u6b8b\u3063\u3066\u3044\u308b\u30c1\u30c3\u30d7\u304c\u4e00\u756a\u591a\u3044\u4eba\u304c\u512a\u52dd\u3067\u3059\u3002\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003Cdiv class=\u0022rule-card\u0022\u003E\n      \u003Cspan class=\u0022rule-num\u0022\u003E\u2462\u003C\/span\u003E\n      \u003Cdiv class=\u0022rule-title\u0022\u003E\u8ced\u3051\u65b9\uff08BET\uff09\u306e\u30eb\u30fc\u30eb\u003C\/div\u003E\n      \u003Cdiv class=\u0022rule-body\u0022\u003E\n        \u672c\u756a\u306e7\u56de\u306f\u300c\u30b9\u30eb\u30fc\uff08\u30eb\u30c3\u30af\uff09\u300d\u304c\u3067\u304d\u307e\u305b\u3093\u3002\u5fc5\u305a \u003Cstrong\u003E\u300c\u30d7\u30ec\u30a4\u30e4\u30fc\u300d\u304b\u300c\u30d0\u30f3\u30ab\u30fc\u300d\u003C\/strong\u003E \u306e\u3069\u3061\u3089\u304b\u306b\u8ced\u3051\u3066\u304f\u3060\u3055\u3044\u3002\u003Cbr\u003E\u003Cbr\u003E\n        \u003Ctable class=\u0022rule-table\u0022\u003E\n          \u003Ctr\u003E\n            \u003Cth\u003E\u7a2e\u5225\u003C\/th\u003E\n            \u003Cth\u003E\u8ced\u3051\u91d1\u306e\u7bc4\u56f2\u003C\/th\u003E\n          \u003C\/tr\u003E\n          \u003Ctr\u003E\n            \u003Ctd\u003E\u30d7\u30ec\u30a4\u30e4\u30fc \/ \u30d0\u30f3\u30ab\u30fc\u003C\/td\u003E\n            \u003Ctd\u003E10\u4e07\u301c100\u4e07\u30a6\u30a9\u30f3\u003C\/td\u003E\n          \u003C\/tr\u003E\n          \u003Ctr\u003E\n            \u003Ctd\u003E\u30bf\u30a4\uff08\u5f15\u304d\u5206\u3051\uff09\u003C\/td\u003E\n            \u003Ctd\u003E\u4e0a\u965010\u4e07\u30a6\u30a9\u30f3\u003C\/td\u003E\n          \u003C\/tr\u003E\n        \u003C\/table\u003E\n        \u003Cdiv class=\u0022highlight-box\u0022\u003E\n          \ud83d\udd25 \u6700\u7d427\u30b2\u30fc\u30e0\u76ee\u306e\u307f\u8ced\u3051\u91d1\u306e\u4e0a\u9650\u304c\u306a\u3057\uff01\u003Cbr\u003E\n          \u6301\u3063\u3066\u3044\u308b\u30c1\u30c3\u30d7\u3092\u3059\u3079\u3066\u8ced\u3051\u308b\u300c\u30aa\u30fc\u30eb\u30a4\u30f3\u300d\u306b\u3088\u308b\u5927\u9006\u8ee2\u304c\u53ef\u80fd\u3067\u3059\u3002\u003Cbr\u003E\n          \u003Cspan style=\u0022font-size:0.9em;opacity:0.85;\u0022\u003E\u203b \u30bf\u30a4\u306f\u6700\u7d42\u30b2\u30fc\u30e0\u3082\u4e0a\u965010\u4e07KRW\u307e\u3067\u003C\/span\u003E\u003Cbr\u003E\u003Cbr\u003E\n          \ud83c\udccf \u003Cstrong\u003E\u30b7\u30fc\u30af\u30ec\u30c3\u30c8\u30ab\u30fc\u30c9\u4f7f\u7528\u53ef\u003C\/strong\u003E\u003Cbr\u003E\n          \u6700\u7d42\u30b2\u30fc\u30e0\u306e\u307f\u3001\u81ea\u5206\u306e\u30d9\u30c3\u30c8\u5148\u3068\u91d1\u984d\u3092\u4ed6\u306e\u53c2\u52a0\u8005\u306b\u77e5\u3089\u308c\u308b\u3053\u3068\u306a\u304f\u3001\u30ab\u30fc\u30c9\u306b\u8a18\u5165\u3057\u3066\u8ced\u3051\u308b\u3053\u3068\u304c\u3067\u304d\u307e\u3059\u3002\u6700\u5f8c\u306e\u4e00\u624b\u3067\u5927\u9006\u8ee2\u3092\u72d9\u3063\u3066\u304f\u3060\u3055\u3044\u3002\n        \u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003Cdiv class=\u0022rule-card\u0022\u003E\n      \u003Cspan class=\u0022rule-num\u0022\u003E\u2463\u003C\/span\u003E\n      \u003Cdiv class=\u0022rule-title\u0022\u003E\u914d\u5f53\uff08\u52dd\u3061\u5206\uff09\u306b\u3064\u3044\u3066\u003C\/div\u003E\n      \u003Cdiv class=\u0022rule-body\u0022\u003E\n        \u003Cstrong\u003E\u2705 \u624b\u6570\u6599\uff08\u30b3\u30df\u30c3\u30b7\u30e7\u30f3\uff09\u4e00\u5207\u306a\u3057\u003C\/strong\u003E\u003Cbr\u003E\n        \u901a\u5e38\u30ab\u30b8\u30ce\u3067\u5f15\u304b\u308c\u308b\u624b\u6570\u6599\u306f\u4e00\u5207\u3042\u308a\u307e\u305b\u3093\u3002\u003Cbr\u003E\u003Cbr\u003E\n        \u003Cstrong\u003E\u2705 \u30d0\u30f3\u30ab\u30fc6\u30eb\u30fc\u30eb\u306a\u3057\u003C\/strong\u003E\u003Cbr\u003E\n        \u300c\u30d0\u30f3\u30ab\u30fc\u304c6\u3067\u52dd\u3063\u305f\u5834\u5408\u306f\u914d\u5f53\u304c\u534a\u5206\u306b\u306a\u308b\u300d\u3068\u3044\u3046\u30eb\u30fc\u30eb\u3082\u3042\u308a\u307e\u305b\u3093\u3002\u003Cbr\u003E\u003Cbr\u003E\n        \u003Cstrong\u003E\u2705 \u30b7\u30f3\u30d7\u30eb\u306a\u8a08\u7b97\u003C\/strong\u003E\u003Cbr\u003E\n        \u52dd\u3066\u3070\u5fc5\u305a\u300c\u8ced\u3051\u305f\u984d\u3068\u540c\u3058\u984d\u300d\u304c\u305d\u306e\u307e\u307e\u623b\u3063\u3066\u304d\u307e\u3059\u3002\u003Cbr\u003E\u003Cbr\u003E\n        \u003Cdiv class=\u0022highlight-box\u0022\u003E\n          \u203b \u30aa\u30d7\u30b7\u30e7\u30f3\u306e\u8ced\u3051\u306f\u300c\u30bf\u30a4\uff08\u5f15\u304d\u5206\u3051\uff09\u300d\u306e\u307f\u3067\u3059\u3002\u003Cbr\u003E\uff08\u30e9\u30c3\u30ad\u30fc6\u306f\u3042\u308a\u307e\u305b\u3093\uff09\n        \u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003Cdiv class=\u0022rule-card\u0022 style=\u0022grid-column:1\/-1;\u0022\u003E\n      \u003Cspan class=\u0022rule-num\u0022\u003E\u2464\u003C\/span\u003E\n      \u003Cdiv class=\u0022rule-title\u0022\u003E\u5927\u4f1a\u7d42\u4e86\u5f8c\u306e\u6d41\u308c\u003C\/div\u003E\n      \u003Cdiv class=\u0022rule-body\u0022\u003E\n        \u3059\u3079\u3066\u306e\u30b2\u30fc\u30e0\u304c\u7d42\u308f\u3063\u305f\u5f8c\u306b\u003Cstrong\u003E\u9806\u4f4d\u767a\u8868\u003C\/strong\u003E\u3092\u884c\u3044\u307e\u3059\u3002\n        \u898b\u4e8b\u5165\u8cde\u3055\u308c\u305f\u65b9\u306f\u3001\u3054\u672c\u4eba\u69d8\u78ba\u8a8d\u304c\u3042\u308a\u307e\u3059\u306e\u3067\u3001\u305d\u306e\u307e\u307e\u304a\u5e2d\u3067\u304a\u5f85\u3061\u304f\u3060\u3055\u3044\u3002\u003Cbr\u003E\u003Cbr\u003E\n        \u5165\u8cde\u3055\u308c\u306a\u304b\u3063\u305f\u65b9\u3082\u3001\u305c\u3072\u305d\u306e\u307e\u307e\u304a\u5e2d\u3067\u304a\u5f85\u3061\u304f\u3060\u3055\u3044\u3002\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n\n\u003Cdiv class=\u0022full-divider\u0022\u003E\u003C\/div\u003E\n\n\u003C!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 SCHEDULE \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 --\u003E\n\u003Cdiv class=\u0022section-wrap reveal\u0022\u003E\n  \u003Cdiv class=\u0022section-head\u0022\u003E\n    \u003Cspan class=\u0022sh-eyebrow\u0022\u003E05 \u2014 Schedule\u003C\/span\u003E\n    \u003Ch2 class=\u0022sh-title\u0022\u003E\u5f53\u65e5\u30bf\u30a4\u30e0\u30c6\u30fc\u30d6\u30eb\u003C\/h2\u003E\n    \u003Cp class=\u0022sh-sub\u0022\u003E2026\u5e744\u670818\u65e5\uff08\u571f\uff09\u30b9\u30b1\u30b8\u30e5\u30fc\u30eb\u003C\/p\u003E\n    \u003Cdiv class=\u0022sh-ornament\u0022\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-dot\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022schedule-timeline\u0022\u003E\n    \u003Cdiv class=\u0022st-item\u0022\u003E\n      \u003Cdiv class=\u0022st-time\u0022\u003E19:35\u301c\u003C\/div\u003E\n      \u003Cdiv class=\u0022st-track\u0022\u003E\u003Cdiv class=\u0022st-dot\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022st-line\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n      \u003Cdiv class=\u0022st-content\u0022\u003E\n        \u003Cdiv class=\u0022st-title\u0022\u003E\u53c2\u52a0\u8005\u5165\u5834\u30fb\u53d7\u4ed8\u958b\u59cb\u003C\/div\u003E\n        \u003Cdiv class=\u0022st-detail\u0022\u003E\u30a6\u30a9\u30fc\u30ab\u30fc\u30d2\u30eb \u97d3\u56fd\u30ab\u30b8\u30ce VIP\u30eb\u30fc\u30e0\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003Cdiv class=\u0022st-item\u0022\u003E\n      \u003Cdiv class=\u0022st-time\u0022\u003E19:45\u301c\u003C\/div\u003E\n      \u003Cdiv class=\u0022st-track\u0022\u003E\u003Cdiv class=\u0022st-dot active\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022st-line\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n      \u003Cdiv class=\u0022st-content\u0022\u003E\n        \u003Cdiv class=\u0022st-title\u0022\u003E\u30d0\u30ab\u30e9\u30c8\u30fc\u30ca\u30e1\u30f3\u30c8\u958b\u50ac \u003Cspan class=\u0022st-badge main\u0022\u003EMAIN\u003C\/span\u003E\u003C\/div\u003E\n        \u003Cdiv class=\u0022st-detail\u0022\u003E\u30a6\u30a9\u30fc\u30ab\u30fc\u30d2\u30eb \u97d3\u56fd\u30ab\u30b8\u30ce VIP\u30eb\u30fc\u30e0\u003C\/div\u003E\n        \u003Cdiv class=\u0022st-highlight\u0022\u003E\ud83d\udc51 \u4e95\u5ddd\u3055\u3093\u3082\u5927\u4f1a\u306b\u53c2\u52a0\uff08\u540c\u5353\u306e\u53ef\u80fd\u6027\u3042\u308a\uff09\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003Cdiv class=\u0022st-item\u0022\u003E\n      \u003Cdiv class=\u0022st-time\u0022\u003E20:10\u301c\u003C\/div\u003E\n      \u003Cdiv class=\u0022st-track\u0022\u003E\u003Cdiv class=\u0022st-dot active\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n      \u003Cdiv class=\u0022st-content\u0022\u003E\n        \u003Cdiv class=\u0022st-title\u0022\u003E\u5927\u4f1a\u7d42\u4e86 \u00b7 \u6388\u8cde\u5f0f\u003C\/div\u003E\n        \u003Cdiv class=\u0022st-detail\u0022\u003E\u512a\u52dd\u8005\u304a\u3088\u3073\u5165\u8cde\u8005\u306e\u8868\u5f70 \u00b7 \u8cde\u91d1\u6388\u4e0e\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n  \u003C\/div\u003E\n\u003C\/div\u003E\n\n\u003Cdiv class=\u0022full-divider\u0022\u003E\u003C\/div\u003E\n\n\u003C!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 ENTRY \u0026 BENEFITS \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 --\u003E\n\u003Cdiv class=\u0022section-wrap reveal\u0022\u003E\n  \u003Cdiv class=\u0022section-head\u0022\u003E\n    \u003Cspan class=\u0022sh-eyebrow\u0022\u003E06 \u2014 Entry \u0026 Benefits\u003C\/span\u003E\n    \u003Ch2 class=\u0022sh-title\u0022\u003E\u53c2\u52a0\u6761\u4ef6 \u00b7 \u30c7\u30dd\u30b8\u30c3\u30c8\u5225\u7279\u5178\u003C\/h2\u003E\n    \u003Cdiv class=\u0022sh-ornament\u0022\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-dot\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022tiers-grid\u0022\u003E\n    \u003Cdiv class=\u0022tier-card\u0022\u003E\n      \u003Cspan class=\u0022tier-dep-label\u0022\u003EDeposit\u003C\/span\u003E\n      \u003Cdiv class=\u0022tier-amount\u0022\u003E50\u003Cspan class=\u0022unit\u0022\u003E\u4e07\u5186\u301c\u003C\/span\u003E\u003C\/div\u003E\n      \u003Cul class=\u0022tier-benefits\u0022\u003E\n        \u003Cli\u003E\u30db\u30c6\u30eb 1\u6cca\u7121\u6599\u003C\/li\u003E\n      \u003C\/ul\u003E\n      \u003Cdiv class=\u0022tier-play-cond\u0022\u003E\n        \u003Cdiv class=\u0022tpc-title\u0022\u003E\u30b3\u30f3\u30d7\u6761\u4ef6\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EAvg Bet\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E30\u4e07\u30a6\u30a9\u30f3\u4ee5\u4e0a\u003C\/span\u003E\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EPlay Time\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E3\u6642\u9593\u4ee5\u4e0a\u003C\/span\u003E\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EShooter\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E2\u30b7\u30e5\u30fc\u30bf\u30fc\u4ee5\u4e0a\u003C\/span\u003E\u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\u0022tier-plan-name\u0022\u003EStandard Plan\u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022tier-card\u0022\u003E\n      \u003Cspan class=\u0022tier-dep-label\u0022\u003EDeposit\u003C\/span\u003E\n      \u003Cdiv class=\u0022tier-amount\u0022\u003E100\u003Cspan class=\u0022unit\u0022\u003E\u4e07\u5186\u301c\u003C\/span\u003E\u003C\/div\u003E\n      \u003Cul class=\u0022tier-benefits\u0022\u003E\n        \u003Cli\u003E\u30db\u30c6\u30eb 2\u6cca3\u65e5\u7121\u6599\u003C\/li\u003E\n        \u003Cli\u003E\u822a\u7a7a\u5238\u30ad\u30e3\u30c3\u30b7\u30e5\u30d0\u30c3\u30af\uff08\u6700\u592745,000\u5186\uff09\u003C\/li\u003E\n        \u003Cli\u003E\u7a7a\u6e2f\u9001\u8fce\u4ed8\u304d\u003C\/li\u003E\n      \u003C\/ul\u003E\n      \u003Cdiv class=\u0022tier-play-cond\u0022\u003E\n        \u003Cdiv class=\u0022tpc-title\u0022\u003E\u30b3\u30f3\u30d7\u6761\u4ef6\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EAvg Bet\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E30\u4e07\u30a6\u30a9\u30f3\u4ee5\u4e0a\u003C\/span\u003E\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EPlay Time\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E3\u6642\u9593\u4ee5\u4e0a \u003Cspan style=\u0022font-size:0.85em;color:var(--gold);font-family:\u0027Noto Sans JP\u0027,sans-serif;\u0022\u003E\uff08\u65e5\uff09\u003C\/span\u003E\u003C\/span\u003E\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EShooter\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E2\u30b7\u30e5\u30fc\u30bf\u30fc\u4ee5\u4e0a\u003C\/span\u003E\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022tier-card recommended\u0022\u003E\n      \u003Cspan class=\u0022tier-dep-label\u0022\u003EDeposit\u003C\/span\u003E\n      \u003Cdiv class=\u0022tier-amount\u0022\u003E300\u003Cspan class=\u0022unit\u0022\u003E\u4e07\u5186\u301c\u003C\/span\u003E\u003C\/div\u003E\n      \u003Cul class=\u0022tier-benefits\u0022\u003E\n        \u003Cli\u003E\u30a8\u30b3\u30ce\u30df\u30fc\u30af\u30e9\u30b9\u822a\u7a7a\u5238 \u5168\u984d\u7121\u6599\u003C\/li\u003E\n        \u003Cli\u003E\u30db\u30c6\u30eb 2\u6cca3\u65e5\u7121\u6599\u003C\/li\u003E\n        \u003Cli\u003E\u7a7a\u6e2f\u9001\u8fce\u4ed8\u304d\u003C\/li\u003E\n      \u003C\/ul\u003E\n      \u003Cdiv class=\u0022tier-play-cond\u0022\u003E\n        \u003Cdiv class=\u0022tpc-title\u0022\u003E\u30b3\u30f3\u30d7\u6761\u4ef6\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EMinimum Bet\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E30\u4e07\u30a6\u30a9\u30f3\u4ee5\u4e0a\u003C\/span\u003E\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EPlay Time\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E3\u6642\u9593\u4ee5\u4e0a \u003Cspan style=\u0022font-size:0.85em;color:var(--gold);font-family:\u0027Noto Sans JP\u0027,sans-serif;\u0022\u003E\uff08\u65e5\uff09\u003C\/span\u003E\u003C\/span\u003E\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EShooter\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E2\u30b7\u30e5\u30fc\u30bf\u30fc\u4ee5\u4e0a\u003C\/span\u003E\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022tier-card\u0022\u003E\n      \u003Cspan class=\u0022tier-dep-label\u0022\u003EVIP Premium\u003C\/span\u003E\n      \u003Cdiv class=\u0022tier-amount\u0022\u003E500\u003Cspan class=\u0022unit\u0022\u003E\u4e07\u5186\u301c\u003C\/span\u003E\u003C\/div\u003E\n      \u003Cul class=\u0022tier-benefits\u0022\u003E\n        \u003Cli\u003E\u30d3\u30b8\u30cd\u30b9\u30af\u30e9\u30b9\u822a\u7a7a\u5238\u003C\/li\u003E\n        \u003Cli\u003E\u30db\u30c6\u30eb 2\u6cca3\u65e5\u7121\u6599\u003C\/li\u003E\n        \u003Cli\u003E\u7a7a\u6e2f\u9001\u8fce\u4ed8\u304d\u003C\/li\u003E\n      \u003C\/ul\u003E\n      \u003Cdiv class=\u0022tier-play-cond\u0022\u003E\n        \u003Cdiv class=\u0022tpc-title\u0022\u003E\u30b3\u30f3\u30d7\u6761\u4ef6\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EMinimum Bet\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E30\u4e07\u30a6\u30a9\u30f3\u4ee5\u4e0a\u003C\/span\u003E\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EPlay Time\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E3\u6642\u9593\u4ee5\u4e0a \u003Cspan style=\u0022font-size:0.85em;color:var(--gold);font-family:\u0027Noto Sans JP\u0027,sans-serif;\u0022\u003E\uff08\u65e5\uff09\u003C\/span\u003E\u003C\/span\u003E\u003C\/div\u003E\n        \u003Cdiv class=\u0022tpc-row\u0022\u003E\u003Cspan class=\u0022tpc-label\u0022\u003EShooter\u003C\/span\u003E\u003Cspan class=\u0022tpc-val\u0022\u003E2\u30b7\u30e5\u30fc\u30bf\u30fc\u4ee5\u4e0a\u003C\/span\u003E\u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\u0022tier-plan-name\u0022\u003E\u2666 \u6700\u9ad8\u7d1a\u306e\u5f85\u9047\u3092\u3054\u7528\u610f\u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n  \u003Cp style=\u0022font-size:12px;color:var(--gold);text-align:center;margin-top:16px;letter-spacing:0.1em;\u0022\u003E\n    \u203b \u5927\u4f1a\u9650\u5b9a\u30b3\u30f3\u30d7\u6761\u4ef6\n  \u003C\/p\u003E\n\u003C\/div\u003E\n\n\u003Cdiv class=\u0022full-divider\u0022\u003E\u003C\/div\u003E\n\n\u003C!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 FLOW \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 --\u003E\n\u003Cstyle\u003E\n.flow-list { display:flex; flex-direction:column; gap:0; max-width:800px; margin:0 auto; }\n.flow-item {\n  display:grid;\n  grid-template-columns:160px 1fr;\n  gap:0 40px;\n  position:relative;\n  padding-bottom:48px;\n}\n.flow-item:last-child { padding-bottom:0; }\n.flow-item:not(:last-child)::after {\n  content:\u0027\u0027;\n  position:absolute;\n  left:79px;\n  top:90px;\n  bottom:0;\n  width:1px;\n  background:linear-gradient(180deg,var(--gold),transparent);\n  opacity:0.25;\n}\n.flow-left {\n  display:flex;\n  flex-direction:column;\n  align-items:center;\n  gap:12px;\n  padding-top:4px;\n}\n.flow-num {\n  font-family:\u0027Cinzel\u0027,serif;\n  font-size:11px;\n  letter-spacing:0.5em;\n  color:var(--gold);\n  text-transform:uppercase;\n}\n.flow-icon-circle {\n  width:80px; height:80px;\n  border-radius:50%;\n  border:1px solid var(--border-bright);\n  background:var(--card);\n  display:flex; align-items:center; justify-content:center;\n  font-size:34px;\n  box-shadow:0 0 32px rgba(201,168,76,0.12);\n  flex-shrink:0;\n}\n.flow-right {\n  padding-top:8px;\n}\n.flow-title {\n  font-family:\u0027Shippori Mincho\u0027,serif;\n  font-size:clamp(18px,2.5vw,22px);\n  font-weight:600;\n  color:var(--text);\n  letter-spacing:0.05em;\n  margin-bottom:14px;\n}\n.flow-body {\n  font-size:14px;\n  color:var(--muted);\n  line-height:2;\n  letter-spacing:0.04em;\n}\n.flow-note {\n  display:inline-block;\n  margin-top:12px;\n  font-size:12px;\n  color:var(--gold);\n  letter-spacing:0.06em;\n  line-height:1.8;\n  border-left:2px solid var(--gold);\n  padding-left:12px;\n  opacity:0.9;\n}\n.flow-table {\n  width:100%;\n  border-collapse:collapse;\n  margin-top:14px;\n  font-size:13px;\n}\n.flow-table th {\n  font-family:\u0027Cinzel\u0027,serif;\n  font-size:9px; letter-spacing:0.25em;\n  color:var(--gold);\n  border-bottom:1px solid var(--border);\n  padding:8px 12px;\n  text-align:left;\n  text-transform:uppercase;\n}\n.flow-table td {\n  padding:8px 12px;\n  color:var(--muted);\n  border-bottom:1px solid rgba(201,168,76,0.06);\n  line-height:1.7;\n}\n.flow-table tr:last-child td { border-bottom:none; }\n@media(max-width:600px){\n  .flow-item{ grid-template-columns:1fr; }\n  .flow-left{ flex-direction:row; justify-content:flex-start; padding-bottom:12px; }\n  .flow-item:not(:last-child)::after{ display:none; }\n}\n\u003C\/style\u003E\n\n\u003Cdiv class=\u0022section-wrap reveal\u0022\u003E\n  \u003Cdiv class=\u0022section-head\u0022\u003E\n    \u003Cspan class=\u0022sh-eyebrow\u0022\u003E07 \u2014 Participation Flow\u003C\/span\u003E\n    \u003Ch2 class=\u0022sh-title\u0022\u003E\u53c2\u52a0\u307e\u3067\u306e\u6d41\u308c\u003C\/h2\u003E\n    \u003Cp class=\u0022sh-sub\u0022\u003E\u304a\u7533\u3057\u8fbc\u307f\u304b\u3089\u5f53\u65e5\u307e\u3067\u003C\/p\u003E\n    \u003Cdiv class=\u0022sh-ornament\u0022\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-dot\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022flow-list\u0022\u003E\n\n    \u003C!-- STEP 1 --\u003E\n    \u003Cdiv class=\u0022flow-item\u0022\u003E\n      \u003Cdiv class=\u0022flow-left\u0022\u003E\n        \u003Cspan class=\u0022flow-num\u0022\u003ESTEP 1\u003C\/span\u003E\n        \u003Cdiv class=\u0022flow-icon-circle\u0022\u003E\ud83d\udccb\u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\u0022flow-right\u0022\u003E\n        \u003Cdiv class=\u0022flow-title\u0022\u003E\u304a\u7533\u3057\u8fbc\u307f\u003C\/div\u003E\n        \u003Cdiv class=\u0022flow-body\u0022\u003E\u4e0b\u90e8\u306e\u30a8\u30f3\u30c8\u30ea\u30fc\u30d5\u30a9\u30fc\u30e0\u3088\u308a\u304a\u7533\u3057\u8fbc\u307f\u304f\u3060\u3055\u3044\u3002\u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003C!-- STEP 2 --\u003E\n    \u003Cdiv class=\u0022flow-item\u0022\u003E\n      \u003Cdiv class=\u0022flow-left\u0022\u003E\n        \u003Cspan class=\u0022flow-num\u0022\u003ESTEP 2\u003C\/span\u003E\n        \u003Cdiv class=\u0022flow-icon-circle\u0022\u003E\ud83d\udcac\u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\u0022flow-right\u0022\u003E\n        \u003Cdiv class=\u0022flow-title\u0022\u003E\u3054\u6848\u5185\u30e1\u30c3\u30bb\u30fc\u30b8\u3092\u304a\u9001\u308a\u3057\u307e\u3059\u003C\/div\u003E\n        \u003Cdiv class=\u0022flow-body\u0022\u003E\n          \u304a\u7533\u3057\u8fbc\u307f\u5f8c\u3001\u81ea\u52d5\u8fd4\u4fe1\u30e1\u30c3\u30bb\u30fc\u30b8\u306b\u3066\u3054\u6848\u5185\u3044\u305f\u3057\u307e\u3059\u3002\u003Cbr\u003E\n          \u2460 \u003Cstrong style=\u0022color:var(--text);\u0022\u003E\u30d1\u30b9\u30dd\u30fc\u30c8\u60c5\u5831\u306e\u3054\u63d0\u51fa\u003C\/strong\u003E\uff08\u30db\u30c6\u30eb\u30fb\u30ab\u30b8\u30ce\u624b\u7d9a\u304d\u306b\u5fc5\u8981\uff09\u003Cbr\u003E\n          \u2461 \u003Cstrong style=\u0022color:var(--text);\u0022\u003E\u53c2\u52a0\u8cbb\u306e\u304a\u632f\u8fbc\u307f\u306e\u3054\u6848\u5185\u003C\/strong\u003E\n        \u003C\/div\u003E\n        \u003Cspan class=\u0022flow-note\u0022\u003E\u203b \u73fe\u5730\u3067\u306e\u304a\u652f\u6255\u3044\u3092\u5e0c\u671b\u3055\u308c\u308b\u5834\u5408\u3001\u632f\u8fbc\u306f\u5fc5\u9808\u3067\u306f\u3042\u308a\u307e\u305b\u3093\u3002\u003C\/span\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003C!-- STEP 3 --\u003E\n    \u003Cdiv class=\u0022flow-item\u0022\u003E\n      \u003Cdiv class=\u0022flow-left\u0022\u003E\n        \u003Cspan class=\u0022flow-num\u0022\u003ESTEP 3\u003C\/span\u003E\n        \u003Cdiv class=\u0022flow-icon-circle\u0022\u003E\u2708\ufe0f\u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\u0022flow-right\u0022\u003E\n        \u003Cdiv class=\u0022flow-title\u0022\u003EN9\u306b\u3088\u308b\u3054\u624b\u914d\u003C\/div\u003E\n        \u003Cdiv class=\u0022flow-body\u0022\u003E\u3054\u5229\u7528\u306e\u30b3\u30f3\u30d7\u5185\u5bb9\u306b\u5fdc\u3058\u3066\u3001N9\u62c5\u5f53\u8005\u304c\u3054\u624b\u914d\u3044\u305f\u3057\u307e\u3059\u3002\u003C\/div\u003E\n        \u003Ctable class=\u0022flow-table\u0022\u003E\n          \u003Ctr\u003E\u003Cth\u003E\u30c7\u30dd\u30b8\u30c3\u30c8\u003C\/th\u003E\u003Cth\u003EN9\u304c\u624b\u914d\u3059\u308b\u5185\u5bb9\u003C\/th\u003E\u003C\/tr\u003E\n          \u003Ctr\u003E\u003Ctd\u003E50\u4e07\u5186\u301c\u003C\/td\u003E\u003Ctd\u003E\u30db\u30c6\u30eb 1\u6cca\u003C\/td\u003E\u003C\/tr\u003E\n          \u003Ctr\u003E\u003Ctd\u003E100\u4e07\u5186\u301c\u003C\/td\u003E\u003Ctd\u003E\u30db\u30c6\u30eb 2\u6cca3\u65e5 \uff0b \u822a\u7a7a\u5238\u30ad\u30e3\u30c3\u30b7\u30e5\u30d0\u30c3\u30af \uff0b \u7a7a\u6e2f\u9001\u8fce\u003C\/td\u003E\u003C\/tr\u003E\n          \u003Ctr\u003E\u003Ctd\u003E300\u4e07\u5186\u301c\u003C\/td\u003E\u003Ctd\u003E\u30db\u30c6\u30eb 2\u6cca3\u65e5 \uff0b \u822a\u7a7a\u5238\uff08\u30a8\u30b3\u30ce\u30df\u30fc\u5168\u984d\uff09\uff0b \u7a7a\u6e2f\u9001\u8fce\u003C\/td\u003E\u003C\/tr\u003E\n          \u003Ctr\u003E\u003Ctd\u003E500\u4e07\u5186\u301c\u003C\/td\u003E\u003Ctd\u003E\u30db\u30c6\u30eb 2\u6cca3\u65e5 \uff0b \u822a\u7a7a\u5238\uff08\u30d3\u30b8\u30cd\u30b9\u30af\u30e9\u30b9\uff09\uff0b \u7a7a\u6e2f\u9001\u8fce\u003C\/td\u003E\u003C\/tr\u003E\n        \u003C\/table\u003E\n        \u003Cspan class=\u0022flow-note\u0022\u003E\u203b \u30b3\u30f3\u30d7\u3092\u5229\u7528\u3055\u308c\u306a\u3044\u65b9\u306f\u3001\u6e21\u822a\u30fb\u5bbf\u6cca\u3092\u3054\u81ea\u8eab\u3067\u304a\u624b\u914d\u304f\u3060\u3055\u3044\u3002\u003C\/span\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003C!-- STEP 4 --\u003E\n    \u003Cdiv class=\u0022flow-item\u0022\u003E\n      \u003Cdiv class=\u0022flow-left\u0022\u003E\n        \u003Cspan class=\u0022flow-num\u0022\u003ESTEP 4\u003C\/span\u003E\n        \u003Cdiv class=\u0022flow-icon-circle\u0022\u003E\ud83d\udcf1\u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\u0022flow-right\u0022\u003E\n        \u003Cdiv class=\u0022flow-title\u0022\u003E\u6e21\u822a\u524d\u306e\u4e8b\u524d\u6e96\u5099\uff08\u5fc5\u9808\uff09\u003C\/div\u003E\n        \u003Cdiv class=\u0022flow-body\u0022\u003E\n      \u73fe\u5730\u3067\u306e\u3054\u9023\u7d61\u30fb\u7dca\u6025\u5bfe\u5fdc\u30fb\u5404\u7a2e\u6848\u5185\u306f\u3059\u3079\u3066\u003Cstrong style=\u0022color:var(--gold-pale);\u0022\u003E\u73fe\u5730\u30b5\u30dd\u30fc\u30c8\u5c02\u7528LINE\u003C\/strong\u003E\u3067\u884c\u3044\u307e\u3059\u3002\u003Cbr\u003E\u003Cbr\u003E\n      \u30b9\u30c6\u30c3\u30d73\u306e\u304a\u7533\u3057\u8fbc\u307f\u5b8c\u4e86\u5f8c\u3001N9\u62c5\u5f53\u8005\u3088\u308a\u003Cstrong style=\u0022color:var(--gold-pale);\u0022\u003E\u500b\u5225\u306b\u3054\u6848\u5185\u003C\/strong\u003E\u3044\u305f\u3057\u307e\u3059\u3002\u003Cbr\u003E\n      URL\u306f\u4e00\u822c\u516c\u958b\u3057\u3066\u304a\u308a\u307e\u305b\u3093\u3002\n    \u003C\/div\u003E\n        \u003Cspan class=\u0022flow-note\u0022\u003E\u30b9\u30c6\u30c3\u30d73\u306e\u304a\u7533\u3057\u8fbc\u307f\u5b8c\u4e86\u8005\u306e\u307f\u306b\u30e9\u30a4\u30f3URL\u3092\u304a\u9001\u308a\u3057\u307e\u3059\u003C\/span\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003C!-- STEP 5 --\u003E\n    \u003Cdiv class=\u0022flow-item\u0022\u003E\n      \u003Cdiv class=\u0022flow-left\u0022\u003E\n        \u003Cspan class=\u0022flow-num\u0022\u003ESTEP 5\u003C\/span\u003E\n        \u003Cdiv class=\u0022flow-icon-circle\u0022\u003E\ud83c\udfb4\u003C\/div\u003E\n      \u003C\/div\u003E\n      \u003Cdiv class=\u0022flow-right\u0022\u003E\n        \u003Cdiv class=\u0022flow-title\u0022\u003E\u5f53\u65e5 4\u670818\u65e5\uff08\u571f\uff09\u003C\/div\u003E\n        \u003Cdiv class=\u0022flow-body\u0022\u003E\n          \u003Ctable class=\u0022flow-table\u0022\u003E\n            \u003Cthead\u003E\n              \u003Ctr\u003E\u003Cth\u003E\u6642\u9593\u003C\/th\u003E\u003Cth\u003E\u5185\u5bb9\u30fb\u5834\u6240\u003C\/th\u003E\u003C\/tr\u003E\n            \u003C\/thead\u003E\n            \u003Ctbody\u003E\n              \u003Ctr\u003E\n                \u003Ctd style=\u0022white-space:nowrap; vertical-align:top; padding-top:10px;\u0022\u003E\u301c15:00\u003C\/td\u003E\n                \u003Ctd\u003E\n                  \u003Cstrong\u003E\u30db\u30c6\u30eb\u5230\u7740\u30fb\u30c1\u30a7\u30c3\u30af\u30a4\u30f3\u003C\/strong\u003E\u003Cbr\u003E\n                  \u003Cspan style=\u0022font-size:12px; color:var(--muted);\u0022\u003EGrand Walkerhill Seoul\uff08\u30bd\u30a6\u30eb\uff09\u003Cbr\u003E\n                  \u5230\u7740\u5f8c\u3001\u73fe\u5730\u30b5\u30dd\u30fc\u30c8\u5c02\u7528LINE\u3078\u3054\u9023\u7d61\u304f\u3060\u3055\u3044\u3002\u003Cbr\u003E\n                  \u30db\u30c6\u30eb1\u968e\u30e1\u30a4\u30f3\u30a8\u30f3\u30c8\u30e9\u30f3\u30b9\u306e\u82b1\u58c7\u4ed8\u8fd1\u3067N9\u30b9\u30bf\u30c3\u30d5\uff08N9\u30cd\u30c3\u30af\u30b9\u30c8\u30e9\u30c3\u30d7\u7740\u7528\uff09\u304c\u5f85\u6a5f\u3057\u3066\u3044\u307e\u3059\u3002\u003C\/span\u003E\n                \u003C\/td\u003E\n              \u003C\/tr\u003E\n              \u003Ctr\u003E\n                \u003Ctd style=\u0022white-space:nowrap; vertical-align:top; padding-top:10px;\u0022\u003E15:00\u301c\u003C\/td\u003E\n                \u003Ctd\u003E\n                  \u003Cstrong\u003E\u30ab\u30b8\u30ceVIP\u30ab\u30fc\u30c9\u767a\u884c\u003C\/strong\u003E\u003Cbr\u003E\n                  \u003Cspan style=\u0022font-size:12px; color:var(--muted);\u0022\u003E\u30db\u30c6\u30eb1\u968e\u30e1\u30a4\u30f3\u30a8\u30f3\u30c8\u30e9\u30f3\u30b9\u306b\u3066\u9806\u6b21\u5bfe\u5fdc\u3002\u003Cbr\u003E\n                  \u30c1\u30a7\u30c3\u30af\u30a4\u30f3\u5f8c\u306f\u5927\u4f1a\u30b9\u30bf\u30fc\u30c8\u307e\u3067\u30d5\u30ea\u30fc\u30bf\u30a4\u30e0\u3067\u3059\u3002\u003C\/span\u003E\n                \u003C\/td\u003E\n              \u003C\/tr\u003E\n              \u003Ctr\u003E\n                \u003Ctd style=\u0022white-space:nowrap; vertical-align:top; padding-top:10px;\u0022\u003E19:35\u301c\u003C\/td\u003E\n                \u003Ctd\u003E\n                  \u003Cstrong\u003E\u96c6\u5408\u30fb\u53d7\u4ed8\u958b\u59cb\u003C\/strong\u003E\u003Cbr\u003E\n                  \u003Cspan style=\u0022font-size:12px; color:var(--muted);\u0022\u003E\ud83d\udccd \u30db\u30c6\u30eb\u5730\u4e0b1\u968e\u3000\u30ab\u30b8\u30ce\u5165\u53e3\u4ed8\u8fd1\u300c\u30c8\u30e9\u30f3\u30d7\u306e\u30aa\u30d6\u30b8\u30a7\u300d\u524d\u003Cbr\u003E\n                  \u53c2\u52a0\u8005\u304c\u63c3\u3044\u6b21\u7b2c\u3001\u5165\u5834\u4e88\u5b9a\u003C\/span\u003E\n                \u003C\/td\u003E\n              \u003C\/tr\u003E\n              \u003Ctr\u003E\n                \u003Ctd style=\u0022white-space:nowrap; vertical-align:top; padding-top:10px;\u0022\u003E19:45\u301c\u003C\/td\u003E\n                \u003Ctd\u003E\n                  \u003Cstrong\u003E\u30d0\u30ab\u30e9\u30c8\u30fc\u30ca\u30e1\u30f3\u30c8\u958b\u50ac\u003C\/strong\u003E\u003Cbr\u003E\n                  \u003Cspan style=\u0022font-size:12px; color:var(--muted);\u0022\u003EVIP\u30eb\u30fc\u30e0\u3000\ud83d\udc51 \u4e95\u5ddd\u610f\u9ad8\u6c0f\u3082\u7dca\u6025\u53c2\u6226\u4e88\u5b9a\u003C\/span\u003E\n                \u003C\/td\u003E\n              \u003C\/tr\u003E\n              \u003Ctr\u003E\n                \u003Ctd style=\u0022white-space:nowrap; vertical-align:top; padding-top:10px;\u0022\u003E20:10\u301c\u003C\/td\u003E\n                \u003Ctd\u003E\n                  \u003Cstrong\u003E\u5927\u4f1a\u7d42\u4e86\u30fb\u6388\u8cde\u5f0f\u003C\/strong\u003E\u003Cbr\u003E\n                  \u003Cspan style=\u0022font-size:12px; color:var(--muted);\u0022\u003E\u512a\u52dd\u8005\u304a\u3088\u3073\u5165\u8cde\u8005\u306e\u8868\u5f70\u30fb\u8cde\u91d1\u6388\u4e0e\u003C\/span\u003E\n                \u003C\/td\u003E\n              \u003C\/tr\u003E\n            \u003C\/tbody\u003E\n          \u003C\/table\u003E\n        \u003C\/div\u003E\n        \u003Cspan class=\u0022flow-note\u0022\u003E\ud83d\ude97 \u30c7\u30dd\u30b8\u30c3\u30c8100\u4e07\u5186\u4ee5\u4e0a\u306e\u304a\u5ba2\u69d8\uff1a\u4ec1\u5ddd\u7a7a\u6e2f\u304b\u3089\u30db\u30c6\u30eb\u307e\u3067\u306e\u5c02\u7528\u9001\u8fce\u3042\u308a\u003C\/span\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n  \u003C\/div\u003E\n\u003C\/div\u003E\n\n\u003Cdiv class=\u0022full-divider\u0022\u003E\u003C\/div\u003E\n\n\u003C!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 SPECIAL BENEFITS \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 --\u003E\n\u003Cdiv class=\u0022section-wrap reveal\u0022\u003E\n  \u003Cdiv class=\u0022section-head\u0022\u003E\n    \u003Cspan class=\u0022sh-eyebrow\u0022\u003E08 \u2014 Exclusive Benefits\u003C\/span\u003E\n    \u003Ch2 class=\u0022sh-title\u0022\u003E\u53c2\u52a0\u8005\u7279\u5225\u7279\u5178\u003C\/h2\u003E\n    \u003Cp class=\u0022sh-sub\u0022\u003E\u30c7\u30dd\u30b8\u30c3\u30c850\u4e07\u5186\u4ee5\u4e0a\u306eVIP\u9650\u5b9a\u003C\/p\u003E\n    \u003Cdiv class=\u0022sh-ornament\u0022\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-dot\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022benefits-wrap\u0022\u003E\n    \u003Cdiv class=\u0022benefit-item featured\u0022\u003E\n      \u003Cdiv class=\u0022bi-icon\u0022\u003E\ud83d\udc51\u003C\/div\u003E\n      \u003Cdiv class=\u0022bi-body\u0022\u003E\n        \u003Cspan class=\u0022bi-tag\u0022\u003ESpecial\u003C\/span\u003E\n        \u003Ch4\u003E\u4e95\u5ddd\u6c0f \u7279\u5225\u53c2\u6226\u003C\/h4\u003E\n        \u003Cp\u003E\u5f53\u65e5\u306f\u4e95\u5ddd\u3055\u3093\u3082\u5927\u4f1a\u306b\u30d7\u30ec\u30a4\u30e4\u30fc\u3068\u3057\u3066\u53c2\u52a0\u3002\u540c\u3058\u30c6\u30fc\u30d6\u30eb\u3067\u30d7\u30ec\u30a4\u3067\u304d\u308b\u53ef\u80fd\u6027\u3082\u3042\u308b\u3001\u307e\u305f\u3068\u306a\u3044\u30c1\u30e3\u30f3\u30b9\u3067\u3059\u3002\u003C\/p\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022benefit-item\u0022\u003E\n      \u003Cdiv class=\u0022bi-icon\u0022\u003E\ud83d\udcb3\u003C\/div\u003E\n      \u003Cdiv class=\u0022bi-body\u0022\u003E\n        \u003Ch4\u003EN9 VIP\u30ab\u30fc\u30c9\u767a\u884c\u003C\/h4\u003E\n        \u003Cp\u003E\u6b21\u56de\u4ee5\u964d\u3082\u5229\u7528\u53ef\u80fd\u306a\u3001\u9078\u3070\u308c\u3057\u8005\u306e\u30b9\u30c6\u30fc\u30bf\u30b9\u30ab\u30fc\u30c9\u3092\u8d08\u5448\u3002\u003C\/p\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv class=\u0022benefit-item\u0022\u003E\n      \u003Cdiv class=\u0022bi-icon\u0022\u003E\ud83c\udf10\u003C\/div\u003E\n      \u003Cdiv class=\u0022bi-body\u0022\u003E\n        \u003Ch4\u003EN9\u30e1\u30f3\u30d0\u30fc\u3068\u306e\u7279\u5225\u306a\u51fa\u4f1a\u3044\u003C\/h4\u003E\n        \u003Cp\u003E\u4e16\u754c\u306e\u30ab\u30b8\u30ce\u5c55\u958b\u30fb\u4eca\u5f8c\u306eVIP\u30a4\u30d9\u30f3\u30c8\u306a\u3069\u3001N9\u306e\u6700\u65b0\u60c5\u5831\u3092\u3044\u3061\u65e9\u304f\u304a\u5c4a\u3051\u3057\u307e\u3059\u3002\u003C\/p\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n\n\u003Cdiv class=\u0022full-divider\u0022\u003E\u003C\/div\u003E\n\n\u003C!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 NOTES \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 --\u003E\n\u003Cdiv class=\u0022section-wrap reveal\u0022\u003E\n  \u003Cdiv class=\u0022section-head\u0022\u003E\n    \u003Cspan class=\u0022sh-eyebrow\u0022\u003E09 \u2014 Important Notes\u003C\/span\u003E\n    \u003Ch2 class=\u0022sh-title\u0022\u003E\u6ce8\u610f\u4e8b\u9805\u003C\/h2\u003E\n    \u003Cdiv class=\u0022sh-ornament\u0022\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-dot\u0022\u003E\u003C\/div\u003E\u003Cdiv class=\u0022sh-line\u0022\u003E\u003C\/div\u003E\u003C\/div\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022notes-grid\u0022\u003E\n\n    \u003C!-- \u5927\u4f1a\u53c2\u52a0\u6761\u4ef6 --\u003E\n    \u003Cdiv class=\u0022note-item\u0022\u003E\n      \u003Cdiv class=\u0022note-icon\u0022\u003E\u2705\u003C\/div\u003E\n      \u003Cdiv class=\u0022note-body\u0022\u003E\n        \u003Ch4\u003E\u5927\u4f1a\u53c2\u52a0\u6761\u4ef6\u306b\u3064\u3044\u3066\u003C\/h4\u003E\n        \u003Cp\u003E\u4ee5\u4e0b\u306e\u3044\u305a\u308c\u304b\u306b\u8a72\u5f53\u3059\u308b\u65b9\u304c\u5bfe\u8c61\u3068\u306a\u308a\u307e\u3059\u3002\u003Cbr\u003E\u003Cbr\u003E\n        \u003Cstrong\u003E\u30fb\u003C\/strong\u003E \u904e\u53bb\u306bN9\u3092\u3054\u5229\u7528\u3044\u305f\u3060\u3044\u305f\u3053\u3068\u304c\u3042\u308b\u65b9\u003Cbr\u003E\n        \u003Cstrong\u003E\u30fb\u003C\/strong\u003E N9\u7d4c\u7531\u306b\u3066\u30a6\u30a9\u30fc\u30ab\u30fc\u30d2\u30eb\u306e\u65b0\u898f\u767b\u9332\u304c\u53ef\u80fd\u306a\u65b9\u003Cbr\u003E\n        \u003Cstrong\u003E\u30fb\u003C\/strong\u003E \u30a6\u30a9\u30fc\u30ab\u30fc\u30d2\u30eb\u306e\u3054\u5229\u7528\u5c65\u6b74\u304c\u904e\u53bb1\u5e74\u4ee5\u4e0a\u306a\u3044\u65b9\u003Cbr\u003E\u003Cbr\u003E\n        \u003Cspan style=\u0022color:var(--gold);\u0022\u003E\u203b \u65e2\u5b58\u306eN9\u4f1a\u54e1\u69d8\u3082\u4eca\u56de\u306e\u5927\u4f1a\u306b\u3054\u53c2\u52a0\u3044\u305f\u3060\u3051\u307e\u3059\u3002\u003C\/span\u003E\u003C\/p\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003C!-- \u540c\u70b9 --\u003E\n    \u003Cdiv class=\u0022note-item\u0022\u003E\n      \u003Cdiv class=\u0022note-icon\u0022\u003E\u2696\ufe0f\u003C\/div\u003E\n      \u003Cdiv class=\u0022note-body\u0022\u003E\n        \u003Ch4\u003E\u540c\u70b9\uff08\u30c1\u30c3\u30d7\u540c\u6570\uff09\u306b\u306a\u3063\u305f\u5834\u5408\u003C\/h4\u003E\n        \u003Cp\u003E\u3082\u3057\u6700\u7d42\u7684\u306a\u30c1\u30c3\u30d7\u306e\u679a\u6570\u304c\u540c\u3058\u65b9\u304c\u8907\u6570\u3044\u305f\u5834\u5408\u306f\u3001\u8a72\u5f53\u3059\u308b\u9806\u4f4d\u306e\u8cde\u91d1\u3092\u5408\u8a08\u3057\u3001\u4eba\u6570\u3067\u5747\u7b49\u306b\u5206\u3051\u5408\u3044\u307e\u3059\u3002\u003Cbr\u003E\n        \uff08\u4f8b\uff1a2\u4f4d\u30683\u4f4d\u304c\u540c\u70b9\u306e\u5834\u5408\u30012\u4f4d\u30683\u4f4d\u306e\u8cde\u91d1\u3092\u8db3\u3057\u3066\u30012\u4eba\u3067\u534a\u5206\u305a\u3064\u53d7\u3051\u53d6\u308a\u307e\u3059\uff09\u003C\/p\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003C!-- \u8cde\u91d1\u984d\u306e\u5909\u52d5 --\u003E\n    \u003Cdiv class=\u0022note-item\u0022\u003E\n      \u003Cdiv class=\u0022note-icon\u0022\u003E\ud83d\udcb0\u003C\/div\u003E\n      \u003Cdiv class=\u0022note-body\u0022\u003E\n        \u003Ch4\u003E\u8cde\u91d1\u984d\u306e\u5909\u52d5\u306b\u3064\u3044\u3066\u003C\/h4\u003E\n        \u003Cp\u003E\u53c2\u52a0\u4eba\u6570\u304c\u5c11\u306a\u3044\u5834\u5408\u306b\u306f\u8cde\u91d1\u984d\u304c\u5909\u52d5\u3059\u308b\u53ef\u80fd\u6027\u304c\u3054\u3056\u3044\u307e\u3059\u306e\u3067\u3054\u4e86\u627f\u304f\u3060\u3055\u3044\u3002\u003C\/p\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n    \u003C!-- \u30ad\u30e3\u30f3\u30bb\u30eb\u898f\u5b9a --\u003E\n    \u003Cdiv class=\u0022note-item\u0022\u003E\n      \u003Cdiv class=\u0022note-icon\u0022\u003E\u274c\u003C\/div\u003E\n      \u003Cdiv class=\u0022note-body\u0022\u003E\n        \u003Ch4\u003E\u30ad\u30e3\u30f3\u30bb\u30eb\u898f\u5b9a\u003C\/h4\u003E\n        \u003Cp\u003E\u30a4\u30d9\u30f3\u30c8\u958b\u50ac\u65e5 \u003Cstrong\u003E2026\u5e744\u670818\u65e5\uff08\u571f\uff09\u003C\/strong\u003E \u3092\u57fa\u6e96\u3068\u3057\u3066\u3001\u4ee5\u4e0b\u306e\u30ad\u30e3\u30f3\u30bb\u30eb\u6599\u304c\u767a\u751f\u3044\u305f\u3057\u307e\u3059\u3002\u003Cbr\u003E\u003Cbr\u003E\n        \u003Cstrong\u003E\u958b\u50ac 5\u55b6\u696d\u65e5\u524d\u4ee5\u5185\u003C\/strong\u003E \u306e\u30ad\u30e3\u30f3\u30bb\u30eb\u003Cbr\u003E\n        \u2192 \u53c2\u52a0\u8cbb\u306e \u003Cstrong\u003E50%\u003C\/strong\u003E\u003Cbr\u003E\u003Cbr\u003E\n        \u003Cstrong\u003E\u958b\u50ac 3\u55b6\u696d\u65e5\u524d\u4ee5\u5185\u003C\/strong\u003E \u306e\u30ad\u30e3\u30f3\u30bb\u30eb\u003Cbr\u003E\n        \u2192 \u53c2\u52a0\u8cbb\u306e \u003Cstrong\u003E100%\u003C\/strong\u003E\uff08\u8fd4\u91d1\u4e0d\u53ef\uff09\u003Cbr\u003E\u003Cbr\u003E\n        \u304a\u7533\u3057\u8fbc\u307f\u5f8c\u306b\u5f53\u65e5\u4f1a\u5834\u3078\u304a\u8d8a\u3057\u306b\u306a\u308c\u306a\u304b\u3063\u305f\u5834\u5408\uff08\u7121\u65ad\u30ad\u30e3\u30f3\u30bb\u30eb\u7b49\uff09\u3082\u3001\u53c2\u52a0\u8cbb\u306e\u8fd4\u91d1\u306f\u3067\u304d\u304b\u306d\u307e\u3059\u306e\u3067\u3054\u6ce8\u610f\u304f\u3060\u3055\u3044\u3002\u003C\/p\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n\n  \u003C\/div\u003E\n\u003C\/div\u003E\n\n\u003Cdiv class=\u0022full-divider\u0022\u003E\u003C\/div\u003E\n\n\u003C!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 ENTRY CTA \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 --\u003E\n\u003Cdiv class=\u0022section-wrap reveal\u0022\u003E\n  \u003Cdiv class=\u0022entry-section\u0022\u003E\n    \u003Cspan class=\u0022entry-eyebrow\u0022\u003ESummary \u0026 Entry\u003C\/span\u003E\n    \u003Ch2 class=\u0022entry-title\u0022\u003E\u4eca\u3059\u3050\u30a8\u30f3\u30c8\u30ea\u30fc\u3059\u308b\u003C\/h2\u003E\n    \u003Cp class=\u0022entry-sub\u0022\u003E\u30c7\u30dd\u30b8\u30c3\u30c8 50\u4e07\u5186\u4ee5\u4e0a\u306eVIP\u9650\u5b9a\u003C\/p\u003E\n\n    \u003Cdiv class=\u0022entry-condition\u0022\u003E\n      \u53c2\u52a0\u5bfe\u8c61\uff1a\u30c7\u30dd\u30b8\u30c3\u30c8 50\u4e07\u5186\u4ee5\u4e0a\u306eVIP\u9650\u5b9a\n    \u003C\/div\u003E\n\n    \u003Cspan class=\u0022entry-fee\u0022\u003E\u53c2\u52a0\u8cbb 10\u003Cspan style=\u0022font-size:0.5em\u0022\u003E\u4e07\u5186\u003C\/span\u003E\u003Cspan class=\u0022entry-fee-tax\u0022\u003E\uff08\u7a0e\u8fbc\uff09\u003C\/span\u003E\u003C\/span\u003E\n\n    \u003C!-- =====================================================\n         UTAGE \u30d5\u30a9\u30fc\u30e0\u57cb\u3081\u8fbc\u307f\u4f4d\u7f6e\n         UTAGE\u306e\u30d5\u30a9\u30fc\u30e0\u30b3\u30fc\u30c9\u3092\u3053\u3053\u306b\u8cbc\u308a\u4ed8\u3051\u3066\u304f\u3060\u3055\u3044\n         \u4f8b: \u003Cdiv class=\u0022utage-form\u0022\u003E...\u003C\/div\u003E\n         \u307e\u305f\u306f UTAGE\u304c\u767a\u884c\u3059\u308b \u003Cscript\u003E \u30bf\u30b0\n         ===================================================== --\u003E\n    \u003Cdiv id=\u0022utage-form-area\u0022 style=\u0022width:100%;max-width:560px;margin:0 auto 32px;\u0022\u003E\n      \u003C!-- \u2193 \u3053\u3053\u306bUTAGE\u30d5\u30a9\u30fc\u30e0\u30b3\u30fc\u30c9\u3092\u8cbc\u308a\u4ed8\u3051 \u2193 --\u003E\n\n      \u003C!-- \u2191 \u3053\u3053\u307e\u3067 \u2191 --\u003E\n    \u003C\/div\u003E\n\n    \u003Cp class=\u0022entry-footnote\u0022\u003E\n      \u203b \u304a\u7533\u3057\u8fbc\u307f\u5f8c\u3001\u62c5\u5f53\u8005\u3088\u308a\u3054\u9023\u7d61\u3055\u305b\u3066\u3044\u305f\u3060\u304d\u307e\u3059\u3002\u003Cbr\u003E\n      \u203b \u8a73\u7d30\u306b\u3064\u3044\u3066\u306f\u968f\u6642\u66f4\u65b0\u3055\u308c\u308b\u3053\u3068\u304c\u3054\u3056\u3044\u307e\u3059\u3002\n    \u003C\/p\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n\n\u003Cscript\u003E\nconst reveals = document.querySelectorAll(\u0027.reveal\u0027);\nconst observer = new IntersectionObserver(entries =\u003E {\n  entries.forEach(e =\u003E { if(e.isIntersecting) e.target.classList.add(\u0027visible\u0027); });\n}, {threshold: 0.08});\nreveals.forEach(el =\u003E observer.observe(el));\n\n\u003C\/script\u003E\n\u003C\/body\u003E\n\u003C\/html\u003E","sid":"","children":[]},{"id":947947165,"is_popup":0,"type":"subhead","text":"\u003Cp style=\u0022text-align:center\u0022\u003E\u003Cspan style=\u0022font-size:1.3em\u0022\u003E\u003Cspan style=\u0022font-family:Georgia,serif\u0022\u003E\u304a\u7533\u3057\u8fbc\u307f\u30d5\u30a9\u30fc\u30e0\u003C\/span\u003E\u003C\/span\u003E\u003C\/p\u003E","sid":"","children":[]},{"id":947947166,"is_popup":0,"type":"form-input","item":"seimei","name":"seimei","input_type":"text","is_required":1,"label":"\u304a\u540d\u524d","placeholder":"\u304a\u540d\u524d\u3092\u5165\u529b","sid":"","children":[]},{"id":947947167,"is_popup":0,"type":"form-input","item":"mail","name":"mail","input_type":"text","is_required":1,"label":"\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9","placeholder":"\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9\u3092\u5165\u529b","sid":"","children":[]},{"id":947947168,"is_popup":0,"type":"form-input","scenario_id_str":"kQ6aQ7KLTyiR","subtext":"50\u4e07\u5186\n100\u4e07\u5186\n300\u4e07\u5186\n500\u4e07\u5186","item":"scenario","reader_item_id":1023468,"name":"free26","input_type":"select","is_required":1,"label":"\u5229\u7528\u30b3\u30f3\u30d7","placeholder":"\u5229\u7528\u30b3\u30f3\u30d7\u3092\u5165\u529b","sid":"","children":[]},{"id":947947169,"is_popup":0,"type":"form-button","scenario_id_str":"kQ6aQ7KLTyiR","action":"form","text":"\u9001\u4fe1","href_type":"url","href":"https:\/\/fn.n9ec.com\/line\/open\/kQ6aQ7KLTyiR?mtid=zDkuOqduGSg8","btn_color":"btn-orange-cubic","sid":"","children":[]},{"id":947947170,"is_popup":0,"type":"html","text":"\u003C!-- FOOTER --\u003E\n\u003Cfooter\u003E\n  \u003Cspan class=\u0022footer-logo\u0022\u003EN9\u003C\/span\u003E\n  \u003Cp class=\u0022footer-tagline\u0022\u003EN9 Baccarat Tournament \u00b7 Walker Hill \u00b7 April 18, 2026\u003C\/p\u003E\n  \u003Cp class=\u0022footer-note\u0022\u003E\n    \u672c\u30a4\u30d9\u30f3\u30c8\u306fN9 VIP\u9867\u5ba2\u3092\u5bfe\u8c61\u3068\u3057\u305f\u62db\u5f85\u5236\u30d7\u30ec\u30df\u30a2\u30e0\u30a4\u30d9\u30f3\u30c8\u3067\u3059\u3002\u003Cbr\u003E\n    \u00a9 N9  Baccarat Tournament 2026 \u00b7 All Rights Reserved\n  \u003C\/p\u003E\n\u003C\/footer\u003E","sid":"","children":[]}]}]}]}],"popupelements":[],"products":[],"actions":[],"forms":[],"funnel":{"id":129106,"id_str":"7O5mrpdXbgEl","funnel_group_id":0,"memo":null,"share_id":"NNEFKrdn3KZO","is_test_mode":0,"is_archived":0,"is_deleted":0,"status":"published","share_type":"url","from_funnel_id":null,"period_to":null,"url_closed":null,"webinar_format":"web","webinar_type":"day","webinar_registration_type":"default","webinar_period_minute":null,"webinar_day_after":null,"webinar_days":null,"webinar_count_per_day":null,"webinar_from_hour1":null,"webinar_from_min1":null,"webinar_to_hour1":null,"webinar_to_min1":null,"webinar_from_hour2":null,"webinar_from_min2":null,"webinar_to_hour2":null,"webinar_to_min2":null,"webinar_length_hour":null,"webinar_length_minute":null,"webinar_replay_days":null,"webinar_chat_type":"none","webinar_chat_approval_type":"auto","webinar_default_schedule_type":"none","zoom_webinar_project_id":null,"js_head":"\u003C!-- Google Tag Manager --\u003E\r\n\u003Cscript\u003E(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\u0027gtm.start\u0027:\r\nnew Date().getTime(),event:\u0027gtm.js\u0027});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!=\u0027dataLayer\u0027?\u0027\u0026l=\u0027+l:\u0027\u0027;j.async=true;j.src=\r\n\u0027https:\/\/www.googletagmanager.com\/gtm.js?id=\u0027+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,\u0027script\u0027,\u0027dataLayer\u0027,\u0027GTM-MH8KJJXR\u0027);\u003C\/script\u003E\r\n\u003C!-- End Google Tag Manager --\u003E\r\n\t\u003C!-- Google Tag Manager --\u003E\r\n\u003Cscript\u003E(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\u0027gtm.start\u0027:\r\nnew Date().getTime(),event:\u0027gtm.js\u0027});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!=\u0027dataLayer\u0027?\u0027\u0026l=\u0027+l:\u0027\u0027;j.async=true;j.src=\r\n\u0027https:\/\/www.googletagmanager.com\/gtm.js?id=\u0027+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,\u0027script\u0027,\u0027dataLayer\u0027,\u0027GTM-N56HMFR\u0027);\u003C\/script\u003E\r\n\u003C!-- End Google Tag Manager --\u003E\r\n\t\u003C!-- Google Tag Manager --\u003E\r\n\u003Cscript\u003E(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\u0027gtm.start\u0027:\r\nnew Date().getTime(),event:\u0027gtm.js\u0027});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!=\u0027dataLayer\u0027?\u0027\u0026l=\u0027+l:\u0027\u0027;j.async=true;j.src=\r\n\u0027https:\/\/www.googletagmanager.com\/gtm.js?id=\u0027+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,\u0027script\u0027,\u0027dataLayer\u0027,\u0027GTM-TSB4SG4B\u0027);\u003C\/script\u003E\r\n\u003C!-- End Google Tag Manager --\u003E","js_body_top":"\u003C!-- Google Tag Manager (noscript) --\u003E\r\n\u003Cnoscript\u003E\u003Ciframe src=\u0022https:\/\/www.googletagmanager.com\/ns.html?id=GTM-MH8KJJXR\u0022\r\nheight=\u00220\u0022 width=\u00220\u0022 style=\u0022display:none;visibility:hidden\u0022\u003E\u003C\/iframe\u003E\u003C\/noscript\u003E\r\n\u003C!-- End Google Tag Manager (noscript) --\u003E\r\n\t \u003C!-- Google Tag Manager (noscript) --\u003E\r\n\u003Cnoscript\u003E\u003Ciframe src=\u0022https:\/\/www.googletagmanager.com\/ns.html?id=GTM-TSB4SG4B\u0022\r\nheight=\u00220\u0022 width=\u00220\u0022 style=\u0022display:none;visibility:hidden\u0022\u003E\u003C\/iframe\u003E\u003C\/noscript\u003E\r\n\u003C!-- End Google Tag Manager (noscript) --\u003E\r\n\u003C!-- Google Tag Manager (noscript) --\u003E\r\n\u003Cnoscript\u003E\u003Ciframe src=\u0022https:\/\/www.googletagmanager.com\/ns.html?id=GTM-N56HMFR\u0022\r\nheight=\u00220\u0022 width=\u00220\u0022 style=\u0022display:none;visibility:hidden\u0022\u003E\u003C\/iframe\u003E\u003C\/noscript\u003E\r\n\u003C!-- End Google Tag Manager (noscript) --\u003E","js_body":null,"order":1,"user_id_str":"aEW47CenmRXC","share_status":null,"today":"2026-03-29T04:31:14.238999Z"},"ispreview":false,"pageid":"kaOWKrZpLW2G","pcwidth":100,"bordertype":"shadow","swipetype":"none","userdata":[],"webinarschedules":[],"uselazyload":true}'></elements-component>
+    </div>
+    <div>
+        <div id="exit-popup-hover" class="fixed-top"
+             v-if="canExitPopup"
+             v-on:mouseover="showPopup">
+        </div>
+        <div class="modal fade" id="modal-popup" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document"
+         v-bind:class="[popupVerticalAlign]"
+         v-bind:style="[popupWidth]">
+        <div class="modal-content" v-bind:style="[popupColor]">
+            <div>
+                <button type="button" class="close bg-white rounded-circle border-black" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+                </button>
+            </div>
+            <div id="pupup-container" class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+<div id="modal"></div>
+
+<script src="/js/page.js?id=ca399d0d83da75ddbd25"></script>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold: 0.08});
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
