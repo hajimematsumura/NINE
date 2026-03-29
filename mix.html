@@ -272,9 +272,7 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
 .light .deposit-bar{background:rgba(0,0,0,0.08);}
 .light .dep-sep{background:rgba(0,0,0,0.1);}
 
-/* DARK->LIGHT TRANSITION */
-.section-transition{height:120px;background:linear-gradient(180deg,var(--black),#FAFAF8);}
-.section-transition-rev{height:120px;background:linear-gradient(180deg,#FAFAF8,var(--black));}
+/* no transitions - hard cut */
 
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
@@ -377,7 +375,7 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
   <div class="scroll-cue"><span>Scroll</span><div class="scroll-bar"></div></div>
 </section>
 
-<div class="section-transition"></div>
+<div style="height:0;"></div>
 
 <!-- TRUST -->
 <div class="light">
@@ -417,7 +415,7 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
 
 </div><!-- end light -->
 
-<div class="section-transition-rev"></div>
+<div style="height:0;"></div>
 
 <!-- IKAWA - CINEMATIC -->
 <div class="ikawa-cinematic">
@@ -446,7 +444,7 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
   </div>
 </div>
 
-<div class="section-transition"></div>
+<div style="height:0;"></div>
 
 <div class="light">
 <!-- WHY -->
@@ -623,7 +621,7 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
 
 </div><!-- end light -->
 
-<div class="section-transition-rev"></div>
+<div style="height:0;"></div>
 
 <!-- PARALLAX: VISION -->
 <div class="parallax-section" style="height:40vh;">
