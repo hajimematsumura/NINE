@@ -38,7 +38,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:fl
 
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:120px 24px 100px;text-align:center;}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(196,30,42,0.08) 0%,transparent 60%),radial-gradient(ellipse 100% 70% at 50% 30%,rgba(201,168,76,0.05) 0%,transparent 65%),linear-gradient(160deg,#0E0C08 0%,#080706 40%,#0C0A06 100%);}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(196,30,42,0.08) 0%,transparent 60%),radial-gradient(ellipse 100% 70% at 50% 30%,rgba(201,168,76,0.05) 0%,transparent 65%),linear-gradient(160deg,#0E0C08 0%,#080706 40%,#0C0A06 100%);z-index:1;}
+.hero-photo-bg{position:absolute;right:-5%;top:0;bottom:0;width:55%;z-index:0;overflow:hidden;}
+.hero-photo-bg img{width:100%;height:100%;object-fit:cover;object-position:center 15%;opacity:0.12;mix-blend-mode:luminosity;filter:contrast(1.2) grayscale(0.3);}
 .hero-accent{position:absolute;top:0;right:0;width:2px;height:60%;background:linear-gradient(180deg,transparent,var(--red),var(--gold),transparent);opacity:0.4;}
 .hero-accent2{position:absolute;bottom:0;left:0;width:60%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),var(--red),transparent);opacity:0.3;}
 
@@ -98,19 +100,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:fl
 .trust-sub{font-size:15px;color:var(--muted);line-height:1.9;letter-spacing:0.05em;}
 .trust-highlight{display:inline-block;padding:6px 16px;border:1px solid var(--red);font-family:'EB Garamond',serif;font-size:14px;color:var(--red-bright);letter-spacing:0.15em;margin-top:12px;background:var(--red-dim);}
 
-/* IKAWA */
-.ikawa-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);}
-.ikawa-photo-col{background:var(--card);position:relative;min-height:480px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-.ikawa-photo-col img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
-.ikawa-photo-badge{position:absolute;bottom:24px;left:24px;right:24px;background:linear-gradient(135deg,rgba(8,7,6,0.95),rgba(14,12,8,0.92));border:1px solid var(--border);padding:20px 24px;z-index:2;border-left:3px solid var(--red);}
-.ipb-name{font-family:'Shippori Mincho',serif;font-size:24px;font-weight:700;color:var(--gold-bright);}
-.ipb-title{font-size:13px;color:var(--muted);letter-spacing:0.2em;margin-top:6px;}
-.ikawa-info-col{background:var(--card);padding:56px 48px;display:flex;flex-direction:column;justify-content:center;}
-.ikawa-tag{display:inline-block;background:var(--red);color:#fff;font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.5em;padding:5px 16px;text-transform:uppercase;margin-bottom:20px;font-weight:700;}
-.ikawa-headline{font-family:'Shippori Mincho',serif;font-size:clamp(26px,4.5vw,40px);font-weight:700;line-height:1.4;margin-bottom:20px;color:var(--text);}
-.ikawa-headline em{font-style:normal;color:var(--red-bright);}
-.ikawa-desc{font-size:15px;color:var(--muted);line-height:2;letter-spacing:0.05em;margin-bottom:32px;}
-.ikawa-quote{font-family:'Shippori Mincho',serif;font-size:18px;font-style:italic;color:var(--gold);border-left:3px solid var(--red);padding-left:20px;line-height:1.8;}
+/* IKAWA - FULL WIDTH CINEMATIC */
+.ikawa-cinematic{position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:center;}
+.ikawa-cinematic-bg{position:absolute;inset:0;z-index:0;}
+.ikawa-cinematic-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:contrast(1.1);}
+.ikawa-cinematic-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,7,6,0.85) 0%,rgba(8,7,6,0.6) 40%,rgba(8,7,6,0.2) 70%,transparent 100%);}
+.ikawa-cinematic-content{position:relative;z-index:1;max-width:600px;padding:80px 60px;mix-blend-mode:normal;}
+.ikawa-cinematic .ikawa-tag{display:inline-block;background:var(--red);color:#fff;font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.5em;padding:5px 16px;text-transform:uppercase;margin-bottom:24px;font-weight:700;}
+.ikawa-cinematic .ikawa-name{font-family:'Cinzel',serif;font-size:clamp(12px,2vw,16px);letter-spacing:0.6em;color:var(--gold);text-transform:uppercase;margin-bottom:12px;}
+.ikawa-cinematic .ikawa-headline{font-family:'Shippori Mincho',serif;font-size:clamp(32px,6vw,56px);font-weight:800;line-height:1.3;margin-bottom:24px;color:#fff;}
+.ikawa-cinematic .ikawa-headline em{font-style:normal;background:linear-gradient(135deg,var(--red-bright),var(--gold-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ikawa-cinematic .ikawa-desc{font-size:16px;color:rgba(255,255,255,0.75);line-height:2;letter-spacing:0.05em;margin-bottom:36px;}
+.ikawa-cinematic .ikawa-quote{font-family:'Shippori Mincho',serif;font-size:clamp(18px,3vw,24px);font-style:italic;color:var(--gold-bright);border-left:3px solid var(--red);padding-left:24px;line-height:1.8;}
+.ikawa-cinematic .ikawa-quote-author{font-family:'EB Garamond',serif;font-size:14px;color:var(--gold);letter-spacing:0.3em;margin-top:12px;padding-left:27px;}
+
+/* MIX BLEND OVERLAY */
+.blend-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,30,42,0.08),transparent 50%,rgba(201,168,76,0.06));mix-blend-mode:overlay;z-index:1;pointer-events:none;}
 
 /* WHY */
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);}
@@ -239,6 +244,10 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
   .authority-text{text-align:center;}
   .parallax-bg{background-attachment:scroll;}
   .parallax-section{height:40vh;}
+  .ikawa-cinematic{min-height:70vh;}
+  .ikawa-cinematic-content{padding:48px 28px;}
+  .ikawa-cinematic-bg::after{background:linear-gradient(180deg,rgba(8,7,6,0.7) 0%,rgba(8,7,6,0.85) 100%);}
+  .hero-photo-bg{display:none;}
   .ikawa-photo-col{min-height:320px;}
   .ikawa-info-col{padding:36px 28px;}
   .story-block{padding:48px 28px;}
@@ -267,6 +276,7 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
+  <div class="hero-photo-bg"><img src="ikawa_formal.jpg" alt=""></div>
   <div class="hero-accent"></div>
   <div class="hero-accent2"></div>
 
@@ -355,22 +365,19 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
 
 <div class="full-divider"></div>
 
-<!-- IKAWA -->
-<div class="section-wrap reveal">
-  <div class="ikawa-wrap">
-    <div class="ikawa-photo-col">
-      <img src="ikawa_formal.jpg" alt="井川意高">
-      <div class="ikawa-photo-badge">
-        <div class="ipb-name">井川 意高</div>
-        <div class="ipb-title">Motota Ikawa — Special Guest Player</div>
-      </div>
-    </div>
-    <div class="ikawa-info-col">
-      <span class="ikawa-tag">Guest Player</span>
-      <h3 class="ikawa-headline"><em>井川意高</em>と<br>同じ舞台に立て。</h3>
-      <div class="ikawa-desc">日本のカジノ界で圧倒的な存在感を持つ井川意高氏。本トーナメントでは特別ゲストプレイヤーとして参戦。あなたも同じテーブルで勝負できる、またとない機会です。</div>
-      <div class="ikawa-quote">「勝つか、語られるか。<br>それが、この舞台の価値だ。」</div>
-    </div>
+<!-- IKAWA - CINEMATIC -->
+<div class="ikawa-cinematic">
+  <div class="ikawa-cinematic-bg">
+    <img src="ikawa_formal.jpg" alt="井川意高">
+  </div>
+  <div class="blend-overlay"></div>
+  <div class="ikawa-cinematic-content">
+    <span class="ikawa-tag">Special Guest Player</span>
+    <div class="ikawa-name">Motota Ikawa</div>
+    <h3 class="ikawa-headline"><em>井川意高</em>と<br>同じ舞台に立て。</h3>
+    <div class="ikawa-desc">日本のカジノ界で圧倒的な存在感を持つ井川意高氏。<br>本トーナメントでは特別ゲストプレイヤーとして参戦。<br>あなたも同じテーブルで勝負できる、またとない機会。</div>
+    <div class="ikawa-quote">「この規模感で、この賞金は<br>正直おかしい。」</div>
+    <div class="ikawa-quote-author">— 井川 意高</div>
   </div>
 </div>
 
