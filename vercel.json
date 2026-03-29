@@ -1,0 +1,1 @@
+{ "rewrites": [{ "source": "/react/(.*)", "destination": "/react/index.html" }] }
