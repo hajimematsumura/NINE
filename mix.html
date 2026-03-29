@@ -281,36 +281,176 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease;}
 .reveal.visible{opacity:1;transform:none;}
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .trust-grid,.ikawa-wrap,.why-grid{grid-template-columns:1fr;}
-  .rules-simple{grid-template-columns:1fr;}
-  .steps-grid{grid-template-columns:1fr;gap:24px;}
-  .steps-grid::before{display:none;}
-  nav{padding:12px 20px;}
-  .nav-cta{padding:8px 20px;font-size:11px;}
-  .authority-quote{flex-direction:column;text-align:center;padding:20px 24px;}
-  .authority-text{text-align:center;}
-  .parallax-bg{background-attachment:scroll;}
-  .parallax-section{height:40vh;}
-  .ikawa-cinematic{min-height:70vh;}
-  .ikawa-cinematic-content{padding:48px 28px;}
-  .ikawa-cinematic-bg::after{background:linear-gradient(180deg,rgba(8,7,6,0.7) 0%,rgba(8,7,6,0.85) 100%);}
-  .hero-photo-bg{display:none;}
-  .ikawa-photo-col{min-height:320px;}
-  .ikawa-info-col{padding:36px 28px;}
-  .story-block{padding:48px 28px;}
-  .entry-price{flex-direction:column;gap:8px;}
-  .fixed-cta-text{display:none;}
+/* ===== MOBILE FIRST ===== */
+/* Default = mobile (スマホ) */
+
+/* Nav mobile */
+nav{padding:12px 16px;}
+.nav-logo{font-size:16px;}
+.nav-cta{padding:8px 18px;font-size:11px;}
+
+/* Hero mobile */
+.hero{padding:100px 16px 60px;min-height:100svh;}
+.hero-photo-bg{display:none;}
+.authority-quote{flex-direction:column;text-align:center;padding:16px 20px;gap:16px;}
+.authority-photo{width:56px;height:56px;}
+.authority-text{text-align:center;}
+.authority-words{font-size:16px;}
+.prize-mega{font-size:clamp(48px,14vw,80px);}
+.hero-catch .action{font-size:clamp(20px,5vw,32px);}
+.hero-sub{font-size:16px;margin-bottom:24px;}
+.fee-amount,.fee-prize{font-size:28px;}
+.btn-primary{padding:16px 48px;font-size:14px;}
+.hero-entry-fee{gap:12px;}
+.scroll-cue{bottom:16px;}
+
+/* Section mobile */
+.section-wrap{padding:60px 16px;}
+.section-head{margin-bottom:40px;}
+.sh-title{font-size:clamp(24px,7vw,32px);}
+.sh-eyebrow{font-size:10px;}
+
+/* Trust mobile */
+.trust-grid{grid-template-columns:1fr;gap:1px;}
+.trust-card{padding:32px 20px;}
+.trust-main{font-size:22px;}
+
+/* Ikawa cinematic mobile */
+.ikawa-cinematic{min-height:80svh;}
+.ikawa-cinematic-content{padding:40px 20px;}
+.ikawa-cinematic-bg::after{background:linear-gradient(180deg,rgba(8,7,6,0.6) 0%,rgba(8,7,6,0.88) 100%);}
+.ikawa-cinematic .ikawa-headline{font-size:clamp(24px,6vw,32px);}
+.ikawa-cinematic .ikawa-quote{font-size:clamp(16px,4vw,20px);}
+
+/* Parallax mobile */
+.parallax-bg{background-attachment:scroll;}
+.parallax-section{height:35vh;}
+.big-quote{font-size:clamp(18px,5vw,28px);}
+
+/* Why mobile */
+.why-grid{grid-template-columns:1fr;gap:1px;}
+.why-card{padding:32px 20px;}
+.why-num{font-size:56px;}
+.why-title{font-size:18px;}
+
+/* Prize mobile */
+.prize-item{padding:20px 16px;flex-direction:column;gap:8px;text-align:center;}
+.prize-item.gold{padding:28px 16px;}
+.prize-rank{justify-content:center;}
+.prize-amount{font-size:clamp(28px,8vw,40px);text-align:center;}
+.prize-item.gold .prize-amount{font-size:clamp(36px,10vw,52px);}
+.prize-total{flex-direction:column;gap:8px;text-align:center;padding:24px 16px;}
+
+/* Schedule mobile */
+.sc-content{padding:0 0 32px 20px;}
+.sc-title{font-size:18px;}
+
+/* Rules mobile */
+.rules-simple{grid-template-columns:1fr;gap:1px;}
+.rule-card{padding:32px 20px;}
+
+/* Steps mobile */
+.steps-grid{grid-template-columns:1fr;gap:20px;}
+.steps-grid::before{display:none;}
+.step-num{width:52px;height:52px;font-size:22px;}
+.step-title{font-size:18px;}
+
+/* Story mobile */
+.story-block{padding:48px 20px;}
+.story-lead{font-size:clamp(18px,5vw,24px);}
+.story-highlight{font-size:clamp(15px,4vw,20px);padding:16px 24px;}
+
+/* Entry mobile */
+.entry-section{padding:48px 16px;}
+.entry-title{font-size:clamp(24px,7vw,32px);}
+.entry-price{flex-direction:column;gap:8px;}
+.ep-amount,.ep-prize{font-size:clamp(36px,10vw,48px);}
+.btn-entry-large{padding:18px 48px;font-size:15px;}
+
+/* Fixed CTA mobile */
+.fixed-cta-text{display:none;}
+.btn-fixed{padding:14px 32px;font-size:12px;width:100%;}
+.fixed-cta{padding:10px 16px;}
+
+/* Footer mobile */
+.footer-logo{font-size:28px;}
+
+/* ===== TABLET (min-width: 600px) ===== */
+@media(min-width:600px){
+  nav{padding:14px 32px;}
+  .nav-logo{font-size:18px;}
+  .hero{padding:120px 24px 80px;}
+  .authority-quote{flex-direction:row;text-align:left;padding:20px 28px;gap:20px;}
+  .authority-text{text-align:left;}
+  .authority-words{font-size:18px;}
+  .prize-mega{font-size:clamp(56px,14vw,100px);}
+  .hero-catch .action{font-size:clamp(24px,5vw,36px);}
+  .fee-amount,.fee-prize{font-size:32px;}
+  .section-wrap{padding:80px 24px;}
+  .trust-grid{grid-template-columns:1fr 1fr;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .rules-simple{grid-template-columns:1fr 1fr 1fr;}
+  .steps-grid{grid-template-columns:1fr 1fr 1fr;}
+  .steps-grid::before{display:block;}
+  .prize-item{flex-direction:row;text-align:left;padding:24px 32px;}
+  .prize-item.gold{padding:36px 32px;}
+  .prize-rank{justify-content:flex-start;}
+  .prize-amount{text-align:right;}
+  .prize-total{flex-direction:row;padding:28px 32px;}
+  .entry-price{flex-direction:row;gap:20px;}
+  .ep-amount,.ep-prize{font-size:clamp(40px,8vw,56px);}
+  .ikawa-cinematic-content{padding:60px 40px;}
+  .story-block{padding:64px 40px;}
+  .entry-section{padding:64px 32px;}
+  .fixed-cta-text{display:block;}
+  .btn-fixed{width:auto;padding:12px 40px;}
 }
-@media(max-width:600px){
-  .hero-catch .amount{font-size:clamp(48px,12vw,80px);}
-  .section-wrap{padding:60px 16px;}
-  .entry-section{padding:48px 20px;}
-  .trust-card,.why-card{padding:32px 24px;}
-  .prize-item{padding:20px 16px;flex-direction:column;gap:12px;text-align:center;}
-  .prize-item.gold{padding:32px 16px;}
-  .prize-total{flex-direction:column;gap:8px;text-align:center;}
+
+/* ===== DESKTOP (min-width: 960px) ===== */
+@media(min-width:960px){
+  nav{padding:14px 40px;}
+  .nav-logo{font-size:20px;}
+  .nav-cta{padding:10px 28px;font-size:12px;}
+  .hero{padding:120px 24px 100px;}
+  .hero-photo-bg{display:block;}
+  .authority-quote{padding:24px 36px;gap:24px;}
+  .authority-words{font-size:clamp(18px,2.5vw,22px);}
+  .authority-photo{width:72px;height:72px;}
+  .prize-mega{font-size:clamp(80px,16vw,160px);}
+  .hero-catch .action{font-size:clamp(28px,5vw,48px);}
+  .hero-sub{font-size:clamp(18px,3.5vw,28px);}
+  .fee-amount,.fee-prize{font-size:36px;}
+  .btn-primary{padding:20px 72px;font-size:16px;}
+  .section-wrap{padding:100px 24px;}
+  .section-head{margin-bottom:64px;}
+  .sh-title{font-size:clamp(32px,6vw,56px);}
+  .trust-card{padding:48px 40px;}
+  .trust-main{font-size:28px;}
+  .why-card{padding:48px 40px;}
+  .why-num{font-size:72px;}
+  .why-title{font-size:22px;}
+  .prize-item{padding:28px 40px;}
+  .prize-item.gold{padding:44px 40px;}
+  .prize-amount{font-size:clamp(36px,6vw,64px);}
+  .prize-item.gold .prize-amount{font-size:clamp(44px,8vw,80px);}
+  .prize-total{padding:32px 40px;}
+  .sc-title{font-size:22px;}
+  .sc-content{padding:0 0 48px 28px;}
+  .rule-card{padding:40px 32px;}
+  .step-num{width:64px;height:64px;font-size:28px;}
+  .step-title{font-size:22px;}
+  .ikawa-cinematic{min-height:100vh;}
+  .ikawa-cinematic-content{padding:80px 60px;max-width:600px;}
+  .ikawa-cinematic-bg::after{background:linear-gradient(90deg,rgba(8,7,6,0.85) 0%,rgba(8,7,6,0.6) 40%,rgba(8,7,6,0.2) 70%,transparent 100%);}
+  .parallax-section{height:60vh;}
+  .story-block{padding:80px 60px;}
+  .story-lead{font-size:clamp(20px,4vw,32px);}
+  .story-highlight{font-size:clamp(18px,3vw,28px);}
+  .entry-section{padding:80px 48px;}
+  .entry-title{font-size:clamp(32px,6vw,56px);}
+  .ep-amount,.ep-prize{font-size:clamp(44px,8vw,72px);}
+  .btn-entry-large{padding:24px 80px;font-size:18px;}
+  .footer-logo{font-size:36px;}
 }
     </style>
 </head>
@@ -390,24 +530,24 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
   <div class="trust-grid">
     <div class="trust-card">
       <span class="trust-label">Event</span>
-      <div class="trust-main">IKAWANINE Baccarat Tournament<br>バカラトーナメント</div>
-      <div class="trust-sub">厳選されたプレイヤーが集う、本格バカラトーナメント。少額エントリーで高額賞金に挑戦できます。</div>
+      <div class="trust-main">IKAWANINE<br>Baccarat Tournament</div>
+      <div class="trust-sub">厳選されたプレイヤーが集う、<br>本格バカラトーナメント。<br>少額エントリーで高額賞金に挑戦できます。</div>
     </div>
     <div class="trust-card">
       <span class="trust-label">Date &amp; Venue</span>
       <div class="trust-main">2025年4月18日（金）</div>
-      <div class="trust-sub">東京都内の実在する会場にて開催。<br>参加確定後に詳細をご案内します。</div>
+      <div class="trust-sub">東京都内の実在する会場にて開催。<br>参加確定後に詳細をご案内いたします。</div>
       <span class="trust-highlight">Tokyo, Japan</span>
     </div>
     <div class="trust-card">
       <span class="trust-label">Organizer</span>
       <div class="trust-main">N9 運営事務局</div>
-      <div class="trust-sub">大会運営に関する全ての責任を持ち、公正なルールのもと開催いたします。</div>
+      <div class="trust-sub">大会運営に関する全ての責任を持ち、<br>公正なルールのもと開催いたします。</div>
     </div>
     <div class="trust-card">
       <span class="trust-label">Special Guest</span>
       <div class="trust-main">井川意高 参戦</div>
-      <div class="trust-sub">日本を代表するカジノプレイヤー、井川意高氏が本大会に参戦。同じテーブルで勝負できるチャンス。</div>
+      <div class="trust-sub">日本を代表するカジノプレイヤー、<br>井川意高氏が本大会に参戦。<br>同じテーブルで勝負できるチャンス。</div>
       <span class="trust-highlight">井川意高 出場確定</span>
     </div>
   </div>
@@ -428,7 +568,7 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
     <div class="ikawa-name">Motota Ikawa</div>
     <h3 class="ikawa-headline"><em>井川意高</em>と<br>同じ舞台に立て。</h3>
     <div class="ikawa-desc">日本のカジノ界で圧倒的な存在感を持つ井川意高氏。<br>本トーナメントでは特別ゲストプレイヤーとして参戦。<br>あなたも同じテーブルで勝負できる、またとない機会。</div>
-    <div class="ikawa-quote">「この規模感で、この賞金は<br>正直おかしい。」</div>
+    <div class="ikawa-quote">「この規模感で、<br>この賞金は正直おかしい。」</div>
     <div class="ikawa-quote-author">— 井川 意高</div>
   </div>
 </div>
@@ -459,24 +599,24 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
     <div class="why-card">
       <span class="why-num">01</span>
       <div class="why-title">少額でハイリターン</div>
-      <div class="why-body">エントリーフィーはたった<strong>100,000円</strong>。<br>優勝賞金は<strong>3,000,000円</strong>。30倍のリターンを掴めるチャンス。</div>
+      <div class="why-body">エントリーフィーはたった<strong>10万円</strong>。<br>優勝賞金は300万円。<br>30倍のリターンを掴めるチャンス。</div>
       <div class="why-accent">¥100,000 → ¥3,000,000</div>
     </div>
     <div class="why-card">
       <span class="why-num">02</span>
       <div class="why-title">有名人と同じ舞台</div>
-      <div class="why-body"><strong>井川意高</strong>と同じテーブルで勝負できる。普通では手に入らない体験が、ここにある。</div>
+      <div class="why-body"><strong>井川意高</strong>と同じテーブルで勝負できる。<br>普通では手に入らない体験が、ここにある。</div>
       <div class="why-accent">井川意高と対戦可能</div>
     </div>
     <div class="why-card">
       <span class="why-num">03</span>
       <div class="why-title">1日完結</div>
-      <div class="why-body">忙しい方でも大丈夫。<strong>1日で完結</strong>するトーナメント形式。仕事帰りや週末に、人生を変える勝負を。</div>
+      <div class="why-body">忙しい方でも大丈夫。<br><strong>1日で完結</strong>するトーナメント形式。<br>人生を変える勝負を。</div>
     </div>
     <div class="why-card">
       <span class="why-num">04</span>
       <div class="why-title">初期メンバーの価値</div>
-      <div class="why-body">将来、賞金数億規模を目指すこの大会。<strong>第1回の参加者</strong>は「伝説の初期メンバー」として語り継がれる。</div>
+      <div class="why-body">将来、賞金数億規模を目指すこの大会。<br><strong>第1回の参加者</strong>は、<br>「伝説の初期メンバー」として語り継がれる。</div>
       <div class="why-accent">最初の参加者だけが持つ価値</div>
     </div>
   </div>
@@ -641,16 +781,18 @@ footer{border-top:1px solid var(--border);padding:48px 24px;text-align:center;}
 
   <div class="story-block">
     <div class="story-lead">
-      今は小さくてもいい。<br>
-      この大会は、<em>世界最大級のバカラ大会</em>へ<br>
-      成長する起点だ。
+      今は小さくてもいい。<br><br>
+      この大会は、<br>
+      <em>世界最大級のバカラ大会</em>へ成長する起点だ。
     </div>
     <div class="story-body">
-      将来的に賞金は<strong>数億円規模</strong>まで拡張される計画。<br>
-      第1回に参加したあなたは、<strong>「伝説の初期メンバー」</strong>として<br>
+      将来的に賞金は<strong>数億円規模</strong>まで拡張される計画。<br><br>
+      第1回に参加したあなたは、<br>
+      「伝説の初期メンバー」として<br>
       この大会の歴史に名を刻むことになる。<br><br>
-      これは一緒に作る物語だ。<br>
-      最初に飛び込んだ者だけが、未来の中心に立てる。
+      これは、一緒に作る物語だ。<br>
+      最初に飛び込んだ者だけが、<br>
+      未来の中心に立てる。
     </div>
     <div class="story-highlight">最初の参加者だけが持つ価値がある。</div>
   </div>
