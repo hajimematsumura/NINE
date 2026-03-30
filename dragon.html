@@ -4,417 +4,378 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>龍大会 — 天下一バカラトーナメント</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Shippori+Mincho:wght@700;800&family=M+PLUS+Rounded+1c:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
     <style>
 :root{
-  --orange:#FF6B00;--orange-bright:#FF8C33;--orange-pale:#FFB366;
-  --blue:#1A3A8F;--blue-dark:#0D1F4D;--blue-light:#2E5CE6;
-  --yellow:#FFD700;--yellow-bright:#FFE44D;
-  --red:#E81224;--red-dark:#B30000;
-  --sky:#87CEEB;--cloud:#FFF8E7;
-  --dark:#1A1000;--text:#FFF8E7;
+  --ink:#1a1a1a;--ink-deep:#0a0a0a;
+  --gold:#b8860b;--gold-bright:#d4a017;--gold-pale:#dbc078;
+  --red:#8b0000;--red-bright:#b22222;--vermillion:#cc3300;
+  --paper:#f5f0e1;--paper-dark:#e8dcc8;
+  --text-on-dark:#e8dcc8;--text-on-light:#1a1a1a;
+  --muted-dark:rgba(232,220,200,.6);--muted-light:rgba(26,26,26,.5);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--dark);color:var(--text);font-family:'Noto Sans JP',sans-serif;overflow-x:hidden;}
+body{background:var(--ink-deep);color:var(--text-on-dark);font-family:'Shippori Mincho',serif;overflow-x:hidden;}
 
-/* ── HERO ── */
-.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:40px 16px;text-align:center;background:linear-gradient(180deg,#0D1F4D 0%,#1A3A8F 30%,#FF6B00 70%,#FF8C33 100%);}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 60%,rgba(255,215,0,.15),transparent 70%);pointer-events:none;}
+/* HERO */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:48px 20px;text-align:center;background:var(--ink-deep);}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 45%,rgba(184,134,11,.06),transparent 70%);pointer-events:none;}
+.hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");opacity:.5;pointer-events:none;}
 
-/* Stars */
-.stars{position:absolute;top:0;left:0;right:0;height:40%;overflow:hidden;pointer-events:none;}
-.star{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;animation:twinkle 2s ease-in-out infinite;}
-@keyframes twinkle{0%,100%{opacity:.3;}50%{opacity:1;}}
+.hero-top{font-family:'Zen Antique Soft',serif;font-size:11px;letter-spacing:.6em;color:var(--gold);margin-bottom:24px;position:relative;}
 
-/* Cloud */
-.clouds{position:absolute;bottom:15%;left:0;right:0;height:120px;pointer-events:none;overflow:hidden;}
-.cloud{position:absolute;background:rgba(255,248,231,.15);border-radius:50%;filter:blur(20px);}
+.hero-title{font-family:'Shippori Mincho',serif;font-size:clamp(72px,20vw,160px);font-weight:800;line-height:1;color:var(--text-on-dark);position:relative;margin-bottom:4px;text-shadow:0 0 60px rgba(184,134,11,.15);}
+.hero-title-en{font-family:'Shippori Mincho',serif;font-size:clamp(12px,3vw,18px);letter-spacing:.5em;color:var(--gold);font-weight:500;margin-bottom:32px;position:relative;}
 
-/* Dragon balls */
-.dragon-ball{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--yellow-bright),var(--orange));box-shadow:0 0 20px rgba(255,215,0,.5),inset 0 -4px 8px rgba(0,0,0,.2);position:relative;display:inline-block;margin:0 4px;animation:ballGlow 2s ease-in-out infinite alternate;}
-.dragon-ball .star-mark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--red);font-weight:900;text-shadow:0 1px 2px rgba(0,0,0,.3);}
-@keyframes ballGlow{0%{box-shadow:0 0 20px rgba(255,215,0,.5);}100%{box-shadow:0 0 40px rgba(255,215,0,.8),0 0 60px rgba(255,107,0,.3);}}
+.hero-line{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 28px;position:relative;}
 
-.hero-eyebrow{font-family:'M PLUS Rounded 1c',sans-serif;font-size:13px;letter-spacing:.4em;color:var(--yellow);text-transform:uppercase;margin-bottom:16px;animation:fadeUp .8s ease both;}
-.hero-subtitle{font-family:'M PLUS Rounded 1c',sans-serif;font-size:clamp(14px,3vw,20px);color:var(--cloud);letter-spacing:.2em;margin-bottom:12px;animation:fadeUp .8s .1s ease both;opacity:0;}
+.hero-catch{font-family:'Shippori Mincho',serif;font-size:clamp(18px,4.5vw,28px);font-weight:700;color:var(--text-on-dark);line-height:1.6;margin-bottom:28px;position:relative;letter-spacing:.08em;}
 
-.hero-title{font-family:'Shippori Mincho',serif;font-size:clamp(48px,14vw,100px);font-weight:800;line-height:1.1;margin-bottom:8px;animation:fadeUp .9s .2s ease both;opacity:0;color:var(--yellow);text-shadow:0 4px 0 var(--red-dark),0 8px 20px rgba(0,0,0,.4),0 0 40px rgba(255,215,0,.3);}
-.hero-title-sub{font-family:'M PLUS Rounded 1c',sans-serif;font-size:clamp(18px,5vw,32px);font-weight:900;color:#fff;text-shadow:0 2px 0 var(--blue-dark),0 4px 12px rgba(0,0,0,.4);letter-spacing:.15em;margin-bottom:24px;animation:fadeUp .8s .3s ease both;opacity:0;}
+.hero-prize{font-family:'Shippori Mincho',serif;font-size:clamp(44px,12vw,88px);font-weight:800;color:var(--gold-bright);position:relative;margin-bottom:8px;letter-spacing:-.02em;}
+.hero-prize-sub{font-size:13px;color:var(--muted-dark);margin-bottom:32px;position:relative;letter-spacing:.15em;}
 
-.hero-balls{display:flex;justify-content:center;gap:8px;margin-bottom:28px;animation:fadeUp .8s .4s ease both;opacity:0;}
+.hero-fee{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:28px;position:relative;}
+.hf-val{font-family:'Shippori Mincho',serif;font-size:24px;font-weight:700;color:var(--text-on-dark);}
+.hf-arrow{color:var(--gold);font-size:18px;}
+.hf-prize{font-family:'Shippori Mincho',serif;font-size:24px;font-weight:700;color:var(--gold-bright);}
 
-.hero-catch{font-family:'M PLUS Rounded 1c',sans-serif;font-size:clamp(16px,4vw,24px);font-weight:900;color:#fff;margin-bottom:8px;animation:fadeUp .8s .45s ease both;opacity:0;text-shadow:0 2px 8px rgba(0,0,0,.4);}
-.hero-catch em{font-style:normal;color:var(--yellow);font-size:1.2em;}
+.btn-main{display:inline-block;padding:16px 56px;border:1px solid var(--gold);color:var(--gold);font-family:'Shippori Mincho',serif;font-size:14px;font-weight:700;letter-spacing:.25em;text-decoration:none;transition:all .4s;position:relative;}
+.btn-main:hover{background:var(--gold);color:var(--ink-deep);}
 
-.hero-prize{font-family:'M PLUS Rounded 1c',sans-serif;font-size:clamp(40px,12vw,80px);font-weight:900;color:var(--yellow-bright);text-shadow:0 4px 0 var(--orange),0 8px 20px rgba(0,0,0,.3);margin-bottom:8px;animation:fadeUp .9s .5s ease both;opacity:0;}
+.hero-meta{margin-top:20px;font-size:12px;color:var(--muted-dark);letter-spacing:.2em;position:relative;}
+.hero-meta .sep{margin:0 8px;opacity:.3;}
 
-.hero-sub-copy{font-size:14px;color:rgba(255,248,231,.8);margin-bottom:28px;animation:fadeUp .8s .55s ease both;opacity:0;letter-spacing:.1em;}
+/* QUOTE BANNER */
+.quote-banner{background:var(--ink);border-top:1px solid rgba(184,134,11,.15);border-bottom:1px solid rgba(184,134,11,.15);padding:28px 20px;text-align:center;}
+.quote-banner-bg{position:relative;max-width:600px;margin:0 auto;}
+.qb-text{font-family:'Shippori Mincho',serif;font-size:clamp(15px,3.5vw,20px);font-weight:700;color:var(--text-on-dark);line-height:1.7;letter-spacing:.05em;}
+.qb-name{font-size:13px;color:var(--gold);margin-top:10px;letter-spacing:.25em;}
 
-.hero-fee{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:24px;animation:fadeUp .8s .6s ease both;opacity:0;}
-.hf-amount{font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;font-weight:900;color:#fff;}
-.hf-arrow{font-size:24px;color:var(--yellow);animation:pulse 1.5s ease-in-out infinite;}
-@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.3);}}
-.hf-prize{font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;font-weight:900;color:var(--yellow);}
+/* SECTIONS */
+.section-inner{max-width:960px;margin:0 auto;padding:80px 20px;}
+.section-head{margin-bottom:48px;text-align:center;}
+.sh-jp{font-family:'Shippori Mincho',serif;font-size:clamp(28px,7vw,44px);font-weight:800;color:var(--text-on-dark);line-height:1.3;}
+.light .sh-jp{color:var(--text-on-light);}
+.sh-en{font-size:11px;letter-spacing:.5em;color:var(--gold);margin-top:8px;}
+.sh-line{width:40px;height:1px;background:var(--gold);margin:16px auto 0;}
 
-.btn-dragon{display:inline-block;padding:18px 56px;background:linear-gradient(135deg,var(--orange-bright),var(--orange));color:#fff;font-family:'M PLUS Rounded 1c',sans-serif;font-size:16px;font-weight:900;letter-spacing:.2em;text-decoration:none;border-radius:50px;box-shadow:0 4px 20px rgba(255,107,0,.5),0 0 0 3px rgba(255,215,0,.3);transition:all .3s;animation:fadeUp .8s .65s ease both;opacity:0;position:relative;overflow:hidden;}
-.btn-dragon:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(255,107,0,.6),0 0 0 3px rgba(255,215,0,.5);}
-.btn-dragon::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.2) 50%,transparent 60%);animation:shimmer 3s ease-in-out infinite;}
-@keyframes shimmer{0%{transform:translateX(-100%);}100%{transform:translateX(100%);}}
-
-.hero-meta{margin-top:16px;font-size:13px;color:rgba(255,248,231,.7);animation:fadeUp .8s .7s ease both;opacity:0;letter-spacing:.15em;}
-.hero-meta .sep{margin:0 8px;color:rgba(255,248,231,.3);}
-
-/* ── SECTIONS ── */
-.section{position:relative;z-index:1;}
-.section-inner{max-width:1000px;margin:0 auto;padding:60px 16px;}
-.dark-section{background:var(--dark);}
-.blue-section{background:linear-gradient(180deg,var(--blue-dark),var(--blue));}
-.orange-section{background:linear-gradient(180deg,var(--orange),#CC5500);}
-
-.section-head{margin-bottom:40px;text-align:center;}
-.sh-icon{font-size:36px;display:block;margin-bottom:12px;}
-.sh-title{font-family:'Shippori Mincho',serif;font-size:clamp(28px,7vw,44px);font-weight:800;color:var(--yellow);text-shadow:0 2px 0 var(--red-dark),0 4px 12px rgba(0,0,0,.3);line-height:1.3;}
-.sh-sub{font-size:14px;color:rgba(255,248,231,.6);margin-top:8px;letter-spacing:.2em;}
+.dark{background:var(--ink-deep);}
+.light{background:var(--paper);color:var(--text-on-light);}
+.mid{background:var(--ink);}
 
 /* IKAWA */
-.ikawa-dragon{position:relative;min-height:60svh;display:flex;align-items:center;overflow:hidden;background:linear-gradient(135deg,var(--blue-dark),var(--blue),var(--blue-dark));}
-.ikawa-dragon-bg{position:absolute;inset:0;}
-.ikawa-dragon-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%;opacity:.35;filter:saturate(.7);}
-.ikawa-dragon-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,31,77,.5),rgba(26,58,143,.7));}
-.ikawa-dragon-content{position:relative;z-index:1;padding:40px 20px;max-width:600px;}
-.ikawa-badge{display:inline-block;background:var(--orange);color:#fff;font-family:'M PLUS Rounded 1c',sans-serif;font-size:10px;letter-spacing:.3em;padding:6px 16px;border-radius:20px;font-weight:900;margin-bottom:16px;}
-.ikawa-title{font-family:'Shippori Mincho',serif;font-size:clamp(28px,7vw,44px);font-weight:800;color:var(--yellow);text-shadow:0 3px 0 var(--red-dark),0 6px 16px rgba(0,0,0,.4);line-height:1.3;margin-bottom:16px;}
-.ikawa-desc{font-size:15px;color:rgba(255,248,231,.8);line-height:2;margin-bottom:24px;}
-.ikawa-quote{font-family:'Shippori Mincho',serif;font-size:clamp(16px,4vw,22px);font-weight:700;color:var(--yellow-bright);text-shadow:0 2px 8px rgba(0,0,0,.4);line-height:1.7;}
-.ikawa-quote-name{font-size:14px;color:var(--orange-pale);margin-top:8px;letter-spacing:.2em;}
+.ikawa-section{position:relative;min-height:65svh;overflow:hidden;display:flex;align-items:center;}
+.ikawa-bg{position:absolute;inset:0;}
+.ikawa-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%;opacity:.3;}
+.ikawa-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.4),rgba(10,10,10,.75));}
+.ikawa-content{position:relative;z-index:1;padding:48px 20px;max-width:560px;}
+.ikawa-label{font-size:11px;letter-spacing:.4em;color:var(--gold);border:1px solid var(--gold);display:inline-block;padding:4px 14px;margin-bottom:20px;}
+.ikawa-headline{font-family:'Shippori Mincho',serif;font-size:clamp(28px,7vw,44px);font-weight:800;line-height:1.3;margin-bottom:20px;color:var(--gold-bright);}
+.ikawa-desc{font-size:15px;color:var(--muted-dark);line-height:2.2;margin-bottom:24px;}
+.ikawa-quote{font-family:'Shippori Mincho',serif;font-size:clamp(16px,4vw,22px);font-weight:700;color:var(--gold-pale);border-left:2px solid var(--red-bright);padding-left:20px;line-height:1.8;}
+.ikawa-qname{font-size:13px;color:var(--gold);margin-top:10px;padding-left:22px;letter-spacing:.2em;}
+
+/* TRUST */
+.trust-grid{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(184,134,11,.1);}
+.trust-card{padding:32px 20px;}
+.dark .trust-card{background:var(--ink-deep);}
+.light .trust-card{background:var(--paper);}
+.tc-label{font-size:10px;letter-spacing:.5em;color:var(--gold);margin-bottom:10px;}
+.tc-title{font-family:'Shippori Mincho',serif;font-size:20px;font-weight:800;margin-bottom:8px;line-height:1.4;}
+.tc-desc{font-size:14px;line-height:1.9;color:var(--muted-dark);}
+.light .tc-desc{color:var(--muted-light);}
+.tc-badge{display:inline-block;padding:4px 12px;border:1px solid var(--red-bright);font-size:12px;color:var(--red-bright);margin-top:10px;letter-spacing:.1em;}
 
 /* WHY */
-.why-grid{display:grid;grid-template-columns:1fr;gap:12px;}
-.why-card{background:linear-gradient(135deg,rgba(255,107,0,.1),rgba(255,215,0,.05));border:2px solid rgba(255,215,0,.2);border-radius:16px;padding:28px 20px;transition:all .3s;}
-.why-card:hover{border-color:var(--yellow);transform:translateY(-4px);box-shadow:0 8px 24px rgba(255,107,0,.2);}
-.why-num{font-family:'M PLUS Rounded 1c',sans-serif;font-size:48px;font-weight:900;color:rgba(255,215,0,.3);line-height:1;}
-.why-title{font-family:'M PLUS Rounded 1c',sans-serif;font-size:18px;font-weight:900;color:var(--yellow);margin:8px 0;}
-.why-body{font-size:14px;color:rgba(255,248,231,.7);line-height:1.9;}
-.why-accent{display:inline-block;margin-top:10px;padding:4px 12px;background:var(--orange);color:#fff;border-radius:20px;font-size:12px;font-weight:700;}
+.why-grid{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(184,134,11,.08);}
+.why-card{padding:32px 20px;background:var(--paper);}
+.why-num{font-family:'Shippori Mincho',serif;font-size:48px;font-weight:800;color:rgba(139,0,0,.15);line-height:1;}
+.why-title{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:800;margin:8px 0;color:var(--text-on-light);}
+.why-body{font-size:14px;color:var(--muted-light);line-height:2;}
+.why-accent{display:inline-block;margin-top:10px;padding:4px 12px;border-left:2px solid var(--red-bright);font-size:13px;color:var(--red-bright);background:rgba(139,0,0,.04);}
 
 /* PRIZE */
-.prize-list{display:flex;flex-direction:column;gap:8px;}
-.prize-item{background:linear-gradient(135deg,rgba(26,58,143,.3),rgba(13,31,77,.5));border:2px solid rgba(255,215,0,.15);border-radius:12px;padding:20px 16px;display:flex;align-items:center;justify-content:space-between;}
-.prize-item.champion{background:linear-gradient(135deg,rgba(255,107,0,.2),rgba(255,215,0,.15));border-color:var(--yellow);padding:28px 16px;}
-.prize-item.champion::before{content:'🐉';font-size:28px;margin-right:8px;}
+.prize-list{display:flex;flex-direction:column;gap:1px;background:rgba(184,134,11,.1);}
+.prize-item{background:var(--ink-deep);padding:20px;display:flex;align-items:center;justify-content:space-between;}
+.prize-item.top{background:var(--ink);border:1px solid rgba(184,134,11,.3);padding:28px 20px;}
 .prize-rank{display:flex;align-items:center;gap:12px;}
-.prize-icon{font-size:28px;}
-.prize-label{font-family:'M PLUS Rounded 1c',sans-serif;font-size:18px;font-weight:900;}
-.prize-amount{font-family:'M PLUS Rounded 1c',sans-serif;font-size:clamp(24px,6vw,40px);font-weight:900;color:var(--yellow);}
-.prize-item.champion .prize-amount{font-size:clamp(32px,8vw,52px);color:var(--yellow-bright);text-shadow:0 2px 8px rgba(255,215,0,.4);}
-.prize-total{background:var(--orange);border-radius:12px;padding:20px;text-align:center;margin-top:8px;}
-.prize-total-label{font-size:12px;letter-spacing:.3em;color:rgba(255,255,255,.8);}
-.prize-total-amount{font-family:'M PLUS Rounded 1c',sans-serif;font-size:clamp(32px,8vw,48px);font-weight:900;color:#fff;text-shadow:0 2px 0 var(--red-dark);}
+.pr-num{font-family:'Shippori Mincho',serif;font-size:28px;font-weight:800;color:var(--gold);width:40px;}
+.prize-item.top .pr-num{font-size:36px;}
+.pr-label{font-family:'Shippori Mincho',serif;font-size:16px;font-weight:700;}
+.prize-item.top .pr-label{font-size:20px;}
+.pr-amount{font-family:'Shippori Mincho',serif;font-size:clamp(24px,6vw,40px);font-weight:800;color:var(--gold-bright);}
+.prize-item.top .pr-amount{font-size:clamp(32px,8vw,56px);}
+.prize-total{background:var(--ink);border:1px solid var(--gold);padding:20px;display:flex;align-items:center;justify-content:space-between;margin-top:1px;}
+.pt-label{font-size:11px;letter-spacing:.4em;color:var(--gold);}
+.pt-amount{font-family:'Shippori Mincho',serif;font-size:clamp(28px,7vw,44px);font-weight:800;color:var(--gold-bright);}
 
 /* SCHEDULE */
 .timeline{display:flex;flex-direction:column;}
-.tl-item{display:flex;min-height:80px;}
-.tl-track{display:flex;flex-direction:column;align-items:center;width:48px;flex-shrink:0;}
-.tl-dot{width:16px;height:16px;border-radius:50%;background:var(--orange);box-shadow:0 0 8px rgba(255,107,0,.5);flex-shrink:0;z-index:1;}
-.tl-dot.main{background:var(--yellow);box-shadow:0 0 16px rgba(255,215,0,.6);}
-.tl-line{flex:1;width:2px;background:linear-gradient(180deg,var(--orange),rgba(255,107,0,.2));}
+.tl-item{display:flex;min-height:72px;}
+.tl-track{display:flex;flex-direction:column;align-items:center;width:40px;flex-shrink:0;}
+.tl-dot{width:8px;height:8px;background:var(--gold);flex-shrink:0;z-index:1;transform:rotate(45deg);}
+.tl-dot.main{width:12px;height:12px;background:var(--red-bright);box-shadow:0 0 8px rgba(178,34,34,.4);}
+.tl-line{flex:1;width:1px;background:rgba(184,134,11,.2);}
 .tl-content{flex:1;padding:0 0 28px 16px;transform:translateY(-4px);}
-.tl-badge{display:inline-block;padding:3px 10px;background:var(--red);color:#fff;font-size:9px;font-weight:900;border-radius:10px;margin-bottom:6px;letter-spacing:.1em;}
-.tl-time{font-family:'M PLUS Rounded 1c',sans-serif;font-size:16px;font-weight:900;color:var(--orange-bright);margin-bottom:4px;}
-.tl-title{font-family:'M PLUS Rounded 1c',sans-serif;font-size:18px;font-weight:900;color:#fff;margin-bottom:4px;}
-.tl-desc{font-size:13px;color:rgba(255,248,231,.65);line-height:1.8;}
+.tl-badge{display:inline-block;padding:2px 8px;background:var(--red);color:var(--text-on-dark);font-size:9px;letter-spacing:.2em;margin-bottom:4px;}
+.tl-time{font-size:14px;color:var(--gold);margin-bottom:4px;letter-spacing:.15em;font-weight:700;}
+.tl-title{font-family:'Shippori Mincho',serif;font-size:17px;font-weight:700;margin-bottom:4px;}
+.tl-desc{font-size:13px;color:var(--muted-light);line-height:1.8;}
 
 /* RULES */
-.rules-grid{display:grid;grid-template-columns:1fr;gap:12px;}
-.rule-card{background:linear-gradient(135deg,rgba(255,107,0,.08),rgba(255,215,0,.03));border:2px solid rgba(255,215,0,.15);border-radius:16px;padding:28px 20px;text-align:center;}
-.rule-icon{font-size:32px;display:block;margin-bottom:10px;}
-.rule-title{font-family:'M PLUS Rounded 1c',sans-serif;font-size:18px;font-weight:900;color:var(--yellow);margin-bottom:8px;}
-.rule-text{font-size:14px;color:rgba(255,248,231,.7);line-height:1.9;}
+.rules-grid{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(184,134,11,.1);}
+.rule-card{background:var(--paper);padding:28px 20px;text-align:center;}
+.rule-title{font-family:'Shippori Mincho',serif;font-size:17px;font-weight:800;margin-bottom:8px;color:var(--text-on-light);}
+.rule-desc{font-size:14px;color:var(--muted-light);line-height:1.9;}
 
 /* STEPS */
-.steps-grid{display:grid;grid-template-columns:1fr;gap:16px;}
-.step-card{text-align:center;padding:24px 16px;}
-.step-ball{width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--yellow-bright),var(--orange));box-shadow:0 0 20px rgba(255,215,0,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;font-weight:900;color:var(--red);}
-.step-title{font-family:'M PLUS Rounded 1c',sans-serif;font-size:18px;font-weight:900;color:var(--yellow);margin-bottom:8px;}
-.step-desc{font-size:14px;color:rgba(255,248,231,.7);line-height:1.8;}
+.steps{display:grid;grid-template-columns:1fr;gap:16px;}
+.step{text-align:center;padding:20px;}
+.step-num{font-family:'Shippori Mincho',serif;font-size:36px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:12px;}
+.step-title{font-family:'Shippori Mincho',serif;font-size:17px;font-weight:800;margin-bottom:8px;}
+.step-desc{font-size:14px;color:var(--muted-dark);line-height:1.8;}
 
 /* STORY */
-.story-block{background:linear-gradient(135deg,rgba(255,107,0,.1),rgba(255,215,0,.05));border:2px solid rgba(255,215,0,.2);border-radius:20px;padding:48px 20px;text-align:center;}
-.story-lead{font-family:'Shippori Mincho',serif;font-size:clamp(20px,5vw,28px);font-weight:800;color:#fff;line-height:1.8;margin-bottom:24px;}
-.story-lead em{font-style:normal;color:var(--yellow);text-shadow:0 1px 4px rgba(255,215,0,.3);}
-.story-body{font-size:15px;color:rgba(255,248,231,.7);line-height:2.2;max-width:600px;margin:0 auto 28px;}
-.story-body strong{color:var(--yellow);font-weight:700;}
-.story-highlight{font-family:'M PLUS Rounded 1c',sans-serif;font-size:clamp(16px,4vw,22px);font-weight:900;color:var(--yellow-bright);background:linear-gradient(135deg,rgba(255,107,0,.2),rgba(255,215,0,.1));border:2px solid var(--yellow);border-radius:50px;padding:14px 28px;display:inline-block;text-shadow:0 1px 4px rgba(0,0,0,.3);}
+.story{background:var(--ink);border:1px solid rgba(184,134,11,.15);padding:48px 20px;text-align:center;}
+.story::before{content:'';display:block;width:40px;height:1px;background:var(--gold);margin:0 auto 28px;}
+.story-lead{font-family:'Shippori Mincho',serif;font-size:clamp(18px,4.5vw,26px);font-weight:700;line-height:1.8;margin-bottom:24px;}
+.story-lead em{font-style:normal;color:var(--gold-bright);}
+.story-body{font-size:15px;color:var(--muted-dark);line-height:2.2;max-width:560px;margin:0 auto 28px;}
+.story-body strong{color:var(--gold-pale);font-weight:700;}
+.story-end{font-family:'Shippori Mincho',serif;font-size:clamp(16px,4vw,22px);font-weight:800;color:var(--gold-bright);border:1px solid var(--gold);padding:14px 28px;display:inline-block;letter-spacing:.15em;}
 
 /* ENTRY */
-.entry-block{background:linear-gradient(135deg,var(--orange),#CC5500);border-radius:20px;padding:48px 20px;text-align:center;position:relative;overflow:hidden;}
-.entry-block::before{content:'🐉';position:absolute;top:-20px;right:-20px;font-size:120px;opacity:.1;transform:rotate(-15deg);}
-.entry-title{font-family:'Shippori Mincho',serif;font-size:clamp(28px,7vw,40px);font-weight:800;color:#fff;text-shadow:0 3px 0 var(--red-dark);margin-bottom:12px;}
-.entry-sub{font-size:15px;color:rgba(255,255,255,.85);margin-bottom:28px;letter-spacing:.1em;}
+.entry{border:1px solid rgba(184,134,11,.2);padding:48px 20px;text-align:center;position:relative;background:var(--ink);}
+.entry::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.entry-title{font-family:'Shippori Mincho',serif;font-size:clamp(28px,7vw,40px);font-weight:800;margin-bottom:12px;}
+.entry-sub{font-size:15px;color:var(--muted-dark);margin-bottom:28px;letter-spacing:.1em;}
 .entry-price{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:28px;}
-.ep-label{font-size:12px;color:rgba(255,255,255,.7);}
-.ep-amount{font-family:'M PLUS Rounded 1c',sans-serif;font-size:clamp(32px,8vw,48px);font-weight:900;color:var(--yellow-bright);text-shadow:0 2px 0 var(--red-dark);}
-.ep-arrow{font-size:24px;color:#fff;}
-.entry-note{font-size:12px;color:rgba(255,255,255,.6);margin-top:16px;line-height:2;}
+.ep-label{font-size:11px;color:var(--muted-dark);letter-spacing:.2em;}
+.ep-val{font-family:'Shippori Mincho',serif;font-size:clamp(32px,8vw,48px);font-weight:800;color:var(--gold-bright);}
+.ep-arrow{color:var(--gold);font-size:18px;}
+.entry-note{font-size:12px;color:var(--muted-dark);margin-top:16px;line-height:2;}
 
 /* FIXED CTA */
-.fixed-cta{position:fixed;bottom:0;left:0;right:0;z-index:99;background:rgba(13,31,77,.95);backdrop-filter:blur(8px);border-top:2px solid rgba(255,215,0,.3);padding:10px 16px;display:flex;align-items:center;justify-content:center;gap:12px;transform:translateY(100%);transition:transform .4s ease;}
+.fixed-cta{position:fixed;bottom:0;left:0;right:0;z-index:99;background:rgba(10,10,10,.95);backdrop-filter:blur(8px);border-top:1px solid rgba(184,134,11,.15);padding:10px 16px;display:flex;align-items:center;justify-content:center;gap:16px;transform:translateY(100%);transition:transform .4s ease;}
 .fixed-cta.show{transform:translateY(0);}
-.fixed-cta-text{font-family:'M PLUS Rounded 1c',sans-serif;font-size:13px;color:var(--yellow);font-weight:700;display:none;}
-.btn-fixed{padding:12px 28px;background:var(--orange);color:#fff;font-family:'M PLUS Rounded 1c',sans-serif;font-size:13px;font-weight:900;border-radius:50px;text-decoration:none;width:100%;text-align:center;box-shadow:0 2px 12px rgba(255,107,0,.4);}
+.fc-text{display:none;font-size:13px;color:var(--gold);}
+.fc-text strong{color:var(--gold-bright);}
+.btn-fixed{padding:12px 32px;border:1px solid var(--gold);color:var(--gold);font-family:'Shippori Mincho',serif;font-size:13px;font-weight:700;letter-spacing:.2em;text-decoration:none;width:100%;text-align:center;transition:all .3s;}
+.btn-fixed:hover{background:var(--gold);color:var(--ink-deep);}
 
 /* FOOTER */
-footer{background:var(--blue-dark);padding:40px 16px;text-align:center;border-top:2px solid rgba(255,215,0,.1);}
-.footer-logo{font-family:'Shippori Mincho',serif;font-size:28px;font-weight:800;color:var(--yellow);text-shadow:0 2px 0 var(--red-dark);margin-bottom:8px;}
-.footer-sub{font-size:11px;color:rgba(255,248,231,.4);letter-spacing:.3em;margin-bottom:12px;}
-.footer-copy{font-size:11px;color:rgba(255,248,231,.25);}
-
-/* ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease;}
-.reveal.visible{opacity:1;transform:none;}
+footer{border-top:1px solid rgba(184,134,11,.1);padding:40px 16px;text-align:center;}
+.f-logo{font-family:'Shippori Mincho',serif;font-size:28px;font-weight:800;color:var(--gold);margin-bottom:6px;}
+.f-sub{font-size:10px;letter-spacing:.4em;color:var(--muted-dark);margin-bottom:12px;}
+.f-copy{font-size:10px;color:rgba(232,220,200,.2);}
 
 /* DIVIDER */
-.dragon-divider{text-align:center;padding:16px 0;font-size:28px;background:var(--dark);}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(184,134,11,.2),transparent);}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+.fade-in{animation:fadeUp .8s ease both;}
+.fade-d1{animation-delay:.1s;opacity:0;}
+.fade-d2{animation-delay:.2s;opacity:0;}
+.fade-d3{animation-delay:.3s;opacity:0;}
+.fade-d4{animation-delay:.4s;opacity:0;}
+.fade-d5{animation-delay:.5s;opacity:0;}
+.fade-d6{animation-delay:.6s;opacity:0;}
+.fade-d7{animation-delay:.7s;opacity:0;}
 
 /* RESPONSIVE */
 @media(min-width:600px){
-  .why-grid{grid-template-columns:1fr 1fr;}
+  .trust-grid,.why-grid{grid-template-columns:1fr 1fr;}
   .rules-grid{grid-template-columns:1fr 1fr 1fr;}
-  .steps-grid{grid-template-columns:1fr 1fr 1fr;}
-  .entry-price{flex-direction:row;gap:20px;}
-  .fixed-cta-text{display:block;}
+  .steps{grid-template-columns:1fr 1fr 1fr;}
+  .entry-price{flex-direction:row;gap:24px;}
+  .fc-text{display:block;}
   .btn-fixed{width:auto;}
   .prize-item{padding:24px 32px;}
-  .prize-item.champion{padding:32px 32px;}
-  .ikawa-dragon{min-height:70svh;}
-  .ikawa-dragon-content{padding:60px 40px;}
+  .prize-item.top{padding:32px 32px;}
 }
 @media(min-width:960px){
   .section-inner{padding:100px 24px;}
-  .sh-title{font-size:clamp(32px,6vw,52px);}
-  .prize-amount{font-size:clamp(32px,5vw,56px);}
-  .prize-item.champion .prize-amount{font-size:clamp(40px,7vw,72px);}
-  .story-block{padding:80px 48px;}
-  .entry-block{padding:80px 48px;}
-  .ikawa-dragon{min-height:80vh;}
-  .ikawa-dragon-content{padding:80px 60px;max-width:600px;}
-  .ikawa-dragon-bg::after{background:linear-gradient(90deg,rgba(13,31,77,.8) 0%,rgba(13,31,77,.5) 40%,transparent 70%);}
+  .ikawa-section{min-height:75vh;}
+  .ikawa-content{padding:80px 48px;}
+  .ikawa-bg::after{background:linear-gradient(90deg,rgba(10,10,10,.85) 0%,rgba(10,10,10,.5) 40%,transparent 70%);}
+  .story{padding:80px 48px;}
+  .entry{padding:80px 48px;}
 }
     </style>
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="stars">
-    <div class="star" style="top:8%;left:15%;animation-delay:0s;"></div>
-    <div class="star" style="top:12%;left:45%;animation-delay:.5s;"></div>
-    <div class="star" style="top:5%;left:75%;animation-delay:1s;"></div>
-    <div class="star" style="top:18%;left:30%;animation-delay:.3s;width:2px;height:2px;"></div>
-    <div class="star" style="top:3%;left:60%;animation-delay:.8s;"></div>
-    <div class="star" style="top:22%;left:85%;animation-delay:1.2s;width:2px;height:2px;"></div>
-    <div class="star" style="top:15%;left:10%;animation-delay:.6s;"></div>
-    <div class="star" style="top:8%;left:90%;animation-delay:.4s;"></div>
-  </div>
-
-  <div class="hero-eyebrow">🐉 DRAGON BACCARAT 🐉</div>
-  <div class="hero-subtitle">天下一バカラトーナメント</div>
-  <h1 class="hero-title">龍大会</h1>
-  <div class="hero-title-sub">手に入れろ‼️ ドラゴンボール</div>
-
-  <div class="hero-balls">
-    <div class="dragon-ball"><span class="star-mark">★</span></div>
-    <div class="dragon-ball"><span class="star-mark">★★</span></div>
-    <div class="dragon-ball"><span class="star-mark">★★★</span></div>
-  </div>
-
-  <div class="hero-catch">世界最強のバカラ大会が、<em>今</em>はじまる。</div>
-  <div class="hero-prize">¥3,000,000</div>
-  <div class="hero-sub-copy">— 勝者にはドラゴンボール（賞金）が授けられる —</div>
-
-  <div class="hero-fee">
-    <span class="hf-amount">¥100,000</span>
-    <span class="hf-arrow">⚡</span>
+<section class="hero">
+  <div class="hero-top fade-in">天下一バカラトーナメント</div>
+  <h1 class="hero-title fade-in fade-d1">龍</h1>
+  <div class="hero-title-en fade-in fade-d2">DRAGON BACCARAT</div>
+  <div class="hero-line fade-in fade-d3"></div>
+  <div class="hero-catch fade-in fade-d3">世界最強の大会が、今はじまる。</div>
+  <div class="hero-prize fade-in fade-d4">¥3,000,000</div>
+  <div class="hero-prize-sub fade-in fade-d4">賞金総額</div>
+  <div class="hero-fee fade-in fade-d5">
+    <span class="hf-val">¥100,000</span>
+    <span class="hf-arrow">→</span>
     <span class="hf-prize">¥3,000,000</span>
   </div>
-
-  <a href="#entry" class="btn-dragon">今すぐ参戦する</a>
-  <div class="hero-meta">2025.4.18<span class="sep">|</span>東京<span class="sep">|</span>1日完結</div>
+  <a href="#entry" class="btn-main fade-in fade-d6">参戦する</a>
+  <div class="hero-meta fade-in fade-d7">2025.4.18<span class="sep">|</span>東京<span class="sep">|</span>1日完結</div>
 </section>
 
-<!-- IKAWA -->
-<div class="ikawa-dragon reveal">
-  <div class="ikawa-dragon-bg"><img src="ikawa_formal.jpg" alt="井川意高"></div>
-  <div class="ikawa-dragon-content">
-    <span class="ikawa-badge">🐉 最強の挑戦者</span>
-    <h3 class="ikawa-title">井川意高、参戦。</h3>
-    <div class="ikawa-desc">日本最強のカジノプレイヤーが、<br>この大会に降臨する。<br><br>お前は、この男に勝てるか？</div>
+<div class="quote-banner">
+  <div class="quote-banner-bg">
+    <div class="qb-text">「この規模感、この賞金はおかしい。」</div>
+    <div class="qb-name">— 井川 意高</div>
+  </div>
+</div>
+
+<div class="ikawa-section reveal">
+  <div class="ikawa-bg"><img src="ikawa_formal.jpg" alt="井川意高"></div>
+  <div class="ikawa-content">
+    <span class="ikawa-label">特別参戦</span>
+    <h3 class="ikawa-headline">井川意高、降臨。</h3>
+    <div class="ikawa-desc">日本のカジノ界で圧倒的な存在感を持つ男。<br>本大会に特別参戦。<br><br>同じテーブルで勝負できる、またとない機会。</div>
     <div class="ikawa-quote">「この規模感、<br>この賞金はおかしい。」</div>
-    <div class="ikawa-quote-name">— 井川 意高</div>
+    <div class="ikawa-qname">— 井川 意高</div>
   </div>
 </div>
 
-<div class="dragon-divider">🐉</div>
+<div class="divider"></div>
 
-<!-- WHY -->
-<div class="dark-section">
+<div class="light">
 <div class="section-inner reveal">
-  <div class="section-head"><span class="sh-icon">⚡</span><h2 class="sh-title">なぜ、この大会なのか？</h2></div>
+  <div class="section-head"><h2 class="sh-jp">大会概要</h2><div class="sh-en">OVERVIEW</div><div class="sh-line"></div></div>
+  <div class="trust-grid">
+    <div class="trust-card"><div class="tc-label">EVENT</div><div class="tc-title">龍大会<br>天下一バカラトーナメント</div><div class="tc-desc">厳選されたプレイヤーが集う、<br>本格バカラトーナメント。</div></div>
+    <div class="trust-card"><div class="tc-label">DATE</div><div class="tc-title">2025年4月18日（金）</div><div class="tc-desc">東京都内の実在する会場にて開催。<br>参加確定後に詳細をご案内。</div><span class="tc-badge">Tokyo, Japan</span></div>
+    <div class="trust-card"><div class="tc-label">ORGANIZER</div><div class="tc-title">N9 運営事務局</div><div class="tc-desc">公正なルールのもと開催。<br>大会運営に全責任を持ちます。</div></div>
+    <div class="trust-card"><div class="tc-label">GUEST</div><div class="tc-title">井川意高 参戦</div><div class="tc-desc">日本を代表するカジノプレイヤー、<br>井川意高氏が本大会に参戦。</div><span class="tc-badge">出場確定</span></div>
+  </div>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<div class="light">
+<div class="section-inner reveal">
+  <div class="section-head"><h2 class="sh-jp">なぜ、この大会なのか</h2><div class="sh-en">WHY THIS TOURNAMENT</div><div class="sh-line"></div></div>
   <div class="why-grid">
-    <div class="why-card">
-      <span class="why-num">01</span>
-      <div class="why-title">少額でハイリターン</div>
-      <div class="why-body">参加費はたった10万円。<br>優勝賞金300万円。<br>30倍のリターンを掴め。</div>
-      <span class="why-accent">¥100,000 → ¥3,000,000</span>
-    </div>
-    <div class="why-card">
-      <span class="why-num">02</span>
-      <div class="why-title">井川意高と対戦</div>
-      <div class="why-body">日本最強のプレイヤーと<br>同じテーブルで勝負できる。<br>またとない機会。</div>
-      <span class="why-accent">🐉 最強の相手</span>
-    </div>
-    <div class="why-card">
-      <span class="why-num">03</span>
-      <div class="why-title">1日完結</div>
-      <div class="why-body">忙しくても大丈夫。<br>1日で完結するトーナメント。<br>人生を変える勝負を。</div>
-    </div>
-    <div class="why-card">
-      <span class="why-num">04</span>
-      <div class="why-title">伝説の初期メンバー</div>
-      <div class="why-body">将来、賞金数億規模へ。<br>第1回の参加者は<br>「伝説の戦士」として語り継がれる。</div>
-      <span class="why-accent">⭐ 初期メンバー</span>
-    </div>
+    <div class="why-card"><span class="why-num">01</span><div class="why-title">少額でハイリターン</div><div class="why-body">参加費はたった10万円。<br>優勝賞金300万円。<br>30倍のリターンを掴め。</div><div class="why-accent">¥100,000 → ¥3,000,000</div></div>
+    <div class="why-card"><span class="why-num">02</span><div class="why-title">井川意高と対戦</div><div class="why-body">日本最強のプレイヤーと<br>同じテーブルで勝負できる。</div><div class="why-accent">井川意高と対戦可能</div></div>
+    <div class="why-card"><span class="why-num">03</span><div class="why-title">1日完結</div><div class="why-body">1日で完結するトーナメント。<br>人生を変える勝負を。</div></div>
+    <div class="why-card"><span class="why-num">04</span><div class="why-title">初期メンバーの価値</div><div class="why-body">将来、賞金数億規模へ。<br>第1回の参加者は<br>伝説として語り継がれる。</div><div class="why-accent">最初の参加者だけが持つ価値</div></div>
   </div>
 </div>
 </div>
 
-<div class="dragon-divider">🔥</div>
+<div class="divider"></div>
 
-<!-- PRIZE -->
-<div class="blue-section">
+<div class="dark">
 <div class="section-inner reveal">
-  <div class="section-head"><span class="sh-icon">🏆</span><h2 class="sh-title">賞金構成</h2></div>
+  <div class="section-head"><h2 class="sh-jp">賞金構成</h2><div class="sh-en">PRIZE</div><div class="sh-line"></div></div>
   <div class="prize-list">
-    <div class="prize-item champion">
-      <div class="prize-rank"><span class="prize-icon">🥇</span><span class="prize-label">優勝</span></div>
-      <span class="prize-amount">¥3,000,000</span>
-    </div>
-    <div class="prize-item">
-      <div class="prize-rank"><span class="prize-icon">🥈</span><span class="prize-label">準優勝</span></div>
-      <span class="prize-amount">¥1,500,000</span>
-    </div>
-    <div class="prize-item">
-      <div class="prize-rank"><span class="prize-icon">🥉</span><span class="prize-label">3位</span></div>
-      <span class="prize-amount">¥500,000</span>
-    </div>
+    <div class="prize-item top"><div class="prize-rank"><span class="pr-num">1</span><span class="pr-label">優勝</span></div><span class="pr-amount">¥3,000,000</span></div>
+    <div class="prize-item"><div class="prize-rank"><span class="pr-num">2</span><span class="pr-label">準優勝</span></div><span class="pr-amount">¥1,500,000</span></div>
+    <div class="prize-item"><div class="prize-rank"><span class="pr-num">3</span><span class="pr-label">3位</span></div><span class="pr-amount">¥500,000</span></div>
   </div>
-  <div class="prize-total">
-    <div class="prize-total-label">TOTAL PRIZE POOL</div>
-    <div class="prize-total-amount">¥5,000,000</div>
-  </div>
+  <div class="prize-total"><span class="pt-label">TOTAL</span><span class="pt-amount">¥5,000,000</span></div>
 </div>
 </div>
 
-<!-- SCHEDULE -->
-<div class="dark-section">
+<div class="divider"></div>
+
+<div class="light">
 <div class="section-inner reveal">
-  <div class="section-head"><span class="sh-icon">📋</span><h2 class="sh-title">当日スケジュール</h2></div>
+  <div class="section-head"><h2 class="sh-jp">当日スケジュール</h2><div class="sh-en">SCHEDULE</div><div class="sh-line"></div></div>
   <div class="timeline">
-    <div class="tl-item"><div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-content"><span class="tl-time">15:00</span><div class="tl-title">受付開始</div><div class="tl-desc">戦士たちの集結。本人確認をお忘れなく。</div></div></div>
-    <div class="tl-item"><div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-content"><span class="tl-time">16:00</span><div class="tl-title">レセプション</div><div class="tl-desc">参加者同士の交流。井川氏のご挨拶。</div></div></div>
-    <div class="tl-item"><div class="tl-track"><div class="tl-dot main"></div><div class="tl-line"></div></div><div class="tl-content"><span class="tl-badge">MAIN EVENT</span><span class="tl-time">17:00</span><div class="tl-title">🐉 トーナメント開始</div><div class="tl-desc">予選から決勝まで、最強を決める戦いが始まる。</div></div></div>
-    <div class="tl-item"><div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-content"><span class="tl-time">20:00</span><div class="tl-title">決勝ラウンド</div><div class="tl-desc">勝ち残った戦士たちの最終決戦。</div></div></div>
-    <div class="tl-item"><div class="tl-track"><div class="tl-dot"></div></div><div class="tl-content"><span class="tl-time">21:00</span><div class="tl-title">表彰式</div><div class="tl-desc">優勝者にドラゴンボール（賞金）贈呈。</div></div></div>
+    <div class="tl-item"><div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-content"><span class="tl-time">15:00</span><div class="tl-title">受付開始</div><div class="tl-desc">本人確認書類をご持参ください。</div></div></div>
+    <div class="tl-item"><div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-content"><span class="tl-time">16:00</span><div class="tl-title">レセプション</div><div class="tl-desc">参加者同士の交流。</div></div></div>
+    <div class="tl-item"><div class="tl-track"><div class="tl-dot main"></div><div class="tl-line"></div></div><div class="tl-content"><span class="tl-badge">MAIN</span><span class="tl-time">17:00</span><div class="tl-title">トーナメント開始</div><div class="tl-desc">予選から決勝まで。</div></div></div>
+    <div class="tl-item"><div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-content"><span class="tl-time">20:00</span><div class="tl-title">決勝ラウンド</div><div class="tl-desc">最終決戦。</div></div></div>
+    <div class="tl-item"><div class="tl-track"><div class="tl-dot"></div></div><div class="tl-content"><span class="tl-time">21:00</span><div class="tl-title">表彰式</div><div class="tl-desc">賞金贈呈。特別ディナー。</div></div></div>
   </div>
 </div>
 </div>
 
-<div class="dragon-divider">⚡</div>
+<div class="divider"></div>
 
-<!-- RULES -->
-<div class="dark-section">
+<div class="light">
 <div class="section-inner reveal">
-  <div class="section-head"><span class="sh-icon">📜</span><h2 class="sh-title">ルール</h2></div>
+  <div class="section-head"><h2 class="sh-jp">ルール</h2><div class="sh-en">RULES</div><div class="sh-line"></div></div>
   <div class="rules-grid">
-    <div class="rule-card"><span class="rule-icon">🃏</span><div class="rule-title">勝ち上がり方式</div><div class="rule-text">チップ数を競い、<br>上位が次ラウンドへ。</div></div>
-    <div class="rule-card"><span class="rule-icon">🪙</span><div class="rule-title">チップ量</div><div class="rule-text">全員同じ量でスタート。<br>平等な条件。</div></div>
-    <div class="rule-card"><span class="rule-icon">⏱️</span><div class="rule-title">制限時間</div><div class="rule-text">各ラウンド制限時間あり。<br>スピーディーな勝負。</div></div>
+    <div class="rule-card"><div class="rule-title">勝ち上がり方式</div><div class="rule-desc">チップ数を競い、<br>上位が次ラウンドへ。</div></div>
+    <div class="rule-card"><div class="rule-title">チップ量</div><div class="rule-desc">全員同じ量でスタート。<br>平等な条件。</div></div>
+    <div class="rule-card"><div class="rule-title">制限時間</div><div class="rule-desc">各ラウンド制限時間あり。<br>スピーディーな勝負。</div></div>
   </div>
 </div>
 </div>
 
-<!-- STEPS -->
-<div class="blue-section">
+<div class="divider"></div>
+
+<div class="dark">
 <div class="section-inner reveal">
-  <div class="section-head"><span class="sh-icon">🐉</span><h2 class="sh-title">参加は3ステップ</h2></div>
-  <div class="steps-grid">
-    <div class="step-card"><div class="step-ball">1</div><div class="step-title">エントリー</div><div class="step-desc">フォームから申し込み。<br>必要事項を入力して完了。</div></div>
-    <div class="step-card"><div class="step-ball">2</div><div class="step-title">入金</div><div class="step-desc">参加費10万円をお振込み。<br>入金確認後、参加確定。</div></div>
-    <div class="step-card"><div class="step-ball">3</div><div class="step-title">当日参戦</div><div class="step-desc">会場にお越しください。<br>あとは勝つだけ。</div></div>
+  <div class="section-head"><h2 class="sh-jp">参加は三段</h2><div class="sh-en">HOW TO JOIN</div><div class="sh-line"></div></div>
+  <div class="steps">
+    <div class="step"><div class="step-num">壱</div><div class="step-title">エントリー</div><div class="step-desc">フォームから申し込み。</div></div>
+    <div class="step"><div class="step-num">弐</div><div class="step-title">入金</div><div class="step-desc">参加費10万円をお振込み。</div></div>
+    <div class="step"><div class="step-num">参</div><div class="step-title">当日参戦</div><div class="step-desc">会場にお越しください。<br>あとは勝つだけ。</div></div>
   </div>
 </div>
 </div>
 
-<div class="dragon-divider">🐉</div>
+<div class="divider"></div>
 
-<!-- STORY -->
-<div class="dark-section">
+<div class="dark">
 <div class="section-inner reveal">
-  <div class="section-head"><span class="sh-icon">🌟</span><h2 class="sh-title">この大会の未来</h2></div>
-  <div class="story-block">
+  <div class="section-head"><h2 class="sh-jp">この大会の未来</h2><div class="sh-en">VISION</div><div class="sh-line"></div></div>
+  <div class="story">
     <div class="story-lead">今は小さくてもいい。<br><br>この大会は、<br><em>世界最強のバカラ大会</em>へ成長する。</div>
-    <div class="story-body">将来的に賞金は<strong>数億円規模</strong>まで拡張される。<br><br>第1回に参加したお前は、<br>「伝説の初期メンバー」として<br>この大会の歴史に名を刻む。<br><br>これは、一緒に作る物語だ。</div>
-    <div class="story-highlight">🐉 最初の戦士だけが持つ価値がある</div>
+    <div class="story-body">将来的に賞金は<strong>数億円規模</strong>まで拡張される。<br><br>第1回に参加したあなたは、<br>伝説の初期メンバーとして<br>この大会の歴史に名を刻む。<br><br>これは、一緒に作る物語だ。</div>
+    <div class="story-end">最初の参加者だけが持つ価値がある。</div>
   </div>
 </div>
 </div>
 
-<!-- ENTRY -->
-<div class="dark-section" id="entry">
+<div class="divider"></div>
+
+<div class="dark" id="entry">
 <div class="section-inner reveal">
-  <div class="entry-block">
-    <h2 class="entry-title">今すぐ参戦せよ</h2>
-    <div class="entry-sub">お前の一手が、運命を変える。</div>
+  <div class="entry">
+    <h2 class="entry-title">参戦せよ</h2>
+    <div class="entry-sub">その一手が、運命を変える。</div>
     <div class="entry-price">
-      <div><span class="ep-label">参加費</span><span class="ep-amount">¥100,000</span></div>
-      <span class="ep-arrow">⚡</span>
-      <div><span class="ep-label">優勝賞金</span><span class="ep-amount">¥3,000,000</span></div>
+      <div><span class="ep-label">参加費</span><br><span class="ep-val">¥100,000</span></div>
+      <span class="ep-arrow">→</span>
+      <div><span class="ep-label">優勝賞金</span><br><span class="ep-val">¥3,000,000</span></div>
     </div>
-    <a href="#" class="btn-dragon">🐉 今すぐ参戦する</a>
-    <div class="entry-note">※ 定員になり次第締め切り。<br>最強の戦士を待っている。</div>
+    <a href="#" class="btn-main">参戦する</a>
+    <div class="entry-note">定員になり次第締め切り。</div>
   </div>
 </div>
 </div>
 
 <footer>
-  <div class="footer-logo">🐉 龍大会</div>
-  <div class="footer-sub">DRAGON BACCARAT TOURNAMENT 2025</div>
-  <div class="footer-copy">&copy; 2025 N9. All Rights Reserved.</div>
+  <div class="f-logo">龍大会</div>
+  <div class="f-sub">DRAGON BACCARAT TOURNAMENT 2025</div>
+  <div class="f-copy">&copy; 2025 N9. All Rights Reserved.</div>
 </footer>
 
 <div class="fixed-cta" id="fixedCta">
-  <div class="fixed-cta-text">参加費 <strong>¥100,000</strong> → 優勝 <strong>¥3,000,000</strong></div>
-  <a href="#entry" class="btn-fixed">🐉 今すぐ参戦する</a>
+  <div class="fc-text">参加費 <strong>¥100,000</strong> → 優勝 <strong>¥3,000,000</strong></div>
+  <a href="#entry" class="btn-fixed">参戦する</a>
 </div>
 
 <script>
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-}, {threshold: 0.08});
-reveals.forEach(el => observer.observe(el));
-
-const fixedCta = document.getElementById('fixedCta');
-const hero = document.querySelector('.hero');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > hero.offsetHeight * 0.7) {
-    fixedCta.classList.add('show');
-  } else {
-    fixedCta.classList.remove('show');
-  }
-});
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible');});},{threshold:.08});
+reveals.forEach(el=>obs.observe(el));
+const fc=document.getElementById('fixedCta'),h=document.querySelector('.hero');
+window.addEventListener('scroll',()=>{fc.classList.toggle('show',window.scrollY>h.offsetHeight*.7);});
 </script>
 </body>
 </html>
